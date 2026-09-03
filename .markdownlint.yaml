@@ -1,0 +1,22 @@
+# markdownlint config
+default: true
+
+# Allow inline HTML (for badges, etc.)
+MD033:
+  allowed_elements:
+    - img
+    - br
+    - details
+    - summary
+
+# Line length (tables are long)
+MD013:
+  line_length: 120
+  tables: false
+
+# Allow duplicate headings in different sections
+MD024:
+  siblings_only: true
+
+# Allow bare URLs
+MD034: false

@@ -1,0 +1,42 @@
+name: "Pricing Change"
+description: "Report an outdated or incorrect price"
+title: "[PRICING] "
+labels: ["pricing", "data-fix"]
+body:
+  - type: input
+    id: plan
+    attributes:
+      label: Plan name
+      placeholder: "e.g., MiMo Token Plan"
+    validations:
+      required: true
+
+  - type: input
+    id: current_price
+    attributes:
+      label: Current price listed
+      placeholder: "e.g., $6/mo"
+    validations:
+      required: true
+
+  - type: input
+    id: correct_price
+    attributes:
+      label: Correct price
+      placeholder: "e.g., $8/mo"
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source link
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+      description: "Any other changes (model names, quota, etc.)"

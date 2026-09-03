@@ -1,0 +1,44 @@
+name: "New Plan Suggestion"
+description: "Suggest a new coding plan to add"
+title: "[NEW PLAN] "
+labels: ["new-plan", "enhancement"]
+body:
+  - type: input
+    id: plan_name
+    attributes:
+      label: Plan name
+      placeholder: "e.g., CodeWhisperer"
+    validations:
+      required: true
+
+  - type: input
+    id: website
+    attributes:
+      label: Pricing URL
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: input
+    id: starting_price
+    attributes:
+      label: Starting price
+      placeholder: "e.g., $10/mo"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: "Models, quota model, key features, why it's notable"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Verification
+      options:
+        - label: I have confirmed the plan is publicly available
+          required: true

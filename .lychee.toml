@@ -1,0 +1,22 @@
+# Lychee link checker config
+
+# Exclude URLs that are known to block bots
+exclude = [
+  "https://x.com/.*",
+  "https://twitter.com/.*",
+]
+
+# Retry failed requests
+max_retries = 3
+
+# Timeout per request (seconds)
+timeout = 30
+
+# Max concurrent requests
+max_concurrency = 5
+
+# Accept these status codes
+accept = [200, 201, 204, 301, 302, 307, 308, 429]
+
+# Skip checking these paths (fragments, etc.)
+exclude_path = []
