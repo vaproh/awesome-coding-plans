@@ -15,7 +15,7 @@
 - [Plans Under $10](#plans-under-10)
 - [Plans Under $20](#plans-under-20)
 - [Student Discounts & Freebies](#student-discounts--freebies)
-- [Detailed Plan Breakdowns](plans.md)
+- [All Plans](plans.md)
 - [Contributing](CONTRIBUTING.md)
 - [License](#license)
 
@@ -25,27 +25,26 @@
 
 | Plan | Price | Models | Best For |
 |------|-------|--------|----------|
-| [Command Code](plans.md#command-code-ai) | $1/mo | 30+ models | taste-1, free models |
-| [MiMo](plans.md#mimo-token-plan) | $6/mo | 6 models | Cheapest, no weekly caps |
-| [Step](plans.md#step-plan) | $6.99/mo | 4+ models | Multimodal on a budget |
-| [Qwen](plans.md#qwen-token-plan) | ~$6/mo | 5+ models | Multi-model, 7-day refresh |
-| [Chutes](plans.md#chutes) | $3/mo | 13+ models | Cheapest PAYG |
-| [Cline Pass](plans.md#cline-pass) | $9.99/mo | 14 models | Cline users |
-| [Command Code](plans.md#command-code-ai) | $1/mo | 30+ models | taste-1, free models |
-| [GitHub Copilot](plans.md#github-copilot) | $10/mo | 30+ models | Biggest model catalog |
-| [Perch](plans.md#perch-ai) | $10/mo | 15+ models | Smart routing, BYOK |
-| [OpenCode Go](plans.md#opencode-go) | $10/mo | 24 models | Best overall value |
-| [NanoGPT](plans.md#nanogpt) | $12/mo | 4+ models | 1000+ via PAYGO |
-| [Mistral](plans.md#mistral-vibe) | $14.99/mo | 7 models | European, open weights |
-| [Kimi Code](plans.md#kimi-code) | Free / ¥49 | 4 models | K3 flagship, free tier |
-| [Claude](plans.md#claude-plans) | $17-20/mo | 4 models | Frontier quality |
-| [Standard Compute](plans.md#standard-compute) | $19/mo | All frontiers | No token meter, no windows |
-| [GLM](plans.md#glm-coding-plan) | $18/mo | 2 models | GLM-5.3 flagship |
-| [Codex](plans.md#openai-codex-plans) | $20/mo | Tiered | OpenAI ecosystem |
-| [Cursor](plans.md#cursor) | $20/mo | Multi-model | AI-native IDE |
-| [Windsurf](plans.md#windsurf) | $20/mo | Multi-model | Cascade agent |
-| [MiniMax](plans.md#minimax-token-plan) | $22/mo | 5+ models | Multimodal in one quota |
-| [Synthetic](plans.md#synthetic) | $30/mo | 16 models | Privacy, no token meter |
+| [Command Code](plans/command-code-ai.md) | $1/mo | 30+ models | taste-1, free models |
+| [Chutes](plans/chutes.md) | $3/mo | 13+ models | Cheapest PAYG |
+| [MiMo](plans/mimo-token-plan.md) | $6/mo | 6 models | Cheapest, no weekly caps |
+| [Qwen](plans/qwen-token-plan.md) | ~$6/mo | 5+ models | Multi-model, 7-day refresh |
+| [Step](plans/step-plan.md) | $6.99/mo | 4+ models | Multimodal on a budget |
+| [Cline Pass](plans/cline-pass.md) | $9.99/mo | 14 models | Cline users |
+| [GitHub Copilot](plans/github-copilot.md) | $10/mo | 30+ models | Biggest model catalog |
+| [Perch](plans/perch-ai.md) | $10/mo | 15+ models | Smart routing, BYOK |
+| [OpenCode Go](plans/opencode-go.md) | $10/mo | 24 models | Best overall value |
+| [NanoGPT](plans/nanogpt.md) | $12/mo | 4+ models | 1000+ via PAYGO |
+| [Kimi Code](plans/kimi-code.md) | Free / ¥49 | 4 models | K3 flagship, free tier |
+| [Mistral](plans/mistral-vibe.md) | $14.99/mo | 7 models | European, open weights |
+| [GLM](plans/glm-coding-plan.md) | $18/mo | 2 models | GLM-5.3 flagship |
+| [Claude](plans/claude-plans.md) | $17-20/mo | 4 models | Frontier quality |
+| [Standard Compute](plans/standard-compute.md) | $19/mo | All frontiers | No token meter, no windows |
+| [Codex](plans/openai-codex-plans.md) | $20/mo | Tiered | OpenAI ecosystem |
+| [Cursor](plans/cursor.md) | $20/mo | Multi-model | AI-native IDE |
+| [Windsurf](plans/windsurf.md) | $20/mo | Multi-model | Cascade agent |
+| [MiniMax](plans/minimax-token-plan.md) | $22/mo | 5+ models | Multimodal in one quota |
+| [Synthetic](plans/synthetic.md) | $30/mo | 16 models | Privacy, no token meter |
 
 ---
 
@@ -72,12 +71,12 @@
 
 | Plan | Price | Models | Quota | Best For |
 |------|-------|--------|-------|----------|
-| Chutes Base | $3 | 13+ open | 5x PAYGO value | Cheapest sub |
-| MiMo Lite | $6 | 6 MiMo | 4.1B Credits/mo | No weekly/5h caps |
-| Qwen Lite | ~$6 | Qwen3.8, DeepSeek V4, GLM | 2,500 Credits/7d | Multi-model |
-| Step Mini | $6.99 | Step 3.7/3.5 Flash, audio, image | 400M Credits | Multimodal |
-| Cline Pass | $9.99 | 14 open models | 2-5x rate limits | Cline users |
-| Command Code Go | $1 | 30+ models (taste-1, free models) | $10 credits (~$20 effective) | Cheapest entry |
+| [Chutes Base](plans/chutes.md) | $3 | 13+ open | 5x PAYGO value | Cheapest sub |
+| [Command Code Go](plans/command-code-ai.md) | $1 | 30+ models | $10 credits (~$20 effective) | Cheapest entry |
+| [MiMo Lite](plans/mimo-token-plan.md) | $6 | 6 MiMo | 4.1B Credits/mo | No weekly/5h caps |
+| [Qwen Lite](plans/qwen-token-plan.md) | ~$6 | Qwen3.8, DeepSeek V4, GLM | 2,500 Credits/7d | Multi-model |
+| [Step Mini](plans/step-plan.md) | $6.99 | Step 3.7/3.5 Flash, audio, image | 400M Credits | Multimodal |
+| [Cline Pass](plans/cline-pass.md) | $9.99 | 14 open models | 2-5x rate limits | Cline users |
 
 ---
 
@@ -85,11 +84,11 @@
 
 | Plan | Price | Models | Quota | Best For |
 |------|-------|--------|-------|----------|
-| Kimi Moderato | ~$14 | K3 (256K), K2.7 Code | 60 agent credits | K3 flagship access |
-| Mistral Pro | $14.99 | Medium 3.5, Devstral 2, Codestral | 100 sessions/day | European AI |
-| Claude Pro | $17-20 | Opus 5, Sonnet 5, Haiku 4.5 | ~5x Free | Frontier quality |
-| GLM Lite | $18 | GLM-5.3, 5.3-Flash | 2K/5h + 10K/wk | Flagship at low price |
-| Standard Compute | $19 | All frontiers + open | Flat budget | No windows ever |
+| [Kimi Moderato](plans/kimi-code.md) | ~$14 | K3 (256K), K2.7 Code | 60 agent credits | K3 flagship access |
+| [Mistral Pro](plans/mistral-vibe.md) | $14.99 | Medium 3.5, Devstral 2, Codestral | 100 sessions/day | European AI |
+| [Claude Pro](plans/claude-plans.md) | $17-20 | Opus 5, Sonnet 5, Haiku 4.5 | ~5x Free | Frontier quality |
+| [GLM Lite](plans/glm-coding-plan.md) | $18 | GLM-5.3, 5.3-Flash | 2K/5h + 10K/wk | Flagship at low price |
+| [Standard Compute](plans/standard-compute.md) | $19 | All frontiers + open | Flat budget | No windows ever |
 
 ---
 
@@ -110,7 +109,7 @@
 
 > *GitHub Copilot Student new sign-ups paused April 2026. Existing users keep it.
 
-See [detailed student section](plans.md#student-discounts--freebies) for eligibility, partner schools, and application links.
+See [detailed student section](plans/student-discounts-freebies.md) for eligibility, partner schools, and application links.
 
 ---
 
