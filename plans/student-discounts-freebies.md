@@ -124,4 +124,4 @@ The old program gave 1 year free Cursor Pro via SheerID. Existing users keep the
 
 ---
 
-*Last updated: September 2026. Always verify on official websites before subscribing.*
+*Last updated: September 3, 2026. Always verify on official websites before subscribing.*

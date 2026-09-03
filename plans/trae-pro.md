@@ -2,17 +2,23 @@
 
 **Website:** [trae.ai/pricing](https://www.trae.ai/pricing)
 
-AI-native IDE by ByteDance. Includes agent mode and unlimited autocomplete.
+AI-native IDE by ByteDance. Five tiers from free to Ultra. Pro unlocks SOLO mode and unlimited autocomplete.
 
 ### Plans
 
-| Tier | Price | Usage | Notes |
-|------|-------|-------|-------|
-| **Pro** | $10/mo | $20 Basic + Bonus usage | 7-day free trial, unlimited autocomplete |
+| Tier | Price | Basic Usage | Autocomplete | Cloud Tasks | Notes |
+|------|-------|-------------|--------------|-------------|-------|
+| **Free** | $0 | $3/mo | 5,000/mo | 2 | Standard queue |
+| **Lite** | $3/mo | $5/mo | Unlimited | 2 | Fast queue |
+| **Pro** | $10/mo | $20/mo | Unlimited | 10 | SOLO mode, fast queue |
+| **Pro+** | $30/mo | $90/mo | Unlimited | 15 | Fast queue |
+| **Ultra** | $100/mo | $400/mo | Unlimited | 20 | Early access to SOTA models |
 
 ### Key Features
-- **Unlimited autocomplete** — included in all plans
-- **Agent mode** — multi-step task completion
-- **Bonus usage** — random bonus credits (reports of up to $130)
-- **AI-native IDE** — built from ground up for AI coding
-- **Free trial** — 7 days free, no card required
+- **SOLO mode** — autonomous coding workflows (Pro+)
+- **Unlimited autocomplete** — included on all paid plans
+- **Concurrent cloud tasks** — up to 20 on Ultra
+- **Fast queue priority** — on all paid plans
+- **Annual billing** — Pro $27/yr (~$2.25/mo), saves ~75%
+- **7-day free trial** — for new users, includes Pro benefits + $5 usage
+- **On-Demand Usage** — continue after Basic Usage is exhausted

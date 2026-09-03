@@ -1,17 +1,23 @@
-# Factory Droid Pro
+# Factory Droid
 
 **Website:** [factory.ai/pricing](https://factory.ai/pricing)
 
-AI agent for autonomous software development. Works on entire codebases with minimal input.
+AI agent for autonomous software development. Droid agent plans for individuals and teams.
 
 ### Plans
 
-| Tier | Price | Tokens | Notes |
-|------|-------|--------|-------|
-| **Pro** | $20/mo | 20M Standard Tokens | Usage-based |
+| Tier | Price | Usage | Notes |
+|------|-------|-------|-------|
+| **Pro** | $20/mo | Standard rate limits | Desktop/CLI/SDK, background agents |
+| **Plus** | $100/mo | ~5x Pro usage | Droid Computers (cloud), expanded limits |
+| **Max** | $200/mo | ~10x Pro usage | Early access to new features |
+| **Teams** | $60 + $40/seat/mo | Shared | Up to 10 seats, centralized billing |
+| **Business** | Custom | Custom | Up to 150 seats, SSO, ZDR, audit logs |
+| **Enterprise** | Custom | Custom | Unlimited seats, dedicated compute, on-prem |
 
 ### Key Features
 - **Autonomous agent** — plans and implements entire features
-- **Standard Tokens** — 10 cached tokens = 1 Standard Token
-- **Works across codebase** — not just single-file edits
-- **Multi-model** — uses best model for each task
+- **Multi-platform** — Desktop, CLI, SDK
+- **Cloud & local background agents**
+- **Droid Computers** — cloud computers for remote agents (Plus+)
+- **Agent-readiness dashboard**

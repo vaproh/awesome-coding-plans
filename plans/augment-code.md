@@ -1,17 +1,22 @@
 # Augment Code
 
-**Website:** [augmentcode.com/pricing](https://www.augmentcode.com/pricing)
+**Website:** [augmentcode.com/pricing](https://augmentcode.com/pricing)
 
-AI coding assistant with context engine that understands your entire codebase.
+AI coding assistant with context engine that understands your entire codebase. Business plan is flat $100/mo for up to 50 seats.
 
 ### Plans
 
-| Tier | Price | Credits | Effective Value |
-|------|-------|---------|-----------------|
-| **INDIE** | $20/mo | 40,000 | ~$25 |
+| Tier | Price | Usage | Seats | Notes |
+|------|-------|-------|-------|-------|
+| **Business** | $100/mo flat | $100/mo included | Up to 50 | No per-seat charge, pooled usage |
+| **Enterprise** | Custom | Custom | Unlimited | SSO, CMEK, dedicated support |
 
 ### Key Features
-- **Context engine** — understands large codebases
-- **Completions, chat, and agent** modes
-- **Credit-based** — 40K credits on Indie plan
-- **Works in VS Code and JetBrains**
+- **Context Engine** — understands large codebases
+- **Coding Agent + Chat + CLI** — multiple interfaces
+- **Cosmos** — compute for agent tasks
+- **MCP & Native Tools** — extensible
+- **40% service fee** on LLM usage (no fee on compute)
+- **SOC 2 Type II** compliant
+- **No AI training** on your data
+- **Usage pooled** across team on Business plan

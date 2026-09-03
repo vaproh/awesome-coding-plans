@@ -1,16 +1,21 @@
-# Kilo Pass
+# Kilo Code
 
 **Website:** [kilo.ai/pricing](https://kilo.ai/pricing)
 
-Multi-model coding subscription from Kilo Code. Access to frontier models with bonus credits.
+Open-source AI coding assistant. Platform is free for individuals; Teams and Enterprise add governance. AI inference billed separately.
 
 ### Plans
 
-| Tier | Price | Notes | Effective Value |
-|------|-------|-------|-----------------|
-| **Starter** | $19/mo | Up to 40% bonus credits | ~$26.6 |
+| Tier | Price | Notes |
+|------|-------|-------|
+| **Free** | $0 | Open source VS Code, JetBrains & CLI extensions. AI usage billed separately. |
+| **Teams** | $15/user/mo | Usage analytics, shared BYOK, team management, priority support |
+| **Enterprise** | Custom | SSO, audit logs, SLA, dedicated support |
 
 ### Key Features
-- **Bonus credits** — up to 40% extra on base plan
-- **Multi-model access** — frontier and open models
-- **Works with Kilo Code** — VS Code extension
+- **Open source** — free forever for individuals
+- **Works with any AI model** — BYOK or Kilo-managed
+- **Agentic coding assistant** — multi-step tasks
+- **Code completion & generation**
+- **Shared BYOK** on Teams and above
+- **14-day Enterprise trial** available
