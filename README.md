@@ -2,7 +2,7 @@
 
 > A curated comparison of AI coding subscriptions and token plans — what models you get, how much it costs, and which tools are supported.
 
-![Plans](https://img.shields.io/badge/plans-19-blue)
+![Plans](https://img.shields.io/badge/plans-20-blue)
 ![Last Updated](https://img.shields.io/badge/updated-September%202026-green)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 
@@ -16,7 +16,7 @@
 - [Plans Under $20](#plans-under-20)
 - [Student Discounts & Freebies](#student-discounts--freebies)
 - [Detailed Plan Breakdowns](plans.md)
-- [Contributing](#contributing)
+- [Contributing](CONTRIBUTING.md)
 - [License](#license)
 
 ---
@@ -25,11 +25,13 @@
 
 | Plan | Price | Models | Best For |
 |------|-------|--------|----------|
+| [Command Code](plans.md#command-code-ai) | $1/mo | 30+ models | taste-1, free models |
 | [MiMo](plans.md#mimo-token-plan) | $6/mo | 6 models | Cheapest, no weekly caps |
 | [Step](plans.md#step-plan) | $6.99/mo | 4+ models | Multimodal on a budget |
 | [Qwen](plans.md#qwen-token-plan) | ~$6/mo | 5+ models | Multi-model, 7-day refresh |
 | [Chutes](plans.md#chutes) | $3/mo | 13+ models | Cheapest PAYG |
 | [Cline Pass](plans.md#cline-pass) | $9.99/mo | 14 models | Cline users |
+| [Command Code](plans.md#command-code-ai) | $1/mo | 30+ models | taste-1, free models |
 | [GitHub Copilot](plans.md#github-copilot) | $10/mo | 30+ models | Biggest model catalog |
 | [Perch](plans.md#perch-ai) | $10/mo | 15+ models | Smart routing, BYOK |
 | [OpenCode Go](plans.md#opencode-go) | $10/mo | 24 models | Best overall value |
@@ -51,7 +53,7 @@
 
 | Category | Winner | Price |
 |----------|--------|-------|
-| **Cheapest** | MiMo Lite | $6/mo |
+| **Cheapest** | Command Code Go | $1/mo |
 | **Best Value** | OpenCode Go | $10/mo |
 | **Best Price/Quality** | GLM Lite | $18/mo |
 | **Most Models** | GitHub Copilot Pro | $10/mo |
@@ -75,6 +77,7 @@
 | Qwen Lite | ~$6 | Qwen3.8, DeepSeek V4, GLM | 2,500 Credits/7d | Multi-model |
 | Step Mini | $6.99 | Step 3.7/3.5 Flash, audio, image | 400M Credits | Multimodal |
 | Cline Pass | $9.99 | 14 open models | 2-5x rate limits | Cline users |
+| Command Code Go | $1 | 30+ models (taste-1, free models) | $10 credits (~$20 effective) | Cheapest entry |
 
 ---
 
@@ -113,14 +116,7 @@ See [detailed student section](plans.md#student-discounts--freebies) for eligibi
 
 ## How to Contribute
 
-Spot a pricing change, new plan, or mistake? PRs welcome:
-
-1. Fork the repo
-2. Edit `plans.md` with your changes
-3. Update the "Last updated" date
-4. Submit a PR
-
-Please include a source link for any pricing changes.
+Spot a pricing change, new plan, or mistake? PRs welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
