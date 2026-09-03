@@ -1,0 +1,6 @@
+[build]
+  command = "cd astro-site && npm ci && npm run build"
+  publish = "astro-site/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
