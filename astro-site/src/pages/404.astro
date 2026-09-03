@@ -1,0 +1,11 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Page Not Found | Awesome Coding Plans" description="That Awesome Coding Plans page does not exist.">
+  <section class="not-found"><p class="eyebrow">404 / not found</p><h1>That route<br /><span>doesn't exist.</span></h1><p>It may have moved, or the plan slug may be wrong.</p><a class="button" href="/">Return to catalog</a></section>
+</Base>
+
+<style>
+  .not-found { padding: 6rem 0; } h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: .95; letter-spacing: -.07em; margin: 0 0 1.5rem; } h1 span { color: var(--accent); } .button { display: inline-block; margin-top: 1rem; padding: .7rem 1rem; color: var(--text); background: var(--accent); border-radius: 6px; }
+</style>

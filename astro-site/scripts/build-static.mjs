@@ -102,3 +102,11 @@ for (const file of files) {
 
 console.log(`Generated ${generated} plan pages`);
 writeFileSync(join(distDir, "plans.json"), JSON.stringify({ updated: "2026-09-03", plans: catalog }, null, 2));
+const sitemapPath = join(distDir, "sitemap-0.xml");
+try {
+  const sitemap = readFileSync(sitemapPath, "utf-8");
+  const planUrls = catalog.map(({ slug }) => `<url><loc>https://awesome-coding-plans.netlify.app/plans/${slug}/</loc></url>`).join("");
+  writeFileSync(sitemapPath, sitemap.replace("</urlset>", `${planUrls}</urlset>`));
+} catch {
+  // Sitemap integration is optional for local script-only runs.
+}

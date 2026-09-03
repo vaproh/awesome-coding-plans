@@ -23,14 +23,32 @@ const countType = (type: string) => plans.filter((plan) => plan.data.type === ty
   <section class="catalog reveal" aria-labelledby="catalog-title">
     <div class="section-heading"><div><p class="eyebrow">01 / catalog</p><h2 id="catalog-title">All plans</h2></div><span id="result-count">{plans.length} results</span></div>
     <div class="filters" aria-label="Plan filters">
-      <label>Search<input id="plan-search" type="search" placeholder="e.g. Claude, IDE, BYOK" /></label>
-      <label>Availability<select id="type-filter"><option value="">All availability</option><option value="Free">Free tier</option><option value="Freemium">Free + paid</option><option value="Paid">Paid only</option></select></label>
-      <label>Price band<select id="price-filter"><option value="">All prices</option><option>Free</option><option>Budget</option><option>Mid</option><option>Premium</option><option>Enterprise</option></select></label>
-      <label>Quota<select id="quota-filter"><option value="">Any quota</option><option>Credits</option><option>Tokens</option><option>Requests</option><option>Sessions</option><option>Unlimited</option><option>Mixed</option></select></label>
-      <label>Access<select id="access-filter"><option value="">Any access</option><option>Single</option><option>Multi-model</option><option>Aggregator</option><option>Frontier</option></select></label>
+      <div class="search-box">
+        <label for="plan-search"><span class="search-icon">/</span><span class="sr-only">Search plans</span></label>
+        <input id="plan-search" type="search" placeholder="Search plans, models, tools, or tags" autocomplete="off" />
+        <kbd>/</kbd>
+        <button id="clear-search" type="button" aria-label="Clear search" hidden>&times;</button>
+      </div>
+      <div class="quick-filters" aria-label="Quick filters">
+        <button type="button" class="quick-filter active" aria-pressed="true" data-filter-group="type" data-value="">Everything</button>
+        <button type="button" class="quick-filter" aria-pressed="false" data-filter-group="type" data-value="Free">Free tier</button>
+        <button type="button" class="quick-filter" aria-pressed="false" data-filter-group="type" data-value="Freemium">Free + paid</button>
+        <button type="button" class="quick-filter" aria-pressed="false" data-filter-group="price" data-value="Budget">Under $10</button>
+        <button type="button" class="quick-filter" aria-pressed="false" data-filter-group="price" data-value="Mid">$10-$20</button>
+      </div>
+      <details class="advanced-filters">
+        <summary><span>More filters</span><span class="filter-summary" id="filter-summary">None active</span></summary>
+        <div class="advanced-grid">
+          <label>Availability<select id="type-filter"><option value="">All availability</option><option value="Free">Free tier</option><option value="Freemium">Free + paid</option><option value="Paid">Paid only</option></select></label>
+          <label>Price band<select id="price-filter"><option value="">All prices</option><option>Free</option><option>Budget</option><option>Mid</option><option>Premium</option><option>Enterprise</option></select></label>
+          <label>Quota<select id="quota-filter"><option value="">Any quota</option><option>Credits</option><option>Tokens</option><option>Requests</option><option>Sessions</option><option>Unlimited</option><option>Mixed</option></select></label>
+          <label>Model access<select id="access-filter"><option value="">Any access</option><option>Single</option><option>Multi-model</option><option>Aggregator</option><option>Frontier</option></select></label>
+        </div>
+      </details>
+      <button id="clear-filters" class="clear-filters" type="button" hidden>Clear all</button>
     </div>
     <div class="chips" id="tag-filters">
-      {['solo','team','student','enterprise','agent','ide','cli','api','byok','offline','multimodal','open-source'].map((tag) => <button type="button" data-tag={tag}>#{tag}</button>)}
+      {['solo','team','student','enterprise','agent','ide','cli','api','byok','offline','multimodal','open-source'].map((tag) => <button type="button" aria-pressed="false" data-tag={tag}>#{tag}</button>)}
     </div>
     <div class="card-grid" id="plan-grid">
       {sortedPlans.map((plan, index) => (
@@ -49,25 +67,63 @@ const countType = (type: string) => plans.filter((plan) => plan.data.type === ty
     const cards = [...document.querySelectorAll('.plan-card')];
     const inputs = ['plan-search','type-filter','price-filter','quota-filter','access-filter'].map((id) => document.getElementById(id));
     let activeTag = '';
+    let quickType = '';
+    let quickPrice = '';
+    let hasFiltered = false;
+    const typeSelect = document.getElementById('type-filter');
+    const priceSelect = document.getElementById('price-filter');
     const filter = () => {
       const [search, type, price, quota, access] = inputs.map((input) => input.value.toLowerCase());
+      const selectedType = (quickType || type).toLowerCase();
+      const selectedPrice = (quickPrice || price).toLowerCase();
       let visible = 0;
       cards.forEach((card) => {
-        const matches = card.dataset.title.includes(search) && (!type || card.dataset.type.toLowerCase() === type) && (!price || card.dataset.price.toLowerCase() === price) && (!quota || card.dataset.quota.toLowerCase() === quota) && (!access || card.dataset.access.toLowerCase() === access) && (!activeTag || card.dataset.tags.includes(activeTag));
-        card.hidden = !matches;
+        const matches = card.dataset.title.includes(search) && (!selectedType || card.dataset.type.toLowerCase() === selectedType) && (!selectedPrice || card.dataset.price.toLowerCase() === selectedPrice) && (!quota || card.dataset.quota.toLowerCase() === quota) && (!access || card.dataset.access.toLowerCase() === access) && (!activeTag || card.dataset.tags.split(' ').includes(activeTag));
+        const wasFiltered = card.classList.contains('is-filtered');
+        card.classList.toggle('is-filtered', !matches);
+        card.classList.toggle('filter-in', matches && hasFiltered && wasFiltered);
         if (matches) visible++;
       });
       document.getElementById('result-count').textContent = `${visible} result${visible === 1 ? '' : 's'}`;
       document.getElementById('empty-state').hidden = visible > 0;
+      const activeCount = [search, selectedType, selectedPrice, quota, access, activeTag].filter(Boolean).length;
+      document.getElementById('filter-summary').textContent = activeCount ? `${activeCount} active` : 'None active';
+      document.getElementById('clear-filters').hidden = activeCount === 0;
+      hasFiltered = true;
     };
-    inputs.forEach((input) => input.addEventListener('input', filter));
-    document.querySelectorAll('[data-tag]').forEach((button) => button.addEventListener('click', () => { activeTag = activeTag === button.dataset.tag ? '' : button.dataset.tag; document.querySelectorAll('[data-tag]').forEach((item) => item.classList.toggle('active', item === button && activeTag)); filter(); }));
+    const searchInput = document.getElementById('plan-search');
+    const clearSearch = document.getElementById('clear-search');
+    inputs.forEach((input) => input.addEventListener('input', () => {
+      if (input === typeSelect) { quickType = ''; document.querySelectorAll('[data-filter-group="type"]').forEach((item) => { const active = item.dataset.value === ''; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(active)); }); }
+      if (input === priceSelect) { quickPrice = ''; document.querySelectorAll('[data-filter-group="price"]').forEach((item) => { item.classList.remove('active'); item.setAttribute('aria-pressed', 'false'); }); }
+      clearSearch.hidden = !searchInput.value; filter();
+    }));
+    clearSearch.addEventListener('click', () => { searchInput.value = ''; clearSearch.hidden = true; searchInput.focus(); filter(); });
+    document.querySelectorAll('[data-filter-group]').forEach((button) => button.addEventListener('click', () => {
+      const group = button.dataset.filterGroup;
+      document.querySelectorAll(`[data-filter-group="${group}"]`).forEach((item) => item.classList.remove('active'));
+      button.classList.add('active');
+      document.querySelectorAll(`[data-filter-group="${group}"]`).forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+      if (group === 'type') { quickType = button.dataset.value; document.getElementById('type-filter').value = ''; }
+      if (group === 'price') { quickPrice = button.dataset.value; document.getElementById('price-filter').value = ''; }
+      filter();
+    }));
+    document.getElementById('clear-filters').addEventListener('click', () => {
+      inputs.forEach((input) => { input.value = ''; });
+      searchInput.value = ''; clearSearch.hidden = true; activeTag = ''; quickType = ''; quickPrice = '';
+      document.querySelectorAll('[data-filter-group]').forEach((item) => { const active = item.dataset.value === '' && item.dataset.filterGroup === 'type'; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(active)); });
+      document.querySelectorAll('[data-tag]').forEach((item) => { item.classList.remove('active'); item.setAttribute('aria-pressed', 'false'); });
+      filter();
+    });
+    document.addEventListener('keydown', (event) => { if (event.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'SELECT') { event.preventDefault(); searchInput.focus(); } });
+    document.querySelectorAll('[data-tag]').forEach((button) => button.addEventListener('click', () => { activeTag = activeTag === button.dataset.tag ? '' : button.dataset.tag; document.querySelectorAll('[data-tag]').forEach((item) => { const active = item === button && activeTag; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(Boolean(active))); }); filter(); }));
   </script>
 </Base>
 
 <style>
   .hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--border); } .eyebrow { color: var(--accent); font: 500 .72rem "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 1rem; } h1 { font-size: clamp(3rem, 8vw, 6.5rem); line-height: .95; letter-spacing: -.07em; margin: 0 0 1.5rem; } h1 span { color: var(--accent); } .lede { max-width: 650px; font-size: 1.1rem; color: var(--text-muted); } .hero-stats { display: flex; gap: 3rem; margin-top: 2.5rem; flex-wrap: wrap; } .hero-stats div { display: grid; gap: .15rem; } .hero-stats strong { font: 500 1.45rem "DM Mono", monospace; color: var(--accent-light); } .hero-stats small { color: var(--text-dim); font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
-  .catalog { padding-top: 3rem; } .section-heading { display:flex; justify-content:space-between; align-items:end; gap:1rem; } h2 { margin:0; font-size:2rem; } #result-count { color:var(--text-dim); font:500 .75rem "DM Mono",monospace; } .filters { display:grid; grid-template-columns:2fr repeat(4,1fr); gap:.7rem; margin:1.5rem 0 .75rem; position:sticky; top:68px; z-index:1; padding:1rem 0; background:rgba(23,20,18,.92); backdrop-filter:blur(12px); } label { display:grid; gap:.35rem; color:var(--text-dim); font:500 .68rem "DM Mono",monospace; text-transform:uppercase; } input,select { width:100%; min-width:0; padding:.7rem .75rem; color:var(--text); background:var(--bg-card); border:1px solid var(--border); border-radius:6px; font:400 .82rem "Space Grotesk",sans-serif; } input:focus,select:focus { outline:1px solid var(--accent); } .chips { display:flex; gap:.4rem; flex-wrap:wrap; margin-bottom:1.5rem; } .chips button { cursor:pointer; padding:.3rem .55rem; color:var(--text-muted); background:transparent; border:1px solid var(--border); border-radius:4px; font:400 .7rem "DM Mono",monospace; } .chips button:hover,.chips button.active { color:var(--accent); border-color:var(--accent); background:var(--accent-glow); }
-  .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:.8rem; } .plan-card { display:flex; flex-direction:column; min-height:175px; color:inherit; text-decoration:none; } .plan-card[hidden] { display:none; } .plan-card h3 { margin:.8rem 0 .35rem; font-size:1.15rem; } .plan-card p { flex:1; margin:0; font-size:.82rem; } .plan-top,.plan-bottom { display:flex; align-items:center; gap:.45rem; color:var(--text-dim); font:500 .68rem "DM Mono",monospace; text-transform:uppercase; } .price-band { margin-left:auto; color:var(--accent-light); } .type-dot { width:7px; height:7px; border-radius:50%; background:#78a6c8; } .type-paid { background:#e07a5f; } .type-freemium { background:#d6a15d; } .plan-bottom { padding-top:.8rem; border-top:1px solid var(--border); color:var(--text-muted); } .plan-bottom span:last-child { margin-left:auto; color:var(--text-dim); } .empty { color:var(--text-muted); padding:3rem 0; }
-  @media (max-width:800px) { .filters { grid-template-columns:1fr 1fr; top:112px; } .filters label:first-child { grid-column:1/-1; } } @media (max-width:520px) { .hero { padding-top:2.5rem; } .hero-stats { gap:1.5rem; } .filters { grid-template-columns:1fr; top:112px; } .filters label:first-child { grid-column:auto; } }
+  .catalog { padding-top: 3rem; } .section-heading { display:flex; justify-content:space-between; align-items:end; gap:1rem; } h2 { margin:0; font-size:2rem; } #result-count { color:var(--text-dim); font:500 .75rem "DM Mono",monospace; } .filters { margin:1.5rem 0 .75rem; position:sticky; top:68px; z-index:1; padding:1rem 0; background:rgba(23,20,18,.92); backdrop-filter:blur(12px); } .search-box { display:flex; align-items:center; min-height:3.1rem; padding:0 .85rem; background:var(--bg-card); border:1px solid var(--border-light); border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,.12); } .search-box:focus-within { border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-glow); } .search-box label { display:block; color:var(--accent); font:500 1.1rem "DM Mono",monospace; } .search-box input { flex:1; min-width:0; padding:.7rem; border:0; outline:0; background:transparent; color:var(--text); font-size:1rem; } .search-box input::placeholder { color:var(--text-dim); } .search-box kbd { padding:.15rem .4rem; color:var(--text-dim); border:1px solid var(--border); border-radius:4px; font:500 .7rem "DM Mono",monospace; } .search-box button { margin-left:.5rem; padding:.1rem .4rem; color:var(--text-muted); background:transparent; border:0; cursor:pointer; font-size:1.35rem; line-height:1; } .search-box button:hover { color:var(--accent); } .quick-filters { display:flex; gap:.45rem; overflow-x:auto; padding:1rem 0 .2rem; scrollbar-width:none; } .quick-filter,.clear-filters { cursor:pointer; white-space:nowrap; padding:.5rem .7rem; color:var(--text-muted); background:transparent; border:1px solid var(--border); border-radius:5px; font:500 .72rem "DM Mono",monospace; } .quick-filter:hover,.quick-filter.active,.clear-filters:hover { color:var(--accent); border-color:var(--accent); background:var(--accent-glow); } .advanced-filters { border-top:1px solid var(--border); margin-top:.8rem; padding-top:.8rem; } .advanced-filters summary { cursor:pointer; display:flex; justify-content:space-between; color:var(--text-muted); font-size:.82rem; } .filter-summary { color:var(--text-dim); font:500 .7rem "DM Mono",monospace; } .advanced-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:.7rem; margin-top:1rem; } .clear-filters { margin-top:.8rem; } label { display:grid; gap:.35rem; color:var(--text-dim); font:500 .68rem "DM Mono",monospace; text-transform:uppercase; } input,select { width:100%; min-width:0; padding:.7rem .75rem; color:var(--text); background:var(--bg-card); border:1px solid var(--border); border-radius:6px; font:400 .82rem "Space Grotesk",sans-serif; } input:focus,select:focus { outline:1px solid var(--accent); } .chips { display:flex; gap:.4rem; flex-wrap:wrap; margin-bottom:1.5rem; } .chips button { cursor:pointer; padding:.3rem .55rem; color:var(--text-muted); background:transparent; border:1px solid var(--border); border-radius:4px; font:400 .7rem "DM Mono",monospace; } .chips button:hover,.chips button.active { color:var(--accent); border-color:var(--accent); background:var(--accent-glow); } .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:.8rem; } .plan-card { display:flex; flex-direction:column; min-height:175px; color:inherit; text-decoration:none; } .plan-card.is-filtered { display:none; } .plan-card.filter-in { animation: filterIn .28s ease both; animation-delay:var(--delay); } @keyframes filterIn { from { opacity:0; transform:translateY(8px) scale(.98); } to { opacity:1; transform:none; } } .plan-card h3 { margin:.8rem 0 .35rem; font-size:1.15rem; } .plan-card p { flex:1; margin:0; font-size:.82rem; } .plan-top,.plan-bottom { display:flex; align-items:center; gap:.45rem; color:var(--text-dim); font:500 .68rem "DM Mono",monospace; text-transform:uppercase; } .price-band { margin-left:auto; color:var(--accent-light); } .type-dot { width:7px; height:7px; border-radius:50%; background:#c5b9ad; } .type-paid { background:#e07a5f; } .type-freemium { background:#9e8f84; } .plan-bottom { padding-top:.8rem; border-top:1px solid var(--border); color:var(--text-muted); } .plan-bottom span:last-child { margin-left:auto; color:var(--text-dim); } .empty { color:var(--text-muted); padding:3rem 0; }
+  @media (max-width:800px) { .filters { top:108px; } .advanced-grid { grid-template-columns:1fr 1fr; } } @media (max-width:520px) { .hero { padding-top:2.5rem; } .hero-stats { gap:1.5rem; } .filters { top:108px; } .search-box { min-height:3.4rem; } .search-box input { font-size:.9rem; } .search-box kbd { display:none; } .advanced-grid { grid-template-columns:1fr; } }
+  @media (prefers-reduced-motion: reduce) { .plan-card.filter-in { animation:none; } }
 </style>

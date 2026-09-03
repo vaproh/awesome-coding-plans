@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://awesome-coding-plans.netlify.app/sitemap-index.xml

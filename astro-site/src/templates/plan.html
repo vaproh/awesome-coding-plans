@@ -6,6 +6,9 @@
   <title>{{TITLE}} | Awesome Coding Plans</title>
   <meta name="description" content="{{TITLE}} AI coding plan: {{PRICE}}. Compare models, quota, access, and supported workflows.">
   <link rel="canonical" href="https://awesome-coding-plans.netlify.app/plans/{{SLUG}}/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://awesome-coding-plans.netlify.app/plans/{{SLUG}}/">
+  <meta property="og:image" content="https://awesome-coding-plans.netlify.app/favicon.svg">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +29,8 @@
   </style>
 </head>
 <body>
-  <header class="topbar"><a href="/" class="brand"><span class="prompt">&gt;_</span>CodingPlans</a><nav aria-label="Primary navigation"><a href="/">Catalog</a><a href="/comparison">Compare</a><a href="/student-discounts">Students</a></nav></header>
+  <header class="topbar"><a href="/" class="brand"><span class="prompt">&gt;_</span>CodingPlans</a><nav aria-label="Primary navigation"><a href="/">Catalog</a><a href="/comparison">Compare</a><a href="/student-discounts">Students</a><a href="/faq">FAQ</a></nav></header>
   <main><article><header class="detail-head"><h1>{{TITLE}}</h1><div class="badges"><span class="badge">{{TYPE}}</span><span class="badge">{{PRICE_RANGE}}</span><span class="badge">{{MODEL_ACCESS}}</span><a class="badge" href="{{WEBSITE}}" target="_blank" rel="noopener noreferrer">Official site ↗</a></div></header><div class="meta"><div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">{{PRICE}}</span></div><div class="meta-item"><span class="meta-label">Quota</span><span class="meta-value">{{QUOTA}}</span></div><div class="meta-item"><span class="meta-label">Quota model</span><span class="meta-value">{{QUOTA_MODEL}}</span></div><div class="meta-item"><span class="meta-label">Best for</span><span class="meta-value">{{BEST_FOR}}</span></div></div><div class="badges">{{TAGS}}</div><div class="content">{{CONTENT}}</div></article></main>
+  <footer class="site-footer"><span>Awesome Coding Plans · verified September 3, 2026</span><span><a href="/llms.txt">For agents</a> · <a href="https://github.com/vaproh/awesome-coding-plans">Source</a></span></footer>
 </body>
 </html>

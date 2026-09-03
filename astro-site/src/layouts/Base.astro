@@ -21,6 +21,8 @@ const currentPath = Astro.url.pathname;
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://awesome-coding-plans.netlify.app${currentPath}`} />
+    <meta property="og:image" content="https://awesome-coding-plans.netlify.app/favicon.svg" />
+    <meta name="twitter:card" content="summary" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -36,11 +38,13 @@ const currentPath = Astro.url.pathname;
           <a href="/" class={currentPath === "/" ? "active" : ""}>Catalog</a>
           <a href="/comparison" class={currentPath.startsWith("/comparison") ? "active" : ""}>Compare</a>
           <a href="/student-discounts" class={currentPath.startsWith("/student-discounts") ? "active" : ""}>Students</a>
+          <a href="/faq" class={currentPath.startsWith("/faq") ? "active" : ""}>FAQ</a>
         </nav>
       </header>
       <main class="main">
         <slot />
       </main>
+      <footer class="site-footer"><span>Awesome Coding Plans · verified September 3, 2026</span><span><a href="/llms.txt">For agents</a> · <a href="https://github.com/vaproh/awesome-coding-plans">Source</a></span></footer>
     </div>
 
     <script>
@@ -103,7 +107,7 @@ const currentPath = Astro.url.pathname;
   }
 
   .app {
-    display: flex;
+    display: block;
     min-height: 100vh;
   }
 
@@ -125,7 +129,6 @@ const currentPath = Astro.url.pathname;
   .topnav { display: flex; gap: .3rem; flex: 1; }
   .topnav a { padding: .45rem .7rem; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid transparent; font-size: .85rem; }
   .topnav a:hover, .topnav a.active { color: var(--accent-light); border-color: var(--accent); }
-  .top-search { width: min(280px, 30vw); }
   /* Main content */
   .main {
     flex: 1;
@@ -133,6 +136,8 @@ const currentPath = Astro.url.pathname;
     margin: 0 auto;
     padding: 2.5rem 0 5rem;
   }
+  .site-footer { width: min(1240px, 92vw); margin: auto; padding: 1.5rem 0 2.5rem; display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--border); color: var(--text-dim); font-size: .75rem; }
+  .site-footer a { color: var(--text-muted); }
 
   /* Animations */
   @keyframes pulse {
@@ -358,8 +363,8 @@ const currentPath = Astro.url.pathname;
   @media (max-width: 768px) {
     .topbar { gap: 1rem; padding: 0 4vw; flex-wrap: wrap; padding-top: .7rem; padding-bottom: .7rem; }
     .topnav { order: 3; flex-basis: 100%; }
-    .top-search { margin-left: auto; width: min(190px, 42vw); }
     .main { padding: 1.5rem 0 4rem; }
+    .site-footer { flex-direction: column; }
     h1 { font-size: 1.75rem; }
     .card-grid {
       grid-template-columns: 1fr;
