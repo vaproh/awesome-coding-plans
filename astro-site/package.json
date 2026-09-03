@@ -9,14 +9,14 @@
     "predev": "node scripts/split-plans.mjs",
     "dev": "astro dev",
     "prebuild": "node scripts/split-plans.mjs",
-    "build": "astro build",
+    "build": "astro build && node scripts/build-static.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^6.4.8",
     "astro-pagefind": "^2.0.1",
-    "marked": "^18.0.11"
+    "marked": "^15.0.0"
   },
   "allowScripts": {
     "esbuild": true

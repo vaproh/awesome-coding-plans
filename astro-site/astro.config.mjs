@@ -5,4 +5,13 @@ export default defineConfig({
   output: "static",
   integrations: [pagefind()],
   site: "https://awesome-coding-plans.netlify.app",
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
+      },
+    },
+  },
 });

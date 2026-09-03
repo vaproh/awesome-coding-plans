@@ -4,13 +4,23 @@ import { getCollection } from "astro:content";
 
 const plans = await getCollection("plans");
 plans.sort((a, b) => {
-  const priceA = parseFloat(a.data.price.replace(/[^0-9.]/g, "")) || 0;
-  const priceB = parseFloat(b.data.price.replace(/[^0-9.]/g, "")) || 0;
-  return priceA - priceB;
+  const getPrice = (p: typeof plans[0]) => {
+    if (p.data.price?.toLowerCase().includes("free")) return 0;
+    const match = p.data.price?.match(/[\d.]+/);
+    return match ? parseFloat(match[0]) : 999;
+  };
+  return getPrice(a) - getPrice(b);
 });
+
+const totalPlans = plans.length;
+const freePlans = plans.filter((p) => p.data.price?.toLowerCase().includes("free")).length;
+const under10 = plans.filter((p) => {
+  const match = p.data.price?.match(/[\d.]+/);
+  return match && parseFloat(match[0]) < 10;
+}).length;
 ---
 
-<Base title="Awesome Coding Plans">
+<Base>
   <div slot="sidebar">
     <a href="/" class="active">Home</a>
     <a href="/comparison">Comparison</a>
@@ -23,13 +33,51 @@ plans.sort((a, b) => {
     }
   </div>
 
-  <h1>Awesome Coding Plans</h1>
-  <p>
-    A curated comparison of AI coding subscriptions and token plans — what models you
-    get, how much it costs, and which tools are supported.
-  </p>
+  <div class="hero">
+    <h1>Awesome Coding Plans</h1>
+    <p>
+      A curated comparison of AI coding subscriptions and token plans — what models you
+      get, how much it costs, and which tools are supported.
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-value">{totalPlans}</div>
+        <div class="stat-label">Plans</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">{freePlans}</div>
+        <div class="stat-label">Free Tiers</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">{under10}</div>
+        <div class="stat-label">Under $10</div>
+      </div>
+    </div>
+  </div>
 
   <h2>All Plans</h2>
+  <div class="card-grid stagger">
+    {
+      plans.map((plan) => {
+        const isFree = plan.data.price?.toLowerCase().includes("free");
+        const isDiscontinued = plan.data.price?.toLowerCase().includes("discontinued");
+        return (
+          <a href={`/plans/${plan.slug}`} class="card plan-card">
+            <div class="plan-header">
+              <h3 class="plan-title">{plan.data.title}</h3>
+              {isFree && <span class="badge badge-free">Free</span>}
+              {isDiscontinued && <span class="badge badge-discontinued">Discontinued</span>}
+              {!isFree && !isDiscontinued && <span class="badge badge-paid">{plan.data.price}</span>}
+            </div>
+            <p class="plan-models">{plan.data.models || "Multiple models"}</p>
+            <p class="plan-bestfor">{plan.data.bestFor}</p>
+          </a>
+        );
+      })
+    }
+  </div>
+
+  <h2>Quick Comparison</h2>
   <table>
     <thead>
       <tr>
@@ -57,3 +105,43 @@ plans.sort((a, b) => {
     </tbody>
   </table>
 </Base>
+
+<style>
+  .plan-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .plan-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .plan-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text);
+  }
+
+  .plan-models {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .plan-bestfor {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .plan-card:hover .plan-title {
+    color: var(--accent-light);
+  }
+</style>

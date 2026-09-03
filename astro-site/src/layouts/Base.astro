@@ -6,6 +6,7 @@ interface Props {
 }
 
 const { title = "Awesome Coding Plans" } = Astro.props;
+const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -14,49 +15,74 @@ const { title = "Awesome Coding Plans" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <script defer src="https://analytics.netlify.com/ns.js"></script>
   </head>
   <body>
-    <div class="layout">
-      <sidebar class="sidebar">
-        <div class="sidebar-header">
-          <a href="/" class="logo">Awesome Coding Plans</a>
+    <div class="app">
+      <sidebar class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+          <a href="/" class="brand">
+            <span class="brand-icon">⚡</span>
+            <span class="brand-text">CodingPlans</span>
+          </a>
         </div>
-        <div class="search-container">
+        <div class="search-wrap">
           <Search />
         </div>
-        <nav class="nav">
+        <nav class="sidenav">
           <slot name="sidebar" />
         </nav>
+        <div class="sidebar-footer">
+          <span>Updated Sep 3, 2026</span>
+        </div>
       </sidebar>
-      <main class="content">
+      <main class="main">
         <slot />
       </main>
     </div>
+
+    <script>
+      // Close sidebar on mobile when clicking a link
+      document.querySelectorAll(".sidenav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.getElementById("sidebar")?.classList.remove("open");
+        });
+      });
+    </script>
   </body>
 </html>
 
 <style is:global>
   :root {
-    --bg: #ffffff;
-    --bg-sidebar: #f8f9fa;
-    --text: #1a1a1a;
-    --text-muted: #6b7280;
-    --border: #e5e7eb;
-    --accent: #2563eb;
-    --accent-light: #dbeafe;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0f172a;
-      --bg-sidebar: #1e293b;
-      --text: #f1f5f9;
-      --text-muted: #94a3b8;
-      --border: #334155;
-      --accent: #60a5fa;
-      --accent-light: #1e3a5f;
-    }
+    --bg: #0a0a0b;
+    --bg-elevated: #111114;
+    --bg-card: #16161a;
+    --bg-card-hover: #1c1c22;
+    --border: #2a2a32;
+    --border-light: #3a3a44;
+    --text: #f0f0f2;
+    --text-muted: #8b8b96;
+    --text-dim: #5a5a66;
+    --accent: #6366f1;
+    --accent-light: #818cf8;
+    --accent-glow: rgba(99, 102, 241, 0.15);
+    --green: #22c55e;
+    --green-glow: rgba(34, 197, 94, 0.15);
+    --orange: #f59e0b;
+    --orange-glow: rgba(245, 158, 11, 0.15);
+    --red: #ef4444;
+    --purple: #a855f7;
+    --purple-glow: rgba(168, 85, 247, 0.15);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --radius-lg: 16px;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 48px rgba(0, 0, 0, 0.4);
+    --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   * {
@@ -65,156 +91,388 @@ const { title = "Awesome Coding Plans" } = Astro.props;
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
 
-  .layout {
+  .app {
     display: flex;
     min-height: 100vh;
   }
 
+  /* Sidebar */
   .sidebar {
     width: 280px;
-    background: var(--bg-sidebar);
+    background: var(--bg-elevated);
     border-right: 1px solid var(--border);
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
     position: fixed;
     height: 100vh;
     overflow-y: auto;
-  }
-
-  .sidebar-header {
-    margin-bottom: 1.5rem;
-  }
-
-  .logo {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text);
-    text-decoration: none;
-  }
-
-  .search-container {
-    margin-bottom: 1.5rem;
-  }
-
-  .nav {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    z-index: 100;
+    transition: transform var(--transition-slow);
   }
 
-  .nav a {
+  .sidebar-brand {
+    margin-bottom: 1.5rem;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  .brand-icon {
+    font-size: 1.5rem;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  .brand-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .search-wrap {
+    margin-bottom: 1.5rem;
+  }
+
+  .sidenav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    flex: 1;
+  }
+
+  .sidenav a {
     color: var(--text-muted);
     text-decoration: none;
-    padding: 0.4rem 0.75rem;
-    border-radius: 6px;
-    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all var(--transition);
+    border: 1px solid transparent;
   }
 
-  .nav a:hover,
-  .nav a.active {
-    background: var(--accent-light);
-    color: var(--accent);
+  .sidenav a:hover {
+    background: var(--bg-card);
+    color: var(--text);
+    border-color: var(--border);
   }
 
-  .nav .section-title {
-    font-size: 0.7rem;
-    font-weight: 600;
+  .sidenav a.active {
+    background: var(--accent-glow);
+    color: var(--accent-light);
+    border-color: var(--accent);
+  }
+
+  .sidenav .section-title {
+    font-size: 0.65rem;
+    font-weight: 700;
     text-transform: uppercase;
-    color: var(--text-muted);
-    margin-top: 1rem;
-    margin-bottom: 0.25rem;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    margin-top: 1.25rem;
+    margin-bottom: 0.35rem;
     padding-left: 0.75rem;
   }
 
-  .content {
-    margin-left: 280px;
-    padding: 2rem 3rem;
-    max-width: 900px;
+  .sidebar-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.7rem;
+    color: var(--text-dim);
   }
 
+  /* Main content */
+  .main {
+    margin-left: 280px;
+    flex: 1;
+    padding: 2.5rem 3rem;
+    max-width: 1100px;
+  }
+
+  /* Animations */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px var(--accent-glow); }
+    50% { box-shadow: 0 0 40px var(--accent-glow); }
+  }
+
+  /* Stagger animation for cards */
+  .stagger > * {
+    animation: fadeInUp 0.4s ease-out both;
+  }
+  .stagger > *:nth-child(1) { animation-delay: 0.02s; }
+  .stagger > *:nth-child(2) { animation-delay: 0.04s; }
+  .stagger > *:nth-child(3) { animation-delay: 0.06s; }
+  .stagger > *:nth-child(4) { animation-delay: 0.08s; }
+  .stagger > *:nth-child(5) { animation-delay: 0.1s; }
+  .stagger > *:nth-child(6) { animation-delay: 0.12s; }
+  .stagger > *:nth-child(7) { animation-delay: 0.14s; }
+  .stagger > *:nth-child(8) { animation-delay: 0.16s; }
+  .stagger > *:nth-child(9) { animation-delay: 0.18s; }
+  .stagger > *:nth-child(10) { animation-delay: 0.2s; }
+
+  /* Typography */
   h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
   }
 
   h2 {
     font-size: 1.5rem;
-    margin: 2rem 0 1rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    letter-spacing: -0.02em;
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     margin: 1.5rem 0 0.75rem;
   }
 
   p {
     margin-bottom: 1rem;
+    color: var(--text-muted);
   }
 
+  a {
+    color: var(--accent-light);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+
+  /* Tables */
   table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     margin: 1rem 0;
-    font-size: 0.875rem;
+    font-size: 0.85rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
   }
 
-  th,
-  td {
-    padding: 0.6rem 0.75rem;
+  th, td {
+    padding: 0.75rem 1rem;
     text-align: left;
-    border-bottom: 1px solid var(--border);
   }
 
   th {
     font-weight: 600;
-    background: var(--bg-sidebar);
-  }
-
-  a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  code {
-    background: var(--bg-sidebar);
-    padding: 0.15rem 0.4rem;
-    border-radius: 4px;
-    font-size: 0.85em;
-  }
-
-  blockquote {
-    border-left: 3px solid var(--accent);
-    padding-left: 1rem;
-    margin: 1rem 0;
+    background: var(--bg-card);
     color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border);
   }
 
-  ul,
-  ol {
-    margin: 0.5rem 0 1rem 1.5rem;
+  td {
+    border-bottom: 1px solid var(--border);
+    transition: background var(--transition);
   }
 
-  li {
-    margin-bottom: 0.25rem;
+  tr:last-child td {
+    border-bottom: none;
   }
 
+  tbody tr:hover td {
+    background: var(--bg-card);
+  }
+
+  /* Cards */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: all var(--transition);
+  }
+
+  .card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  /* Badges */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .badge-free {
+    background: var(--green-glow);
+    color: var(--green);
+  }
+
+  .badge-paid {
+    background: var(--accent-glow);
+    color: var(--accent-light);
+  }
+
+  .badge-discontinued {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--red);
+  }
+
+  /* Hero */
+  .hero {
+    padding: 2rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .hero h1 {
+    background: linear-gradient(135deg, var(--text) 0%, var(--accent-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--accent-light);
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Responsive */
   @media (max-width: 768px) {
     .sidebar {
-      display: none;
+      transform: translateX(-100%);
     }
-    .content {
+    .sidebar.open {
+      transform: translateX(0);
+    }
+    .main {
       margin-left: 0;
       padding: 1.5rem;
     }
+    h1 { font-size: 1.75rem; }
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-stats {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  /* Pagefind overrides */
+  .pagefind-ui__search-input {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-sm) !important;
+    color: var(--text) !important;
+    padding: 0.6rem 0.75rem !important;
+  }
+
+  .pagefind-ui__search-input:focus {
+    border-color: var(--accent) !important;
+    outline: none !important;
+  }
+
+  .pagefind-ui__results {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius) !important;
+  }
+
+  .pagefind-ui__result-title {
+    color: var(--text) !important;
+  }
+
+  .pagefind-ui__result-excerpt {
+    color: var(--text-muted) !important;
   }
 </style>
