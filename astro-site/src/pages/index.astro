@@ -52,7 +52,7 @@ const countType = (type: string) => plans.filter((plan) => plan.data.type === ty
     </div>
     <div class="card-grid" id="plan-grid">
       {sortedPlans.map((plan, index) => (
-        <a class="card plan-card reveal" data-title={plan.data.title.toLowerCase()} data-type={plan.data.type} data-price={plan.data.priceRange} data-quota={plan.data.quotaModel} data-access={plan.data.modelAccess} data-tags={[...plan.data.bestForTags, ...plan.data.flags].join(" ")} href={`/plans/${plan.slug}`} style={`--delay:${Math.min(index, 12) * 35}ms`}>
+        <a class="card plan-card reveal" data-title={plan.data.title.toLowerCase()} data-type={plan.data.type} data-price={plan.data.priceRange} data-quota={plan.data.quotaModel} data-access={plan.data.modelAccess} data-tags={[...plan.data.bestForTags, ...plan.data.flags].join(" ")} href={`/plans/${plan.slug}/`} style={`--delay:${Math.min(index, 12) * 35}ms`}>
           <div class="plan-top"><span class={`type-dot type-${plan.data.type.toLowerCase()}`}></span><span>{plan.data.type === "Free" ? "Free tier" : plan.data.type === "Freemium" ? "Free + paid" : "Paid only"}</span><span class="price-band">{plan.data.priceRange}</span></div>
           <h3>{plan.data.title}</h3>
           <p>{plan.data.bestFor || "AI coding workflows"}</p>

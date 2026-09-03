@@ -45,7 +45,7 @@ const navLinks = files
   })
   .sort((a, b) => a.title.localeCompare(b.title));
 
-const navHtml = navLinks.map((l) => `<a href="/plans/${l.slug}">${l.title}</a>`).join("\n      ");
+const navHtml = navLinks.map((l) => `<a href="/plans/${l.slug}/">${l.title}</a>`).join("\n      ");
 
 let generated = 0;
 const catalog = [];
@@ -74,7 +74,7 @@ for (const file of files) {
   const pageNav = navLinks
     .map(
       (l) =>
-        `<a href="/plans/${l.slug}" class="${l.slug === slug ? "active" : ""}">${l.title}</a>`
+        `<a href="/plans/${l.slug}/" class="${l.slug === slug ? "active" : ""}">${l.title}</a>`
     )
     .join("\n      ");
 

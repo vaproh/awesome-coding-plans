@@ -15,11 +15,11 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script defer src="https://analytics.netlify.com/ns.js"></script>
   <style>
-    :root { --bg:#171412; --card:#26201c; --border:#493a31; --text:#f4eadf; --muted:#bca99a; --dim:#816f62; --accent:#e07a5f; --accent-soft:rgba(224,122,95,.16); --blue:#78a6c8; }
+    :root { --bg:#171412; --card:#26201c; --border:#493a31; --text:#f4eadf; --muted:#bca99a; --dim:#816f62; --accent:#e07a5f; --accent-soft:rgba(224,122,95,.16); --free:#c9bdb1; }
     * { box-sizing:border-box; } html { scroll-behavior:smooth; } body { margin:0; color:var(--text); background:var(--bg); font-family:"Space Grotesk",sans-serif; line-height:1.6; }
     .topbar { position:sticky; top:0; z-index:2; display:flex; align-items:center; gap:2rem; min-height:68px; padding:0 4vw; background:rgba(23,20,18,.94); border-bottom:1px solid var(--border); backdrop-filter:blur(14px); }
     .brand { color:var(--text); text-decoration:none; font-weight:700; white-space:nowrap; } .prompt { color:var(--accent); font:500 1.2rem "DM Mono",monospace; margin-right:.55rem; }
-    nav { display:flex; gap:.3rem; flex:1; } nav a { color:var(--muted); text-decoration:none; padding:.45rem .7rem; font-size:.85rem; } nav a:hover { color:var(--accent); }
+    nav { display:flex; gap:.3rem; flex:1; } nav a { color:var(--muted); text-decoration:none; padding:.45rem .7rem; font-size:.85rem; } nav a:hover { color:var(--accent); } .nav-meta { display:flex; align-items:center; gap:1rem; color:var(--dim); font:500 .68rem "DM Mono",monospace; white-space:nowrap; } .nav-meta a { color:var(--muted); text-decoration:none; } .nav-meta a:hover { color:var(--accent); } .nav-meta i { display:inline-block; width:6px; height:6px; margin-right:.25rem; border-radius:50%; background:var(--free); }
     main { width:min(900px,92vw); margin:auto; padding:3rem 0 5rem; } .detail-head { border-bottom:1px solid var(--border); padding-bottom:1.5rem; margin-bottom:2rem; }
     h1 { margin:0 0 .8rem; font-size:clamp(2rem,5vw,3.2rem); line-height:1.1; } h2 { margin:2.5rem 0 1rem; } h3 { margin:1.5rem 0 .6rem; } p { color:var(--muted); }
     a { color:var(--accent); } .badges { display:flex; gap:.45rem; flex-wrap:wrap; } .badge { display:inline-block; padding:.25rem .6rem; border-radius:999px; background:var(--accent-soft); color:var(--accent); font:500 .72rem "DM Mono",monospace; } .badge.orange { color:#d6a15d; background:rgba(214,161,93,.13); }
@@ -29,7 +29,7 @@
   </style>
 </head>
 <body>
-  <header class="topbar"><a href="/" class="brand"><span class="prompt">&gt;_</span>CodingPlans</a><nav aria-label="Primary navigation"><a href="/">Catalog</a><a href="/comparison">Compare</a><a href="/student-discounts">Students</a><a href="/faq">FAQ</a></nav></header>
+  <header class="topbar"><a href="/" class="brand"><span class="prompt">&gt;_</span>CodingPlans</a><nav aria-label="Primary navigation"><a href="/">Catalog</a><a href="/comparison">Compare</a><a href="/student-discounts">Students</a><a href="/faq">FAQ</a></nav><div class="nav-meta"><span><i></i> 30 plans</span><a href="/plans.json">JSON</a><a href="https://github.com/vaproh/awesome-coding-plans">GitHub ↗</a></div></header>
   <main><article><header class="detail-head"><h1>{{TITLE}}</h1><div class="badges"><span class="badge">{{TYPE}}</span><span class="badge">{{PRICE_RANGE}}</span><span class="badge">{{MODEL_ACCESS}}</span><a class="badge" href="{{WEBSITE}}" target="_blank" rel="noopener noreferrer">Official site ↗</a></div></header><div class="meta"><div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">{{PRICE}}</span></div><div class="meta-item"><span class="meta-label">Quota</span><span class="meta-value">{{QUOTA}}</span></div><div class="meta-item"><span class="meta-label">Quota model</span><span class="meta-value">{{QUOTA_MODEL}}</span></div><div class="meta-item"><span class="meta-label">Best for</span><span class="meta-value">{{BEST_FOR}}</span></div></div><div class="badges">{{TAGS}}</div><div class="content">{{CONTENT}}</div></article></main>
   <footer class="site-footer"><span>Awesome Coding Plans · verified September 3, 2026</span><span><a href="/llms.txt">For agents</a> · <a href="https://github.com/vaproh/awesome-coding-plans">Source</a></span></footer>
 </body>

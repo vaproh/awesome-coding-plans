@@ -40,6 +40,7 @@ const currentPath = Astro.url.pathname;
           <a href="/student-discounts" class={currentPath.startsWith("/student-discounts") ? "active" : ""}>Students</a>
           <a href="/faq" class={currentPath.startsWith("/faq") ? "active" : ""}>FAQ</a>
         </nav>
+        <div class="nav-meta"><span><i></i> 30 plans</span><a href="/plans.json">JSON</a><a class="source-link" href="https://github.com/vaproh/awesome-coding-plans">GitHub ↗</a></div>
       </header>
       <main class="main">
         <slot />
@@ -74,8 +75,8 @@ const currentPath = Astro.url.pathname;
     --accent: #e07a5f;
     --accent-light: #f2a38e;
     --accent-glow: rgba(224, 122, 95, 0.16);
-    --free: #78a6c8;
-    --free-glow: rgba(120, 166, 200, 0.16);
+    --free: #c9bdb1;
+    --free-glow: rgba(201, 189, 177, 0.14);
     --orange: #f59e0b;
     --orange-glow: rgba(245, 158, 11, 0.15);
     --red: #ef4444;
@@ -129,6 +130,10 @@ const currentPath = Astro.url.pathname;
   .topnav { display: flex; gap: .3rem; flex: 1; }
   .topnav a { padding: .45rem .7rem; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid transparent; font-size: .85rem; }
   .topnav a:hover, .topnav a.active { color: var(--accent-light); border-color: var(--accent); }
+  .nav-meta { display:flex; align-items:center; gap:1rem; color:var(--text-dim); font:500 .68rem "DM Mono",monospace; white-space:nowrap; }
+  .nav-meta a { color:var(--text-muted); text-decoration:none; }
+  .nav-meta a:hover { color:var(--accent); }
+  .nav-meta i { display:inline-block; width:6px; height:6px; margin-right:.25rem; border-radius:50%; background:var(--free); }
   /* Main content */
   .main {
     flex: 1;
@@ -363,6 +368,7 @@ const currentPath = Astro.url.pathname;
   @media (max-width: 768px) {
     .topbar { gap: 1rem; padding: 0 4vw; flex-wrap: wrap; padding-top: .7rem; padding-bottom: .7rem; }
     .topnav { order: 3; flex-basis: 100%; }
+    .nav-meta { margin-left:auto; }
     .main { padding: 1.5rem 0 4rem; }
     .site-footer { flex-direction: column; }
     h1 { font-size: 1.75rem; }

@@ -4,3 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/plans/:slug"
+  to = "/plans/:slug/"
+  status = 301
