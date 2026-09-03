@@ -1,3 +1,13 @@
+---
+title: "GLM Coding Plan"
+type: "Paid"
+priceRange: "Mid"
+quotaModel: "Mixed"
+bestForTags: ["solo", "cli", "agent", "heavy"]
+modelAccess: "Single"
+flags: ["multimodal"]
+---
+
 # Glm coding plan
 
 
@@ -34,4 +44,3 @@ Zhipu AI's subscription for coding agents. All tiers get the same flagship model
 ZCode, Claude Code, Cline, OpenCode, Goose, OpenClaw, Roo Code, Kilo Code, and 20+ more.
 
 ---
-

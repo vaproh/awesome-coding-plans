@@ -1,3 +1,13 @@
+---
+title: "NVIDIA NIM"
+type: "Free"
+priceRange: "Free"
+quotaModel: "Requests"
+bestForTags: ["solo", "api", "light"]
+modelAccess: "Multi-model"
+flags: ["open-source", "byok"]
+---
+
 # NVIDIA NIM
 
 **Website:** [build.nvidia.com](https://build.nvidia.com)

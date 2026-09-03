@@ -1,3 +1,13 @@
+---
+title: "Kimi Code"
+type: "Freemium"
+priceRange: "Mid"
+quotaModel: "Mixed"
+bestForTags: ["solo", "agent", "cli", "heavy"]
+modelAccess: "Single"
+flags: ["multimodal"]
+---
+
 # Kimi code
 
 
@@ -33,4 +43,3 @@ Moonshot AI's coding subscription featuring the K3 flagship model (2.8T paramete
 - **BYOK** support for third-party tools
 
 ---
-

@@ -5,6 +5,12 @@ models: ""
 quota: ""
 website: "https://antigravity.google/"
 bestFor: ""
+type: "Free"
+priceRange: "Free"
+quotaModel: "Mixed"
+bestForTags: ["agent", "ide", "student"]
+modelAccess: "Multi-model"
+flags: ["multimodal"]
 ---
 
 # Google Antigravity

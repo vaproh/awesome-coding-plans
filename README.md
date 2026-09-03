@@ -9,6 +9,8 @@
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3fec95af-0feb-49b4-b424-f2a98b4d2586/deploy-status)](https://app.netlify.com/projects/awesome-coding-plans/deploys)
 
+Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Freemium` status, price band, quota model, model access, best-for tags, and flags such as BYOK, offline, multimodal, and student discounts. The [website](https://awesome-coding-plans.netlify.app) uses the same metadata for filtering.
+
 ---
 
 ## All Plans

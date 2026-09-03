@@ -3,9 +3,10 @@ import Search from "astro-pagefind/components/Search.astro";
 
 interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title = "Awesome Coding Plans" } = Astro.props;
+const { title = "Awesome Coding Plans", description = "Compare AI coding plans by price, models, quota, tools, and student discounts." } = Astro.props;
 const currentPath = Astro.url.pathname;
 ---
 
@@ -15,41 +16,43 @@ const currentPath = Astro.url.pathname;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={`https://awesome-coding-plans.netlify.app${currentPath}`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://awesome-coding-plans.netlify.app${currentPath}`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script defer src="https://analytics.netlify.com/ns.js"></script>
+    <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "WebSite", name: "Awesome Coding Plans", url: "https://awesome-coding-plans.netlify.app", description })}></script>
   </head>
   <body>
     <div class="app">
-      <sidebar class="sidebar" id="sidebar">
-        <div class="sidebar-brand">
-          <a href="/" class="brand">
-            <span class="brand-icon">⚡</span>
-            <span class="brand-text">CodingPlans</span>
-          </a>
-        </div>
-        <div class="search-wrap">
-          <Search />
-        </div>
-        <nav class="sidenav">
-          <slot name="sidebar" />
+      <header class="topbar">
+        <a href="/" class="brand"><span class="brand-prompt">&gt;_</span><span>CodingPlans</span></a>
+        <nav class="topnav" aria-label="Primary navigation">
+          <a href="/" class={currentPath === "/" ? "active" : ""}>Catalog</a>
+          <a href="/comparison" class={currentPath.startsWith("/comparison") ? "active" : ""}>Compare</a>
+          <a href="/student-discounts" class={currentPath.startsWith("/student-discounts") ? "active" : ""}>Students</a>
         </nav>
-        <div class="sidebar-footer">
-          <span>Updated Sep 3, 2026</span>
-        </div>
-      </sidebar>
+        <div class="top-search"><Search /></div>
+      </header>
       <main class="main">
         <slot />
       </main>
     </div>
 
     <script>
-      // Close sidebar on mobile when clicking a link
-      document.querySelectorAll(".sidenav a").forEach((link) => {
-        link.addEventListener("click", () => {
-          document.getElementById("sidebar")?.classList.remove("open");
-        });
+      const observer = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add("is-visible")), { threshold: 0.08 });
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+      document.querySelectorAll("[data-count]").forEach((element) => {
+        const target = Number(element.getAttribute("data-count"));
+        const update = () => { element.textContent = String(Math.min(target, Math.ceil(Number(element.textContent || 0) + target / 12))); if (Number(element.textContent) < target) requestAnimationFrame(update); };
+        element.textContent = "0";
+        update();
       });
     </script>
   </body>
@@ -57,18 +60,18 @@ const currentPath = Astro.url.pathname;
 
 <style is:global>
   :root {
-    --bg: #0a0a0b;
-    --bg-elevated: #111114;
-    --bg-card: #16161a;
-    --bg-card-hover: #1c1c22;
-    --border: #2a2a32;
-    --border-light: #3a3a44;
-    --text: #f0f0f2;
-    --text-muted: #8b8b96;
-    --text-dim: #5a5a66;
-    --accent: #6366f1;
-    --accent-light: #818cf8;
-    --accent-glow: rgba(99, 102, 241, 0.15);
+    --bg: #07100d;
+    --bg-elevated: #0b1712;
+    --bg-card: #0e1d16;
+    --bg-card-hover: #13291e;
+    --border: #1c3a29;
+    --border-light: #2b573b;
+    --text: #e4f5e8;
+    --text-muted: #8dad96;
+    --text-dim: #557160;
+    --accent: #4ade80;
+    --accent-light: #86efac;
+    --accent-glow: rgba(74, 222, 128, 0.14);
     --green: #22c55e;
     --green-glow: rgba(34, 197, 94, 0.15);
     --orange: #f59e0b;
@@ -96,7 +99,7 @@ const currentPath = Astro.url.pathname;
   }
 
   body {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
@@ -108,8 +111,27 @@ const currentPath = Astro.url.pathname;
     min-height: 100vh;
   }
 
-  /* Sidebar */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 4vw;
+    background: rgba(7, 16, 13, 0.92);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+  }
+  .brand { display: flex; align-items: center; gap: .55rem; color: var(--text); font-weight: 700; text-decoration: none; white-space: nowrap; }
+  .brand-prompt { color: var(--accent); font-family: "DM Mono", monospace; font-size: 1.25rem; }
+  .topnav { display: flex; gap: .3rem; flex: 1; }
+  .topnav a { padding: .45rem .7rem; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid transparent; font-size: .85rem; }
+  .topnav a:hover, .topnav a.active { color: var(--accent-light); border-color: var(--accent); }
+  .top-search { width: min(280px, 30vw); }
   .sidebar {
+    display: none;
     width: 280px;
     background: var(--bg-elevated);
     border-right: 1px solid var(--border);
@@ -121,29 +143,6 @@ const currentPath = Astro.url.pathname;
     flex-direction: column;
     z-index: 100;
     transition: transform var(--transition-slow);
-  }
-
-  .sidebar-brand {
-    margin-bottom: 1.5rem;
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    text-decoration: none;
-    color: var(--text);
-  }
-
-  .brand-icon {
-    font-size: 1.5rem;
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  .brand-text {
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
   }
 
   .search-wrap {
@@ -201,10 +200,10 @@ const currentPath = Astro.url.pathname;
 
   /* Main content */
   .main {
-    margin-left: 280px;
     flex: 1;
-    padding: 2.5rem 3rem;
-    max-width: 1100px;
+    width: min(1240px, 92vw);
+    margin: 0 auto;
+    padding: 2.5rem 0 5rem;
   }
 
   /* Animations */
@@ -246,9 +245,9 @@ const currentPath = Astro.url.pathname;
   }
 
   /* Stagger animation for cards */
-  .stagger > * {
-    animation: fadeInUp 0.4s ease-out both;
-  }
+  .stagger > * { animation: fadeInUp 0.4s ease-out both; }
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
+  .reveal.is-visible { opacity: 1; transform: none; }
   .stagger > *:nth-child(1) { animation-delay: 0.02s; }
   .stagger > *:nth-child(2) { animation-delay: 0.04s; }
   .stagger > *:nth-child(3) { animation-delay: 0.06s; }
@@ -382,6 +381,7 @@ const currentPath = Astro.url.pathname;
     background: var(--accent-glow);
     color: var(--accent-light);
   }
+  .badge-freemium { background: var(--orange-glow); color: var(--orange); }
 
   .badge-discontinued {
     background: rgba(239, 68, 68, 0.15);
@@ -428,16 +428,10 @@ const currentPath = Astro.url.pathname;
 
   /* Responsive */
   @media (max-width: 768px) {
-    .sidebar {
-      transform: translateX(-100%);
-    }
-    .sidebar.open {
-      transform: translateX(0);
-    }
-    .main {
-      margin-left: 0;
-      padding: 1.5rem;
-    }
+    .topbar { gap: 1rem; padding: 0 4vw; flex-wrap: wrap; padding-top: .7rem; padding-bottom: .7rem; }
+    .topnav { order: 3; flex-basis: 100%; }
+    .top-search { margin-left: auto; width: min(190px, 42vw); }
+    .main { padding: 1.5rem 0 4rem; }
     h1 { font-size: 1.75rem; }
     .card-grid {
       grid-template-columns: 1fr;

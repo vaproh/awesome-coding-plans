@@ -1,3 +1,13 @@
+---
+title: "Cursor"
+type: "Paid"
+priceRange: "Premium"
+quotaModel: "Mixed"
+bestForTags: ["solo", "team", "ide", "agent"]
+modelAccess: "Multi-model"
+flags: ["multimodal", "student-discount"]
+---
+
 # Cursor
 
 
@@ -40,4 +50,3 @@ All frontier models — Claude, GPT, Gemini, etc. Pro includes $20 of third-part
 - **Monthly pools don't roll over**
 
 ---
-

@@ -1,3 +1,13 @@
+---
+title: "Claude Plans"
+type: "Paid"
+priceRange: "Mid"
+quotaModel: "Mixed"
+bestForTags: ["solo", "team", "agent", "heavy"]
+modelAccess: "Frontier"
+flags: ["multimodal", "student-discount"]
+---
+
 # Claude plans
 
 
@@ -31,4 +41,3 @@ Anthropic's official subscription tiers with access to Claude models across prod
 - **Extended thinking** for complex work
 
 ---
-

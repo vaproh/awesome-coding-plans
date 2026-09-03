@@ -1,3 +1,13 @@
+---
+title: "OpenRouter"
+type: "Freemium"
+priceRange: "Free"
+quotaModel: "Requests"
+bestForTags: ["solo", "api", "light"]
+modelAccess: "Aggregator"
+flags: ["byok", "multimodal"]
+---
+
 # OpenRouter
 
 **Website:** [openrouter.ai](https://openrouter.ai)

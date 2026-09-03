@@ -5,6 +5,12 @@ models: ""
 quota: ""
 website: "https://openrouter.ai"
 bestFor: ""
+type: "Freemium"
+priceRange: "Free"
+quotaModel: "Requests"
+bestForTags: ["solo", "api", "light"]
+modelAccess: "Aggregator"
+flags: ["byok", "multimodal"]
 ---
 
 # OpenRouter

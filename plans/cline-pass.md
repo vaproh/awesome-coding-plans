@@ -1,3 +1,13 @@
+---
+title: "Cline Pass"
+type: "Paid"
+priceRange: "Budget"
+quotaModel: "Mixed"
+bestForTags: ["solo", "agent", "ide"]
+modelAccess: "Multi-model"
+flags: ["open-source", "byok"]
+---
+
 # Cline pass
 
 
@@ -36,4 +46,3 @@ Subscription exclusively for the Cline coding agent. 2-5x standard API rate limi
 - **Additional processing fee may apply** (on top of $9.99)
 
 ---
-

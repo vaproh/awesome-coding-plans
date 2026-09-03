@@ -1,3 +1,13 @@
+---
+title: "Augment Code"
+type: "Paid"
+priceRange: "Enterprise"
+quotaModel: "Mixed"
+bestForTags: ["team", "enterprise", "ide", "heavy"]
+modelAccess: "Frontier"
+flags: ["multimodal"]
+---
+
 # Augment Code
 
 **Website:** [augmentcode.com/pricing](https://augmentcode.com/pricing)

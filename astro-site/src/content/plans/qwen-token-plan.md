@@ -1,10 +1,16 @@
 ---
-title: "Qwen token plan"
+title: "Qwen Token Plan"
 price: "$6/mo"
 models: ""
 quota: ""
 website: "https://docs.qwencloud.com/coding-plan/overview"
 bestFor: ""
+type: "Paid"
+priceRange: "Budget"
+quotaModel: "Credits"
+bestForTags: ["solo", "api", "light"]
+modelAccess: "Multi-model"
+flags: ["open-source", "multimodal"]
 ---
 
 # Qwen token plan
@@ -39,4 +45,3 @@ Alibaba Cloud's credit-based plan for AI coding. Access to Qwen, DeepSeek, GLM, 
 OpenClaw, Claude Code, OpenCode, Cursor, Codex, Qwen Code, QwenPaw, Cherry Studio, Chatbox, Cline, Qoder, Lingma, Kilo CLI, Hermes Agent.
 
 ---
-

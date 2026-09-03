@@ -1,3 +1,13 @@
+---
+title: "Chutes"
+type: "Paid"
+priceRange: "Budget"
+quotaModel: "Mixed"
+bestForTags: ["solo", "api", "heavy"]
+modelAccess: "Multi-model"
+flags: ["open-source", "byok"]
+---
+
 # Chutes
 
 
@@ -30,4 +40,3 @@ Decentralized AI inference with optional subscription tiers. Known for cheapest 
 - **Model lineup changes** — flagships pulled from Base tier in 2026
 
 ---
-

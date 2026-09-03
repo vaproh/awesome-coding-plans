@@ -1,3 +1,13 @@
+---
+title: "GitHub Copilot"
+type: "Freemium"
+priceRange: "Mid"
+quotaModel: "Credits"
+bestForTags: ["solo", "team", "ide", "student"]
+modelAccess: "Multi-model"
+flags: ["student-discount", "multimodal"]
+---
+
 # Github copilot
 
 
@@ -36,4 +46,3 @@ The industry-standard AI coding assistant with the broadest model catalog. Uses 
 - **Audit logs** on Pro+
 
 ---
-

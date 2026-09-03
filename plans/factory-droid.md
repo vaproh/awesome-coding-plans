@@ -1,3 +1,13 @@
+---
+title: "Factory Droid"
+type: "Paid"
+priceRange: "Premium"
+quotaModel: "Mixed"
+bestForTags: ["team", "enterprise", "agent", "heavy"]
+modelAccess: "Multi-model"
+flags: ["multimodal"]
+---
+
 # Factory Droid
 
 **Website:** [factory.ai/pricing](https://factory.ai/pricing)

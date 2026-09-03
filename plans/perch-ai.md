@@ -1,3 +1,13 @@
+---
+title: "Perch AI"
+type: "Paid"
+priceRange: "Mid"
+quotaModel: "Mixed"
+bestForTags: ["solo", "api", "heavy"]
+modelAccess: "Aggregator"
+flags: ["byok", "open-source"]
+---
+
 # Perch ai
 
 
@@ -29,4 +39,3 @@ Model-agnostic AI assistant with smart routing ("Roost"). Every premium model fo
 - **Web, Desktop, CLI** under one account
 
 ---
-

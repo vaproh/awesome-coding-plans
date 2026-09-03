@@ -1,3 +1,13 @@
+---
+title: "Synthetic"
+type: "Paid"
+priceRange: "Premium"
+quotaModel: "Requests"
+bestForTags: ["solo", "api", "heavy"]
+modelAccess: "Multi-model"
+flags: ["open-source", "offline"]
+---
+
 # Synthetic
 
 
@@ -33,4 +43,3 @@ Flat-fee subscription for open-weight models on private infrastructure. No train
 - **Codebase indexing** included (via Nomic embeddings)
 
 ---
-

@@ -1,10 +1,16 @@
 ---
-title: "Mistral vibe"
+title: "Mistral Vibe"
 price: "Free"
 models: ""
 quota: ""
 website: "https://mistral.ai/pricing/"
 bestFor: ""
+type: "Paid"
+priceRange: "Mid"
+quotaModel: "Sessions"
+bestForTags: ["solo", "cli", "ide"]
+modelAccess: "Frontier"
+flags: ["open-source"]
 ---
 
 # Mistral vibe
@@ -45,4 +51,3 @@ Mistral's unified AI agent for work and code. Formerly "Le Chat."
 - **Fine-tuning** available for Enterprise
 
 ---
-

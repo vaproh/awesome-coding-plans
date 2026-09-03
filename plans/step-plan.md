@@ -1,3 +1,13 @@
+---
+title: "Step Plan"
+type: "Paid"
+priceRange: "Budget"
+quotaModel: "Credits"
+bestForTags: ["solo", "multimodal", "ide"]
+modelAccess: "Single"
+flags: ["multimodal"]
+---
+
 # Step plan
 
 
@@ -37,4 +47,3 @@ StepFun's subscription for flagship models with smart routing. Credit-based mont
 - **Works with:** OpenClaw, Claude Code, Cline, Kilo Code, Roo Code, Trae, Cursor
 
 ---
-

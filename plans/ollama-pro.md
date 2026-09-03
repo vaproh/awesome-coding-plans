@@ -1,3 +1,13 @@
+---
+title: "Ollama Pro"
+type: "Freemium"
+priceRange: "Premium"
+quotaModel: "Mixed"
+bestForTags: ["solo", "team", "api", "heavy"]
+modelAccess: "Multi-model"
+flags: ["offline", "open-source", "multimodal"]
+---
+
 # Ollama Pro
 
 **Website:** [ollama.com/pricing](https://ollama.com/pricing)

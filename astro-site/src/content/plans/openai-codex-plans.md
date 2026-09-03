@@ -1,10 +1,16 @@
 ---
-title: "Openai codex plans"
+title: "OpenAI Codex Plans"
 price: "$8/mo"
 models: ""
 quota: ""
 website: "https://openai.com/pricing"
 bestFor: ""
+type: "Paid"
+priceRange: "Premium"
+quotaModel: "Mixed"
+bestForTags: ["solo", "agent", "ide", "heavy"]
+modelAccess: "Frontier"
+flags: ["multimodal", "student-discount"]
 ---
 
 # Openai codex plans
@@ -40,4 +46,3 @@ OpenAI's subscription tiers for ChatGPT with Codex agent access.
 - **Maximum memory and context** (Pro)
 
 ---
-

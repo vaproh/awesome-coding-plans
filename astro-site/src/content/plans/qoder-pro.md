@@ -5,6 +5,12 @@ models: ""
 quota: ""
 website: "https://qoder.com/pricing"
 bestFor: ""
+type: "Paid"
+priceRange: "Premium"
+quotaModel: "Credits"
+bestForTags: ["solo", "agent", "ide", "heavy"]
+modelAccess: "Single"
+flags: ["multimodal"]
 ---
 
 # Qoder Pro

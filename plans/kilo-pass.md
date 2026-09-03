@@ -1,3 +1,13 @@
+---
+title: "Kilo Code"
+type: "Freemium"
+priceRange: "Mid"
+quotaModel: "Mixed"
+bestForTags: ["solo", "team", "ide", "agent"]
+modelAccess: "Aggregator"
+flags: ["open-source", "byok", "offline"]
+---
+
 # Kilo Code
 
 **Website:** [kilo.ai/pricing](https://kilo.ai/pricing)

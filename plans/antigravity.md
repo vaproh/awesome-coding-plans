@@ -1,3 +1,13 @@
+---
+title: "Google Antigravity"
+type: "Free"
+priceRange: "Free"
+quotaModel: "Mixed"
+bestForTags: ["agent", "ide", "student"]
+modelAccess: "Multi-model"
+flags: ["multimodal"]
+---
+
 # Google Antigravity
 
 **Website:** [antigravity.google](https://antigravity.google/)

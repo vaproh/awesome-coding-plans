@@ -1,10 +1,16 @@
 ---
-title: "Glm coding plan"
+title: "GLM Coding Plan"
 price: "$18/mo"
 models: ""
 quota: ""
 website: "https://z.ai/subscribe"
 bestFor: ""
+type: "Paid"
+priceRange: "Mid"
+quotaModel: "Mixed"
+bestForTags: ["solo", "cli", "agent", "heavy"]
+modelAccess: "Single"
+flags: ["multimodal"]
 ---
 
 # Glm coding plan
@@ -43,4 +49,3 @@ Zhipu AI's subscription for coding agents. All tiers get the same flagship model
 ZCode, Claude Code, Cline, OpenCode, Goose, OpenClaw, Roo Code, Kilo Code, and 20+ more.
 
 ---
-

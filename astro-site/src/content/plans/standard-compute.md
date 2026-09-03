@@ -1,10 +1,16 @@
 ---
-title: "Standard compute"
+title: "Standard Compute"
 price: "$19/mo"
 models: ""
 quota: ""
 website: "https://standardcompute.com/coding-subscription"
 bestFor: ""
+type: "Paid"
+priceRange: "Mid"
+quotaModel: "Unlimited"
+bestForTags: ["solo", "heavy", "agent", "api"]
+modelAccess: "Frontier"
+flags: ["open-source"]
 ---
 
 # Standard compute
@@ -46,4 +52,3 @@ Flat-rate subscription with access to ALL frontier models via smart routing. No 
 ---
 
 ---
-

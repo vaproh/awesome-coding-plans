@@ -1,3 +1,13 @@
+---
+title: "OpenCode Go"
+type: "Paid"
+priceRange: "Mid"
+quotaModel: "Mixed"
+bestForTags: ["solo", "cli", "agent", "heavy"]
+modelAccess: "Multi-model"
+flags: ["open-source"]
+---
+
 # Opencode go
 
 
@@ -27,4 +37,3 @@ Multi-model aggregator subscription — one plan, access to many frontier models
 > Dollar-based limits (not credits). Usage deducted at each model's pay-as-you-go rate.
 
 ---
-

@@ -5,6 +5,12 @@ models: ""
 quota: ""
 website: "https://kilo.ai/pricing"
 bestFor: ""
+type: "Freemium"
+priceRange: "Mid"
+quotaModel: "Mixed"
+bestForTags: ["solo", "team", "ide", "agent"]
+modelAccess: "Aggregator"
+flags: ["open-source", "byok", "offline"]
 ---
 
 # Kilo Code

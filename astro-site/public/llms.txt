@@ -1,0 +1,13 @@
+# Awesome Coding Plans
+
+> A maintained, coding-focused comparison of AI subscriptions, token plans, coding agents, and student offers.
+
+## Machine-readable catalog
+
+- [plans.json](https://awesome-coding-plans.netlify.app/plans.json): complete plan catalog with type, price band, quota model, model access, tags, flags, and official links.
+- [Comparison](https://awesome-coding-plans.netlify.app/comparison): curated side-by-side picks.
+- [Student discounts](https://awesome-coding-plans.netlify.app/student-discounts): coding-related student offers.
+
+## Source and freshness
+
+The canonical source is the [GitHub repository](https://github.com/vaproh/awesome-coding-plans). Prices and availability can change; verify the official link on each plan page before purchasing.

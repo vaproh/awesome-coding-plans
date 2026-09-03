@@ -3,145 +3,71 @@ import Base from "../layouts/Base.astro";
 import { getCollection } from "astro:content";
 
 const plans = await getCollection("plans");
-plans.sort((a, b) => {
-  const getPrice = (p: typeof plans[0]) => {
-    if (p.data.price?.toLowerCase().includes("free")) return 0;
-    const match = p.data.price?.match(/[\d.]+/);
-    return match ? parseFloat(match[0]) : 999;
-  };
-  return getPrice(a) - getPrice(b);
-});
-
-const totalPlans = plans.length;
-const freePlans = plans.filter((p) => p.data.price?.toLowerCase().includes("free")).length;
-const under10 = plans.filter((p) => {
-  const match = p.data.price?.match(/[\d.]+/);
-  return match && parseFloat(match[0]) < 10;
-}).length;
+const sortedPlans = plans.sort((a, b) => a.data.title.localeCompare(b.data.title));
+const countType = (type: string) => plans.filter((plan) => plan.data.type === type).length;
 ---
 
-<Base>
-  <div slot="sidebar">
-    <a href="/" class="active">Home</a>
-    <a href="/comparison">Comparison</a>
-    <a href="/student-discounts">Student Discounts</a>
-    <div class="section-title">All Plans</div>
-    {
-      plans.map((plan) => (
-        <a href={`/plans/${plan.slug}`}>{plan.data.title}</a>
-      ))
-    }
-  </div>
-
-  <div class="hero">
-    <h1>Awesome Coding Plans</h1>
-    <p>
-      A curated comparison of AI coding subscriptions and token plans — what models you
-      get, how much it costs, and which tools are supported.
-    </p>
+<Base title="Awesome Coding Plans | AI Coding Plan Comparison" description="Compare 30 AI coding subscriptions and token plans by price, model access, quota, tools, and special features.">
+  <section class="hero reveal">
+    <p class="eyebrow">$ npx compare-ai-plans</p>
+    <h1>Find your next<br /><span>coding stack.</span></h1>
+    <p class="lede">A living catalog of AI coding subscriptions, token plans, and agent platforms. Compare the model access, quota mechanics, and real monthly cost before you commit.</p>
     <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-value">{totalPlans}</div>
-        <div class="stat-label">Plans</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value">{freePlans}</div>
-        <div class="stat-label">Free Tiers</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value">{under10}</div>
-        <div class="stat-label">Under $10</div>
-      </div>
+      <div><strong data-count={plans.length}>{plans.length}</strong><small>plans tracked</small></div>
+      <div><strong data-count={countType("Free")}>{countType("Free")}</strong><small>free tiers</small></div>
+      <div><strong data-count={countType("Freemium")}>{countType("Freemium")}</strong><small>freemium</small></div>
+      <div><strong>09/03/26</strong><small>last verified</small></div>
     </div>
-  </div>
+  </section>
 
-  <h2>All Plans</h2>
-  <div class="card-grid stagger">
-    {
-      plans.map((plan) => {
-        const isFree = plan.data.price?.toLowerCase().includes("free");
-        const isDiscontinued = plan.data.price?.toLowerCase().includes("discontinued");
-        return (
-          <a href={`/plans/${plan.slug}`} class="card plan-card">
-            <div class="plan-header">
-              <h3 class="plan-title">{plan.data.title}</h3>
-              {isFree && <span class="badge badge-free">Free</span>}
-              {isDiscontinued && <span class="badge badge-discontinued">Discontinued</span>}
-              {!isFree && !isDiscontinued && <span class="badge badge-paid">{plan.data.price}</span>}
-            </div>
-            <p class="plan-models">{plan.data.models || "Multiple models"}</p>
-            <p class="plan-bestfor">{plan.data.bestFor}</p>
-          </a>
-        );
-      })
-    }
-  </div>
+  <section class="catalog reveal" aria-labelledby="catalog-title">
+    <div class="section-heading"><div><p class="eyebrow">01 / catalog</p><h2 id="catalog-title">All plans</h2></div><span id="result-count">{plans.length} results</span></div>
+    <div class="filters" aria-label="Plan filters">
+      <label>Search<input id="plan-search" type="search" placeholder="e.g. Claude, IDE, BYOK" /></label>
+      <label>Billing<select id="type-filter"><option value="">All types</option><option>Free</option><option>Freemium</option><option>Paid</option></select></label>
+      <label>Price band<select id="price-filter"><option value="">All prices</option><option>Free</option><option>Budget</option><option>Mid</option><option>Premium</option><option>Enterprise</option></select></label>
+      <label>Quota<select id="quota-filter"><option value="">Any quota</option><option>Credits</option><option>Tokens</option><option>Requests</option><option>Sessions</option><option>Unlimited</option><option>Mixed</option></select></label>
+      <label>Access<select id="access-filter"><option value="">Any access</option><option>Single</option><option>Multi-model</option><option>Aggregator</option><option>Frontier</option></select></label>
+    </div>
+    <div class="chips" id="tag-filters">
+      {['solo','team','student','enterprise','agent','ide','cli','api','byok','offline','multimodal','open-source'].map((tag) => <button type="button" data-tag={tag}>#{tag}</button>)}
+    </div>
+    <div class="card-grid" id="plan-grid">
+      {sortedPlans.map((plan, index) => (
+        <a class="card plan-card reveal" data-title={plan.data.title.toLowerCase()} data-type={plan.data.type} data-price={plan.data.priceRange} data-quota={plan.data.quotaModel} data-access={plan.data.modelAccess} data-tags={[...plan.data.bestForTags, ...plan.data.flags].join(" ")} href={`/plans/${plan.slug}`} style={`--delay:${Math.min(index, 12) * 35}ms`}>
+          <div class="plan-top"><span class={`type-dot type-${plan.data.type.toLowerCase()}`}></span><span>{plan.data.type}</span><span class="price-band">{plan.data.priceRange}</span></div>
+          <h3>{plan.data.title}</h3>
+          <p>{plan.data.bestFor || "AI coding workflows"}</p>
+          <div class="plan-bottom"><span>{plan.data.price || "See pricing"}</span><span>{plan.data.modelAccess}</span></div>
+        </a>
+      ))}
+    </div>
+    <p class="empty" id="empty-state" hidden>No plans match those filters. Try widening the search.</p>
+  </section>
 
-  <h2>Quick Comparison</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Plan</th>
-        <th>Price</th>
-        <th>Models</th>
-        <th>Quota</th>
-        <th>Best For</th>
-      </tr>
-    </thead>
-    <tbody>
-      {
-        plans.map((plan) => (
-          <tr>
-            <td>
-              <a href={`/plans/${plan.slug}`}>{plan.data.title}</a>
-            </td>
-            <td>{plan.data.price}</td>
-            <td>{plan.data.models}</td>
-            <td>{plan.data.quota}</td>
-            <td>{plan.data.bestFor}</td>
-          </tr>
-        ))
-      }
-    </tbody>
-  </table>
+  <script>
+    const cards = [...document.querySelectorAll('.plan-card')];
+    const inputs = ['plan-search','type-filter','price-filter','quota-filter','access-filter'].map((id) => document.getElementById(id));
+    let activeTag = '';
+    const filter = () => {
+      const [search, type, price, quota, access] = inputs.map((input) => input.value.toLowerCase());
+      let visible = 0;
+      cards.forEach((card) => {
+        const matches = card.dataset.title.includes(search) && (!type || card.dataset.type.toLowerCase() === type) && (!price || card.dataset.price.toLowerCase() === price) && (!quota || card.dataset.quota.toLowerCase() === quota) && (!access || card.dataset.access.toLowerCase() === access) && (!activeTag || card.dataset.tags.includes(activeTag));
+        card.hidden = !matches;
+        if (matches) visible++;
+      });
+      document.getElementById('result-count').textContent = `${visible} result${visible === 1 ? '' : 's'}`;
+      document.getElementById('empty-state').hidden = visible > 0;
+    };
+    inputs.forEach((input) => input.addEventListener('input', filter));
+    document.querySelectorAll('[data-tag]').forEach((button) => button.addEventListener('click', () => { activeTag = activeTag === button.dataset.tag ? '' : button.dataset.tag; document.querySelectorAll('[data-tag]').forEach((item) => item.classList.toggle('active', item === button && activeTag)); filter(); }));
+  </script>
 </Base>
 
 <style>
-  .plan-card {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .plan-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-  }
-
-  .plan-title {
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0;
-    color: var(--text);
-  }
-
-  .plan-models {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    margin: 0;
-  }
-
-  .plan-bestfor {
-    font-size: 0.75rem;
-    color: var(--text-dim);
-    margin: 0;
-  }
-
-  .plan-card:hover .plan-title {
-    color: var(--accent-light);
-  }
+  .hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--border); } .eyebrow { color: var(--accent); font: 500 .72rem "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 1rem; } h1 { font-size: clamp(3rem, 8vw, 6.5rem); line-height: .95; letter-spacing: -.07em; margin: 0 0 1.5rem; } h1 span { color: var(--accent); } .lede { max-width: 650px; font-size: 1.1rem; color: var(--text-muted); } .hero-stats { display: flex; gap: 3rem; margin-top: 2.5rem; flex-wrap: wrap; } .hero-stats div { display: grid; gap: .15rem; } .hero-stats strong { font: 500 1.45rem "DM Mono", monospace; color: var(--accent-light); } .hero-stats small { color: var(--text-dim); font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
+  .catalog { padding-top: 3rem; } .section-heading { display:flex; justify-content:space-between; align-items:end; gap:1rem; } h2 { margin:0; font-size:2rem; } #result-count { color:var(--text-dim); font:500 .75rem "DM Mono",monospace; } .filters { display:grid; grid-template-columns:2fr repeat(4,1fr); gap:.7rem; margin:1.5rem 0 .75rem; position:sticky; top:68px; z-index:1; padding:1rem 0; background:rgba(7,16,13,.92); backdrop-filter:blur(12px); } label { display:grid; gap:.35rem; color:var(--text-dim); font:500 .68rem "DM Mono",monospace; text-transform:uppercase; } input,select { width:100%; min-width:0; padding:.7rem .75rem; color:var(--text); background:var(--bg-card); border:1px solid var(--border); border-radius:6px; font:400 .82rem "Space Grotesk",sans-serif; } input:focus,select:focus { outline:1px solid var(--accent); } .chips { display:flex; gap:.4rem; flex-wrap:wrap; margin-bottom:1.5rem; } .chips button { cursor:pointer; padding:.3rem .55rem; color:var(--text-muted); background:transparent; border:1px solid var(--border); border-radius:4px; font:400 .7rem "DM Mono",monospace; } .chips button:hover,.chips button.active { color:var(--accent); border-color:var(--accent); background:var(--accent-glow); }
+  .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:.8rem; } .plan-card { display:flex; flex-direction:column; min-height:175px; color:inherit; text-decoration:none; } .plan-card[hidden] { display:none; } .plan-card h3 { margin:.8rem 0 .35rem; font-size:1.15rem; } .plan-card p { flex:1; margin:0; font-size:.82rem; } .plan-top,.plan-bottom { display:flex; align-items:center; gap:.45rem; color:var(--text-dim); font:500 .68rem "DM Mono",monospace; text-transform:uppercase; } .price-band { margin-left:auto; color:var(--accent-light); } .type-dot { width:7px; height:7px; border-radius:50%; background:var(--accent); } .type-paid { background:#f59e0b; } .type-freemium { background:#a78bfa; } .plan-bottom { padding-top:.8rem; border-top:1px solid var(--border); color:var(--text-muted); } .plan-bottom span:last-child { margin-left:auto; color:var(--text-dim); } .empty { color:var(--text-muted); padding:3rem 0; }
+  @media (max-width:800px) { .filters { grid-template-columns:1fr 1fr; top:112px; } .filters label:first-child { grid-column:1/-1; } } @media (max-width:520px) { .hero { padding-top:2.5rem; } .hero-stats { gap:1.5rem; } .filters { grid-template-columns:1fr; top:112px; } .filters label:first-child { grid-column:auto; } }
 </style>

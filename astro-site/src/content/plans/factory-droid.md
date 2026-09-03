@@ -5,6 +5,12 @@ models: ""
 quota: ""
 website: "https://factory.ai/pricing"
 bestFor: ""
+type: "Paid"
+priceRange: "Premium"
+quotaModel: "Mixed"
+bestForTags: ["team", "enterprise", "agent", "heavy"]
+modelAccess: "Multi-model"
+flags: ["multimodal"]
 ---
 
 # Factory Droid

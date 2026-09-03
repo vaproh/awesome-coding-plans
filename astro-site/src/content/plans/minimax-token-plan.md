@@ -1,10 +1,16 @@
 ---
-title: "Minimax token plan"
+title: "MiniMax Token Plan"
 price: "$22/mo"
 models: ""
 quota: ""
 website: "https://platform.minimax.io/subscribe/token-plan"
 bestFor: ""
+type: "Paid"
+priceRange: "Premium"
+quotaModel: "Mixed"
+bestForTags: ["solo", "api", "multimodal", "heavy"]
+modelAccess: "Multi-model"
+flags: ["multimodal"]
 ---
 
 # Minimax token plan
@@ -39,4 +45,3 @@ Full-spectrum AI subscription covering language, speech, video, and image models
 - **BYOK** — works with OpenClaw, Claude Code, Cline, OpenCode, Grok CLI, Hermes Agent, Kilo Code, Droid
 
 ---
-

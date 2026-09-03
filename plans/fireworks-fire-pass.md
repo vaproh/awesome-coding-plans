@@ -1,3 +1,13 @@
+---
+title: "Fireworks Fire Pass"
+type: "Paid"
+priceRange: "Premium"
+quotaModel: "Mixed"
+bestForTags: ["solo", "api"]
+modelAccess: "Multi-model"
+flags: ["multimodal"]
+---
+
 # Fireworks Fire Pass
 
 **Website:** [docs.fireworks.ai/firepass](https://docs.fireworks.ai/firepass)

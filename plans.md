@@ -4,6 +4,8 @@
 
 *Last updated: September 3, 2026*
 
+Each plan file carries the catalog metadata used by the website: plan type (`Free`, `Paid`, or `Freemium`), price range, quota model, model access, best-for tags, and special flags.
+
 ---
 
 ## Free Tiers

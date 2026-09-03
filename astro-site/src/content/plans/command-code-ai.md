@@ -1,10 +1,16 @@
 ---
-title: "Command code ai"
-price: "$1/mo"
+title: "Command Code AI"
+price: "Free"
 models: ""
 quota: ""
 website: "https://commandcode.ai/pricing"
 bestFor: ""
+type: "Freemium"
+priceRange: "Premium"
+quotaModel: "Credits"
+bestForTags: ["solo", "api", "agent", "heavy"]
+modelAccess: "Aggregator"
+flags: ["byok", "multimodal"]
 ---
 
 # Command code ai
@@ -64,4 +70,3 @@ Multi-model coding subscription with "taste-1" — a model that learns and appli
 - **Auto top-up at API cost** when you run out
 
 ---
-

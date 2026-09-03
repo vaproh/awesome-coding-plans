@@ -1,3 +1,13 @@
+---
+title: "Standard Compute"
+type: "Paid"
+priceRange: "Mid"
+quotaModel: "Unlimited"
+bestForTags: ["solo", "heavy", "agent", "api"]
+modelAccess: "Frontier"
+flags: ["open-source"]
+---
+
 # Standard compute
 
 
@@ -37,4 +47,3 @@ Flat-rate subscription with access to ALL frontier models via smart routing. No 
 ---
 
 ---
-

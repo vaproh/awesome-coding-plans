@@ -1,3 +1,13 @@
+---
+title: "Qoder Pro"
+type: "Paid"
+priceRange: "Premium"
+quotaModel: "Credits"
+bestForTags: ["solo", "agent", "ide", "heavy"]
+modelAccess: "Single"
+flags: ["multimodal"]
+---
+
 # Qoder Pro
 
 **Website:** [qoder.com/pricing](https://qoder.com/pricing)

@@ -1,3 +1,13 @@
+---
+title: "MiMo Token Plan"
+type: "Paid"
+priceRange: "Budget"
+quotaModel: "Credits"
+bestForTags: ["solo", "heavy", "api"]
+modelAccess: "Single"
+flags: ["multimodal"]
+---
+
 # Mimo token plan
 
 
@@ -35,4 +45,3 @@ Xiaomi's coding subscription for AI programming scenarios. Uses a transparent Cr
 - **MiMo Claw** agent platform available as add-on (stackable with Token Plan)
 
 ---
-

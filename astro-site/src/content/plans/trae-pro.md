@@ -5,6 +5,12 @@ models: ""
 quota: ""
 website: "https://www.trae.ai/pricing"
 bestFor: ""
+type: "Paid"
+priceRange: "Budget"
+quotaModel: "Mixed"
+bestForTags: ["solo", "ide", "agent"]
+modelAccess: "Multi-model"
+flags: ["multimodal"]
 ---
 
 # Trae Pro

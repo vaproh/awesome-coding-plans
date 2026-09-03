@@ -5,6 +5,12 @@ models: ""
 quota: ""
 website: "https://augmentcode.com/pricing"
 bestFor: ""
+type: "Paid"
+priceRange: "Enterprise"
+quotaModel: "Mixed"
+bestForTags: ["team", "enterprise", "ide", "heavy"]
+modelAccess: "Frontier"
+flags: ["multimodal"]
 ---
 
 # Augment Code

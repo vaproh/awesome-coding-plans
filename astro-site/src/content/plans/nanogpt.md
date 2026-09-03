@@ -1,10 +1,16 @@
 ---
-title: "Nanogpt"
+title: "NanoGPT"
 price: "$12/mo"
 models: ""
 quota: ""
 website: "https://nano-gpt.com/pricing"
 bestFor: ""
+type: "Paid"
+priceRange: "Mid"
+quotaModel: "Mixed"
+bestForTags: ["solo", "api", "light"]
+modelAccess: "Aggregator"
+flags: ["byok"]
 ---
 
 # Nanogpt
@@ -40,4 +46,3 @@ Multi-model API gateway with optional subscription. 1000+ models accessible thro
 - **Crypto or card** payments
 
 ---
-

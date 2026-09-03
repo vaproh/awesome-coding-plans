@@ -1,3 +1,13 @@
+---
+title: "Trae Pro"
+type: "Paid"
+priceRange: "Budget"
+quotaModel: "Mixed"
+bestForTags: ["solo", "ide", "agent"]
+modelAccess: "Multi-model"
+flags: ["multimodal"]
+---
+
 # Trae Pro
 
 **Website:** [trae.ai/pricing](https://www.trae.ai/pricing)

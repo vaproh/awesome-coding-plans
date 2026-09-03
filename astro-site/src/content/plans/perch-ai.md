@@ -1,10 +1,16 @@
 ---
-title: "Perch ai"
+title: "Perch AI"
 price: "Free"
 models: ""
 quota: ""
 website: "https://www.perchai.app/"
 bestFor: ""
+type: "Paid"
+priceRange: "Mid"
+quotaModel: "Mixed"
+bestForTags: ["solo", "api", "heavy"]
+modelAccess: "Aggregator"
+flags: ["byok", "open-source"]
 ---
 
 # Perch ai
@@ -38,4 +44,3 @@ Model-agnostic AI assistant with smart routing ("Roost"). Every premium model fo
 - **Web, Desktop, CLI** under one account
 
 ---
-

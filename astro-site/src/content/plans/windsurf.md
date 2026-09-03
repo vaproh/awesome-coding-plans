@@ -5,6 +5,12 @@ models: ""
 quota: ""
 website: "https://windsurf.com/pricing"
 bestFor: ""
+type: "Freemium"
+priceRange: "Premium"
+quotaModel: "Mixed"
+bestForTags: ["solo", "team", "ide", "agent"]
+modelAccess: "Multi-model"
+flags: ["multimodal", "student-discount"]
 ---
 
 # Windsurf
@@ -42,4 +48,3 @@ AI-native IDE (VS Code fork) with Cascade agent. Uses daily + weekly quota windo
 - **Parallel agents** on Max tier
 
 ---
-

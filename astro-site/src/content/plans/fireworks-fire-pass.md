@@ -5,6 +5,12 @@ models: ""
 quota: ""
 website: "https://docs.fireworks.ai/firepass"
 bestFor: ""
+type: "Paid"
+priceRange: "Premium"
+quotaModel: "Mixed"
+bestForTags: ["solo", "api"]
+modelAccess: "Multi-model"
+flags: ["multimodal"]
 ---
 
 # Fireworks Fire Pass
