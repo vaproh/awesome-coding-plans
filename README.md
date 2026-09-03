@@ -2,9 +2,12 @@
 
 > A curated comparison of AI coding subscriptions and token plans — what models you get, how much it costs, and which tools are supported.
 
+🌐 **Website:** [awesome-coding-plans.netlify.app](https://awesome-coding-plans.netlify.app)
+
 ![Plans](https://img.shields.io/badge/plans-30-blue)
 ![Last Updated](https://img.shields.io/badge/updated-September%203%2C%202026-green)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3fec95af-0feb-49b4-b424-f2a98b4d2586/deploy-status)](https://app.netlify.com/projects/awesome-coding-plans/deploys)
 
 ---
 
