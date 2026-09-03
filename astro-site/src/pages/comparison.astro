@@ -6,18 +6,6 @@ const plans = await getCollection("plans");
 ---
 
 <Base title="Compare AI Coding Plans | Awesome Coding Plans" description="Side-by-side comparison of AI coding plans, pricing, quotas, models, and best use cases.">
-  <div slot="sidebar">
-    <a href="/">Home</a>
-    <a href="/comparison" class="active">Comparison</a>
-    <a href="/student-discounts">Student Discounts</a>
-    <div class="section-title">All Plans</div>
-    {
-      plans.map((plan) => (
-        <a href={`/plans/${plan.slug}`}>{plan.data.title}</a>
-      ))
-    }
-  </div>
-
   <div class="hero">
     <h1>Plan Comparison</h1>
     <p>Side-by-side comparison of the best AI coding plans.</p>

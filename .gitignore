@@ -8,3 +8,8 @@ node_modules/
 .netlify/
 dist/
 *.log
+.playwright-mcp/
+astro-site/.astro/
+astro-site/dist/
+astro-site/pnpm-lock.yaml
+astro-site/pnpm-workspace.yaml

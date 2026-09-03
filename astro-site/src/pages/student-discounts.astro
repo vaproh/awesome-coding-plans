@@ -6,18 +6,6 @@ const plans = await getCollection("plans");
 ---
 
 <Base title="Student Discounts for AI Coding Tools | Awesome Coding Plans" description="Verified student discounts and free offers for Claude Code, GitHub Copilot, Gemini, ChatGPT, Kiro, Cursor, and Windsurf.">
-  <div slot="sidebar">
-    <a href="/">Home</a>
-    <a href="/comparison">Comparison</a>
-    <a href="/student-discounts" class="active">Student Discounts</a>
-    <div class="section-title">All Plans</div>
-    {
-      plans.map((plan) => (
-        <a href={`/plans/${plan.slug}`}>{plan.data.title}</a>
-      ))
-    }
-  </div>
-
   <div class="hero">
     <h1>Student Discounts &amp; Freebies</h1>
     <p>Student discounts and free tiers specifically for AI coding plans. Verified students can save significantly.</p>

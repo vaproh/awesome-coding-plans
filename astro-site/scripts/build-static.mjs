@@ -84,7 +84,7 @@ for (const file of files) {
     .replace(/{{SLUG}}/g, slug)
     .replace(/{{CONTENT}}/g, htmlContent)
     .replace(/{{WEBSITE}}/g, escapeHtml(website))
-    .replace(/{{TYPE}}/g, escapeHtml(data.type || "Paid"))
+    .replace(/{{TYPE}}/g, escapeHtml(data.type === "Free" ? "Free tier" : data.type === "Freemium" ? "Free + paid" : "Paid only"))
     .replace(/{{PRICE_RANGE}}/g, escapeHtml(data.priceRange || "Premium"))
     .replace(/{{MODEL_ACCESS}}/g, escapeHtml(data.modelAccess || "Multi-model"))
     .replace(/{{PRICE}}/g, escapeHtml(data.price || inferPrice(body)))

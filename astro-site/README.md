@@ -1,43 +1,36 @@
-# Astro Starter Kit: Minimal
+# Awesome Coding Plans Web
+
+Astro static site for [Awesome Coding Plans](https://awesome-coding-plans.netlify.app). The catalog is generated from the canonical Markdown files in `../plans/`.
+
+## Development
 
 ```sh
-npm create astro@latest -- --template minimal
+npm ci
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Use `npm run build` to generate the production site in `dist/`, including the 30 static plan detail routes and `plans.json`.
 
-## 🚀 Project Structure
+## Data Flow
 
-Inside of your Astro project, you'll see the following folders and files:
+- `../plans/*.md` is the source of truth for plan content and catalog metadata.
+- `scripts/split-plans.mjs` copies source Markdown into the Astro content collection and normalizes inferred price, website, and legacy fields.
+- `src/content.config.ts` validates the metadata schema.
+- `scripts/build-static.mjs` converts each source plan to a static page under `dist/plans/<slug>/` and writes `dist/plans.json`.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Each plan supports `type` (`Free`, `Paid`, or `Freemium`), `priceRange`, `quotaModel`, `bestForTags`, `modelAccess`, and `flags`. The home page filters against those fields with native browser controls, so it does not depend on a search service or client framework.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## SEO And Agent Access
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+The site emits page titles, descriptions, canonical URLs, Open Graph metadata, and Schema.org JSON-LD. Static discovery files live in `public/`:
 
-Any static assets, like images, can be placed in the `public/` directory.
+- `favicon.svg` for the site icon.
+- `robots.txt` for crawler access.
+- `llms.txt` for agent-oriented entry points and source guidance.
+- `plans.json` is generated at build time as the machine-readable catalog.
 
-## 🧞 Commands
+## Deployment
 
-All commands are run from the root of the project, from a terminal:
+The repository root `netlify.toml` runs `npm ci && npm run build` from this directory with Node 22 and publishes `astro-site/dist`.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Generated files and local tooling output are ignored. Do not commit `node_modules`, `dist`, `.astro`, or local browser-test artifacts.
