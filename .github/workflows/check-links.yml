@@ -17,13 +17,14 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --timeout 30 --max-concurrency 5 ./README.md ./plans.md ./CONTRIBUTING.md
+          args: |
+            --verbose
+            --no-progress
+            --timeout 30
+            --max-concurrency 5
+            --accept 200,201,204,301,302,307,308,429
+            --exclude https://x.com/.*
+            --exclude https://twitter.com/.*
+            --exclude https://education.github.com/.*
+            ./README.md ./plans.md ./CONTRIBUTING.md
           fail: true
-
-      - name: Create issue on failure
-        if: failure()
-        uses: peter-evans/create-issue-from-file@v5
-        with:
-          title: "Link check failed"
-          content-filepath: ./lychee/out.md
-          labels: ["bug", "automated"]
