@@ -1,0 +1,59 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const plans = await getCollection("plans");
+plans.sort((a, b) => {
+  const priceA = parseFloat(a.data.price.replace(/[^0-9.]/g, "")) || 0;
+  const priceB = parseFloat(b.data.price.replace(/[^0-9.]/g, "")) || 0;
+  return priceA - priceB;
+});
+---
+
+<Base title="Awesome Coding Plans">
+  <div slot="sidebar">
+    <a href="/" class="active">Home</a>
+    <a href="/comparison">Comparison</a>
+    <a href="/student-discounts">Student Discounts</a>
+    <div class="section-title">All Plans</div>
+    {
+      plans.map((plan) => (
+        <a href={`/plans/${plan.slug}`}>{plan.data.title}</a>
+      ))
+    }
+  </div>
+
+  <h1>Awesome Coding Plans</h1>
+  <p>
+    A curated comparison of AI coding subscriptions and token plans — what models you
+    get, how much it costs, and which tools are supported.
+  </p>
+
+  <h2>All Plans</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Plan</th>
+        <th>Price</th>
+        <th>Models</th>
+        <th>Quota</th>
+        <th>Best For</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        plans.map((plan) => (
+          <tr>
+            <td>
+              <a href={`/plans/${plan.slug}`}>{plan.data.title}</a>
+            </td>
+            <td>{plan.data.price}</td>
+            <td>{plan.data.models}</td>
+            <td>{plan.data.quota}</td>
+            <td>{plan.data.bestFor}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</Base>

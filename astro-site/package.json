@@ -1,0 +1,24 @@
+{
+  "name": "astro-site",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "predev": "node scripts/split-plans.mjs",
+    "dev": "astro dev",
+    "prebuild": "node scripts/split-plans.mjs",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^6.4.8",
+    "astro-pagefind": "^2.0.1",
+    "marked": "^18.0.11"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}

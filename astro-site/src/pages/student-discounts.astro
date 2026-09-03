@@ -1,0 +1,77 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const plans = await getCollection("plans");
+---
+
+<Base title="Student Discounts | Awesome Coding Plans">
+  <div slot="sidebar">
+    <a href="/">Home</a>
+    <a href="/comparison">Comparison</a>
+    <a href="/student-discounts" class="active">Student Discounts</a>
+    <div class="section-title">All Plans</div>
+    {
+      plans.map((plan) => (
+        <a href={`/plans/${plan.slug}`}>{plan.data.title}</a>
+      ))
+    }
+  </div>
+
+  <h1>Student Discounts &amp; Freebies</h1>
+  <p>Student discounts and free tiers specifically for AI coding plans. Verified students can save significantly.</p>
+
+  <h2>Coding Plan Student Offers</h2>
+
+  <h3>Claude for Education</h3>
+  <p>Free Claude Pro (includes Claude Code) at partner universities.</p>
+  <table>
+    <thead><tr><th>Route</th><th>What You Get</th><th>How</th></tr></thead>
+    <tbody>
+      <tr><td>Claude for Education (partner universities)</td><td>Free Claude Pro + Claude Code</td><td>Sign in with university email</td></tr>
+      <tr><td>Campus Program (Ambassadors/Builder Clubs)</td><td>Free Pro + API credits + stipend</td><td>Apply at claude.com/programs/campus</td></tr>
+      <tr><td>Student Builder API Credits</td><td>~$50 in API credits</td><td>Apply with .edu email</td></tr>
+      <tr><td>Annual billing</td><td>$17/mo instead of $20/mo</td><td>No student status needed</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Known partner schools:</strong> Northeastern, LSE, Champlain College, USF Law, Northumbria University.</p>
+
+  <h3>GitHub Copilot Student</h3>
+  <p>Free Copilot for verified students. <strong>New sign-ups paused since April 2026</strong> — existing users keep it.</p>
+
+  <h3>Google AI Pro for Students</h3>
+  <table>
+    <thead><tr><th>Region</th><th>What You Get</th><th>Duration</th></tr></thead>
+    <tbody>
+      <tr><td>US students</td><td>Google AI Pro free (Gemini 3, Antigravity)</td><td>1 year</td></tr>
+      <tr><td>International</td><td>Google AI Plus free</td><td>1 year</td></tr>
+    </tbody>
+  </table>
+
+  <h3>ChatGPT for Students</h3>
+  <p>4 months free ChatGPT Plus for eligible US college students. Claim by October 31.</p>
+
+  <h3>Kiro Students (AWS)</h3>
+  <p>1 year free (1,000 credits/month) at 11 partner universities (US/Canada only). No credit card.</p>
+
+  <h3>Perplexity Education Pro</h3>
+  <p>$10/mo (50% off) or free via referrals. Includes Comet browser, Learn Mode, premium models.</p>
+
+  <h3>Cursor Student Discount</h3>
+  <p><strong>Discontinued</strong> for new sign-ups (June 2026). Hobby plan remains free.</p>
+
+  <h2>Quick Cheat Sheet</h2>
+  <table>
+    <thead><tr><th>Service</th><th>Student Price</th><th>Requires</th></tr></thead>
+    <tbody>
+      <tr><td>Claude for Education</td><td>Free Pro</td><td>Partner university email</td></tr>
+      <tr><td>GitHub Copilot</td><td>Free</td><td>Student verification (paused)</td></tr>
+      <tr><td>Google AI Pro</td><td>Free 1 year</td><td>US college student</td></tr>
+      <tr><td>ChatGPT Plus</td><td>Free 4 months</td><td>US college student</td></tr>
+      <tr><td>Kiro</td><td>Free 1 year</td><td>11 partner universities</td></tr>
+      <tr><td>Perplexity</td><td>$10/mo or free</td><td>Student email</td></tr>
+      <tr><td>Cursor</td><td>Discontinued</td><td>Hobby plan free</td></tr>
+      <tr><td>Windsurf</td><td>Free plan ($0)</td><td>No verification</td></tr>
+    </tbody>
+  </table>
+</Base>

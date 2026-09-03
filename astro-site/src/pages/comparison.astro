@@ -1,0 +1,82 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const plans = await getCollection("plans");
+---
+
+<Base title="Comparison | Awesome Coding Plans">
+  <div slot="sidebar">
+    <a href="/">Home</a>
+    <a href="/comparison" class="active">Comparison</a>
+    <a href="/student-discounts">Student Discounts</a>
+    <div class="section-title">All Plans</div>
+    {
+      plans.map((plan) => (
+        <a href={`/plans/${plan.slug}`}>{plan.data.title}</a>
+      ))
+    }
+  </div>
+
+  <h1>Plan Comparison</h1>
+
+  <h2>Best Picks</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Winner</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Cheapest</td><td>Chutes Base</td><td>$3/mo</td></tr>
+      <tr><td>Best Value</td><td>OpenCode Go</td><td>$10/mo</td></tr>
+      <tr><td>Best Price/Quality</td><td>GLM Lite</td><td>$18/mo</td></tr>
+      <tr><td>Most Models</td><td>GitHub Copilot Pro</td><td>$10/mo</td></tr>
+      <tr><td>Best for Open Models</td><td>Perch Pro</td><td>$10/mo</td></tr>
+      <tr><td>Best for Heavy Use</td><td>Standard Compute</td><td>$19/mo</td></tr>
+      <tr><td>Best for Students</td><td>GitHub Copilot Student</td><td>Free</td></tr>
+      <tr><td>Best Free Tier</td><td>Kimi Code (Adagio)</td><td>Free</td></tr>
+      <tr><td>Best IDE</td><td>Cursor Pro</td><td>$20/mo</td></tr>
+      <tr><td>Best Multimodal</td><td>MiniMax Plus</td><td>$22/mo</td></tr>
+      <tr><td>Best for Privacy</td><td>Synthetic</td><td>$30/mo</td></tr>
+      <tr><td>Best Agent Platform</td><td>Kimi Allegro</td><td>¥699/mo</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Plans Under $10/Month</h2>
+  <table>
+    <thead>
+      <tr><th>Plan</th><th>Price</th><th>Models</th><th>Quota</th><th>Best For</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="/plans/chutes">Chutes Base</a></td><td>$3</td><td>13+ open</td><td>5x PAYGO value</td><td>Cheapest sub</td></tr>
+      <tr><td><a href="/plans/trae-pro">Trae Lite</a></td><td>$3</td><td>Multi-model</td><td>$5/mo usage</td><td>AI-native IDE entry</td></tr>
+      <tr><td><a href="/plans/mimo-token-plan">MiMo Lite</a></td><td>$6</td><td>6 MiMo</td><td>4.1B Credits/mo</td><td>No weekly/5h caps</td></tr>
+      <tr><td><a href="/plans/qwen-token-plan">Qwen Lite</a></td><td>~$6</td><td>Qwen3.8, DeepSeek V4</td><td>2,500 Credits/7d</td><td>Multi-model</td></tr>
+      <tr><td><a href="/plans/step-plan">Step Mini</a></td><td>$6.99</td><td>Step 3.7/3.5, audio, image</td><td>400M Credits</td><td>Multimodal</td></tr>
+      <tr><td><a href="/plans/cline-pass">Cline Pass</a></td><td>$9.99</td><td>14 open</td><td>2-5x rate limits</td><td>Cline users</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Plans $10-$20/Month</h2>
+  <table>
+    <thead>
+      <tr><th>Plan</th><th>Price</th><th>Models</th><th>Quota</th><th>Best For</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="/plans/github-copilot">GitHub Copilot</a></td><td>$10</td><td>30+ models</td><td>1,500 AI Credits</td><td>Most models</td></tr>
+      <tr><td><a href="/plans/perch-ai">Perch Pro</a></td><td>$10</td><td>15+ models</td><td>Up to $150 usage</td><td>Smart routing</td></tr>
+      <tr><td><a href="/plans/opencode-go">OpenCode Go</a></td><td>$10</td><td>24 models</td><td>$12/5h, $30/wk, $60/mo</td><td>Best value</td></tr>
+      <tr><td><a href="/plans/trae-pro">Trae Pro</a></td><td>$10</td><td>Multi-model</td><td>$20 + Bonus</td><td>SOLO mode</td></tr>
+      <tr><td><a href="/plans/nanogpt">NanoGPT</a></td><td>$12</td><td>4+ flagship</td><td>Weekly limits</td><td>1000+ via PAYGO</td></tr>
+      <tr><td><a href="/plans/kimi-code">Kimi Moderato</a></td><td>~$14</td><td>K3 (256K), K2.7 Code</td><td>60 agent credits</td><td>K3 access</td></tr>
+      <tr><td><a href="/plans/mistral-vibe">Mistral Pro</a></td><td>$14.99</td><td>Medium 3.5, Devstral 2</td><td>100 sessions/day</td><td>European AI</td></tr>
+      <tr><td><a href="/plans/kilo-pass">Kilo Code</a></td><td>Free</td><td>Any model</td><td>Teams $15/mo</td><td>Open-source</td></tr>
+      <tr><td><a href="/plans/glm-coding-plan">GLM Lite</a></td><td>$18</td><td>GLM-5.3, 5.3-Flash</td><td>2K/5h + 10K/wk</td><td>Flagship</td></tr>
+      <tr><td><a href="/plans/claude-plans">Claude Pro</a></td><td>$17-20</td><td>Opus 5, Sonnet 5, Haiku 4.5</td><td>~5x Free</td><td>Frontier quality</td></tr>
+      <tr><td><a href="/plans/standard-compute">Standard Compute</a></td><td>$19</td><td>All frontiers + open</td><td>Flat budget</td><td>No windows</td></tr>
+    </tbody>
+  </table>
+</Base>

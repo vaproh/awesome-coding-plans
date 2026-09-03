@@ -1,0 +1,6 @@
+[build]
+  command = "node scripts/split-plans.mjs && astro build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
