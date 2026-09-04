@@ -8,12 +8,27 @@
   <link rel="canonical" href="https://awesome-coding-plans.netlify.app/plans/{{SLUG}}/">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://awesome-coding-plans.netlify.app/plans/{{SLUG}}/">
-  <meta property="og:image" content="https://awesome-coding-plans.netlify.app/favicon.svg">
+  <meta property="og:title" content="{{TITLE}} | Awesome Coding Plans">
+  <meta property="og:description" content="{{TITLE}} AI coding plan: {{PRICE}}. Compare models, quota, access, and supported workflows.">
+  <meta property="og:image" content="https://awesome-coding-plans.netlify.app/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://awesome-coding-plans.netlify.app/og.png">
+  <meta name="theme-color" content="#111111">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/fonts.css">
   <script defer src="https://analytics.netlify.com/ns.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Catalog", "item": "https://awesome-coding-plans.netlify.app/" },
+      { "@type": "ListItem", "position": 2, "name": "{{TITLE}}", "item": "https://awesome-coding-plans.netlify.app/plans/{{SLUG}}/" }
+    ]
+  }
+  </script>
   <style>
     :root { --bg:#111111; --card:#1e1e1e; --border:#383838; --text:#eeeeee; --muted:#b5b5b5; --dim:#777777; --accent:#bdbdbd; --accent-soft:rgba(189,189,189,.16); --free:#aaaaaa; }
     * { box-sizing:border-box; } html { scroll-behavior:smooth; } body { margin:0; color:var(--text); background:var(--bg); font-family:"Space Grotesk",sans-serif; line-height:1.6; }
@@ -26,11 +41,13 @@
     .meta { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:.75rem; margin:2rem 0; } .meta-item { padding:1rem; background:var(--card); border:1px solid var(--border); border-radius:8px; } .meta-label { display:block; color:var(--dim); font:500 .68rem "DM Mono",monospace; text-transform:uppercase; letter-spacing:.08em; } .meta-value { display:block; margin-top:.25rem; font-weight:600; }
     .content { font-size:1rem; } .content ul { padding-left:1.4rem; } .content li { margin:.35rem 0; } table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.9rem; overflow:hidden; } th,td { padding:.7rem; text-align:left; border-bottom:1px solid var(--border); } th { color:var(--muted); font:500 .7rem "DM Mono",monospace; text-transform:uppercase; } blockquote { margin:1rem 0; padding:.8rem 1rem; border-left:2px solid var(--accent); background:var(--card); color:var(--muted); }
     @media (max-width:650px) { .topbar { flex-wrap:wrap; gap:.7rem; padding:.75rem 4vw; } nav { flex-basis:100%; order:3; } main { padding-top:2rem; } table { display:block; overflow-x:auto; white-space:nowrap; } }
+    .skip-link { position:absolute; left:-9999px; top:0; z-index:10; padding:.6rem 1rem; background:var(--card); color:var(--text); border:1px solid var(--border); border-radius:0 0 6px 0; } .skip-link:focus { left:0; } :focus-visible { outline:2px solid var(--text); outline-offset:2px; }
   </style>
 </head>
 <body>
-  <header class="topbar"><a href="/" class="brand"><span class="prompt">&gt;_</span>CodingPlans</a><nav aria-label="Primary navigation"><a href="/">Catalog</a><a href="/comparison">Compare</a><a href="/student-discounts">Students</a><a href="/faq">FAQ</a></nav><div class="nav-meta"><span><i></i> 30 plans</span><a href="/plans.json">JSON</a><a href="https://github.com/vaproh/awesome-coding-plans">GitHub ↗</a></div></header>
-  <main><article><header class="detail-head"><h1>{{TITLE}}</h1><div class="badges"><span class="badge">{{TYPE}}</span><span class="badge">{{PRICE_RANGE}}</span><span class="badge">{{MODEL_ACCESS}}</span><a class="badge" href="{{WEBSITE}}" target="_blank" rel="noopener noreferrer">Official site ↗</a></div></header><div class="meta"><div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">{{PRICE}}</span></div><div class="meta-item"><span class="meta-label">Quota</span><span class="meta-value">{{QUOTA}}</span></div><div class="meta-item"><span class="meta-label">Quota model</span><span class="meta-value">{{QUOTA_MODEL}}</span></div><div class="meta-item"><span class="meta-label">Best for</span><span class="meta-value">{{BEST_FOR}}</span></div></div><div class="badges">{{TAGS}}</div><div class="content">{{CONTENT}}</div></article></main>
-  <footer class="site-footer"><span>Awesome Coding Plans · verified September 3, 2026</span><span><a href="/llms.txt">For agents</a> · <a href="https://github.com/vaproh/awesome-coding-plans">Source</a></span></footer>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar"><a href="/" class="brand"><span class="prompt">&gt;_</span>CodingPlans</a><nav aria-label="Primary navigation"><a href="/">Catalog</a><a href="/comparison">Compare</a><a href="/student-discounts">Students</a><a href="/guide">Guide</a><a href="/faq">FAQ</a></nav><div class="nav-meta"><span><i></i> {{PLAN_COUNT}} plans</span><a href="/plans.json">JSON</a><a href="https://github.com/vaproh/awesome-coding-plans">GitHub ↗</a></div></header>
+  <main id="main"><article><header class="detail-head"><h1>{{TITLE}}</h1><div class="badges"><span class="badge">{{TYPE}}</span><span class="badge">{{PRICE_RANGE}}</span><span class="badge">{{MODEL_ACCESS}}</span><span class="badge">verified {{UPDATED}}</span><a class="badge" href="{{WEBSITE}}" target="_blank" rel="noopener noreferrer">Official site ↗</a></div></header><div class="meta"><div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">{{PRICE}}</span></div><div class="meta-item"><span class="meta-label">Quota</span><span class="meta-value">{{QUOTA}}</span></div><div class="meta-item"><span class="meta-label">Quota model</span><span class="meta-value">{{QUOTA_MODEL}}</span></div><div class="meta-item"><span class="meta-label">Best for</span><span class="meta-value">{{BEST_FOR}}</span></div></div><div class="badges">{{TAGS}}</div><div class="content">{{CONTENT}}</div></article></main>
+  <footer class="site-footer"><span>Awesome Coding Plans · verified September 3, 2026</span><span><a href="/llms.txt">For agents</a> · <a href="/changelog">Changelog</a> · <a href="https://github.com/vaproh/awesome-coding-plans">Source</a></span></footer>
 </body>
 </html>

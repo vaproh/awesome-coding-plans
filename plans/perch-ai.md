@@ -6,6 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api", "heavy"]
 modelAccess: "Aggregator"
 flags: ["byok", "open-source"]
+updated: "2026-09-03"
 website: "https://www.perchai.app/"
 models: "Qwen 3.6/3.8, GLM 5/5.2, Kimi K2.5-K2.7, Grok 4.6, MiniMax M3"
 quota: "Free up to $20/mo; Pro $10/mo up to $150/mo with Roost"

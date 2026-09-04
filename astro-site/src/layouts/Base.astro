@@ -1,4 +1,5 @@
 ---
+import { getCollection } from "astro:content";
 
 interface Props {
   title?: string;
@@ -7,6 +8,7 @@ interface Props {
 
 const { title = "Awesome Coding Plans", description = "Compare AI coding plans by price, models, quota, tools, and student discounts." } = Astro.props;
 const currentPath = Astro.url.pathname;
+const planCount = (await getCollection("plans")).length;
 ---
 
 <!doctype html>
@@ -21,16 +23,19 @@ const currentPath = Astro.url.pathname;
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://awesome-coding-plans.netlify.app${currentPath}`} />
-    <meta property="og:image" content="https://awesome-coding-plans.netlify.app/favicon.svg" />
-    <meta name="twitter:card" content="summary" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <meta property="og:image" content="https://awesome-coding-plans.netlify.app/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://awesome-coding-plans.netlify.app/og.png" />
+    <meta name="theme-color" content="#111111" />
+    <link rel="stylesheet" href="/fonts.css" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script defer src="https://analytics.netlify.com/ns.js"></script>
     <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "WebSite", name: "Awesome Coding Plans", url: "https://awesome-coding-plans.netlify.app", description })}></script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="app">
       <header class="topbar">
         <a href="/" class="brand"><span class="brand-prompt">&gt;_</span><span>CodingPlans</span></a>
@@ -38,14 +43,15 @@ const currentPath = Astro.url.pathname;
           <a href="/" class={currentPath === "/" ? "active" : ""}>Catalog</a>
           <a href="/comparison" class={currentPath.startsWith("/comparison") ? "active" : ""}>Compare</a>
           <a href="/student-discounts" class={currentPath.startsWith("/student-discounts") ? "active" : ""}>Students</a>
+          <a href="/guide" class={currentPath.startsWith("/guide") ? "active" : ""}>Guide</a>
           <a href="/faq" class={currentPath.startsWith("/faq") ? "active" : ""}>FAQ</a>
         </nav>
-        <div class="nav-meta"><span><i></i> 30 plans</span><a href="/plans.json">JSON</a><a class="source-link" href="https://github.com/vaproh/awesome-coding-plans">GitHub ↗</a></div>
+        <div class="nav-meta"><span><i></i> {planCount} plans</span><a href="/plans.json">JSON</a><a class="source-link" href="https://github.com/vaproh/awesome-coding-plans">GitHub ↗</a></div>
       </header>
-      <main class="main">
+      <main class="main" id="main">
         <slot />
       </main>
-      <footer class="site-footer"><span>Awesome Coding Plans · verified September 3, 2026</span><span><a href="/llms.txt">For agents</a> · <a href="https://github.com/vaproh/awesome-coding-plans">Source</a></span></footer>
+      <footer class="site-footer"><span>Awesome Coding Plans · verified September 3, 2026</span><span><a href="/llms.txt">For agents</a> · <a href="/changelog">Changelog</a> · <a href="https://github.com/vaproh/awesome-coding-plans">Source</a></span></footer>
     </div>
 
     <script>
@@ -77,9 +83,9 @@ const currentPath = Astro.url.pathname;
     --accent-glow: rgba(189, 189, 189, 0.16);
     --free: #aaaaaa;
     --free-glow: rgba(170, 170, 170, 0.14);
-    --orange: #999999;
-    --orange-glow: rgba(153, 153, 153, 0.15);
-    --red: #c2c2c2;
+    --freemium: #999999;
+    --freemium-glow: rgba(153, 153, 153, 0.15);
+    --discontinued: #c2c2c2;
     --radius: 12px;
     --radius-sm: 8px;
     --radius-lg: 16px;
@@ -318,11 +324,31 @@ const currentPath = Astro.url.pathname;
     background: var(--accent-glow);
     color: var(--accent-light);
   }
-  .badge-freemium { background: var(--orange-glow); color: var(--orange); }
+  .badge-freemium { background: var(--freemium-glow); color: var(--freemium); }
 
   .badge-discontinued {
     background: rgba(194, 194, 194, 0.15);
-    color: var(--red);
+    color: var(--discontinued);
+  }
+
+  /* Accessibility */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 200;
+    padding: 0.6rem 1rem;
+    background: var(--bg-card);
+    color: var(--text);
+    border: 1px solid var(--border-light);
+    border-radius: 0 0 6px 0;
+  }
+  .skip-link:focus {
+    left: 0;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent-light);
+    outline-offset: 2px;
   }
 
   /* Hero */

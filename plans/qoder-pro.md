@@ -6,6 +6,7 @@ quotaModel: "Credits"
 bestForTags: ["solo", "agent", "ide", "heavy"]
 modelAccess: "Single"
 flags: ["multimodal"]
+updated: "2026-09-03"
 website: "https://qoder.com/pricing"
 models: "Qoder Pro models via Alibaba Cloud (single-model focused)"
 quota: "$0-$200/mo; 300-20,000 credits; 2-week trial on free"

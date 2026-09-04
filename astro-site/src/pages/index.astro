@@ -5,9 +5,11 @@ import { getCollection } from "astro:content";
 const plans = await getCollection("plans");
 const sortedPlans = plans.sort((a, b) => a.data.title.localeCompare(b.data.title));
 const countType = (type: string) => plans.filter((plan) => plan.data.type === type).length;
+const siteUrl = "https://awesome-coding-plans.netlify.app";
 ---
 
-<Base title="Awesome Coding Plans | AI Coding Plan Comparison" description="Compare 30 AI coding subscriptions and token plans by price, model access, quota, tools, and special features.">
+<Base title="Awesome Coding Plans | AI Coding Plan Comparison" description={`Compare ${plans.length} AI coding subscriptions and token plans by price, model access, quota, tools, and special features.`}>
+  <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "AI coding plans", numberOfItems: plans.length, itemListElement: sortedPlans.map((plan, index) => ({ "@type": "ListItem", position: index + 1, name: plan.data.title, url: `${siteUrl}/plans/${plan.id}/` })) })}></script>
   <section class="hero reveal">
     <p class="eyebrow">$ npx compare-ai-plans</p>
     <h1>Find your next<br /><span>coding stack.</span></h1>
@@ -16,12 +18,13 @@ const countType = (type: string) => plans.filter((plan) => plan.data.type === ty
       <div><strong data-count={plans.length}>{plans.length}</strong><small>plans tracked</small></div>
       <div><strong data-count={countType("Free")}>{countType("Free")}</strong><small>free tiers</small></div>
       <div><strong data-count={countType("Freemium")}>{countType("Freemium")}</strong><small>freemium</small></div>
-      <div><strong>09/03/26</strong><small>last verified</small></div>
+      <div><strong>09/04/26</strong><small>last verified</small></div>
     </div>
   </section>
 
   <section class="catalog reveal" aria-labelledby="catalog-title">
     <div class="section-heading"><div><p class="eyebrow">01 / catalog</p><h2 id="catalog-title">All plans</h2></div><span id="result-count">{plans.length} results</span></div>
+    <p class="browse-links">Browse by: <a href="/by-price/">price</a> · <a href="/by-model-access/">model access</a> · <a href="/by-tag/">tag</a> · <a href="/tools/">tool</a></p>
     <div class="filters" aria-label="Plan filters">
       <div class="search-box">
         <label for="plan-search"><span class="search-icon">/</span><span class="sr-only">Search plans</span></label>
@@ -64,14 +67,14 @@ const countType = (type: string) => plans.filter((plan) => plan.data.type === ty
   </section>
 
   <script>
-    const cards = [...document.querySelectorAll('.plan-card')];
-    const inputs = ['plan-search','type-filter','price-filter','quota-filter','access-filter'].map((id) => document.getElementById(id));
+    const cards = [...document.querySelectorAll('.plan-card')] as HTMLElement[];
+    const inputs = ['plan-search','type-filter','price-filter','quota-filter','access-filter'].map((id) => document.getElementById(id)) as (HTMLInputElement | HTMLSelectElement)[];
     let activeTag = '';
     let quickType = '';
     let quickPrice = '';
     let hasFiltered = false;
-    const typeSelect = document.getElementById('type-filter');
-    const priceSelect = document.getElementById('price-filter');
+    const typeSelect = document.getElementById('type-filter') as HTMLSelectElement;
+    const priceSelect = document.getElementById('price-filter') as HTMLSelectElement;
     const filter = () => {
       const [search, type, price, quota, access] = inputs.map((input) => input.value.toLowerCase());
       const selectedType = (quickType || type).toLowerCase();
@@ -91,38 +94,49 @@ const countType = (type: string) => plans.filter((plan) => plan.data.type === ty
       document.getElementById('clear-filters').hidden = activeCount === 0;
       hasFiltered = true;
     };
-    const searchInput = document.getElementById('plan-search');
-    const clearSearch = document.getElementById('clear-search');
+    const searchInput = document.getElementById('plan-search') as HTMLInputElement;
+    const clearSearch = document.getElementById('clear-search') as HTMLButtonElement;
     inputs.forEach((input) => input.addEventListener('input', () => {
-      if (input === typeSelect) { quickType = ''; document.querySelectorAll('[data-filter-group="type"]').forEach((item) => { const active = item.dataset.value === ''; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(active)); }); }
+      if (input === typeSelect) { quickType = ''; document.querySelectorAll('[data-filter-group="type"]').forEach((item) => { const active = (item as HTMLElement).dataset.value === ''; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(active)); }); }
       if (input === priceSelect) { quickPrice = ''; document.querySelectorAll('[data-filter-group="price"]').forEach((item) => { item.classList.remove('active'); item.setAttribute('aria-pressed', 'false'); }); }
       clearSearch.hidden = !searchInput.value; filter();
     }));
     clearSearch.addEventListener('click', () => { searchInput.value = ''; clearSearch.hidden = true; searchInput.focus(); filter(); });
     document.querySelectorAll('[data-filter-group]').forEach((button) => button.addEventListener('click', () => {
-      const group = button.dataset.filterGroup;
+      const group = (button as HTMLElement).dataset.filterGroup;
       document.querySelectorAll(`[data-filter-group="${group}"]`).forEach((item) => item.classList.remove('active'));
       button.classList.add('active');
       document.querySelectorAll(`[data-filter-group="${group}"]`).forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
-      if (group === 'type') { quickType = button.dataset.value; document.getElementById('type-filter').value = ''; }
-      if (group === 'price') { quickPrice = button.dataset.value; document.getElementById('price-filter').value = ''; }
+      if (group === 'type') { quickType = (button as HTMLElement).dataset.value; (document.getElementById('type-filter') as HTMLSelectElement).value = ''; }
+      if (group === 'price') { quickPrice = (button as HTMLElement).dataset.value; (document.getElementById('price-filter') as HTMLSelectElement).value = ''; }
       filter();
     }));
     document.getElementById('clear-filters').addEventListener('click', () => {
       inputs.forEach((input) => { input.value = ''; });
       searchInput.value = ''; clearSearch.hidden = true; activeTag = ''; quickType = ''; quickPrice = '';
-      document.querySelectorAll('[data-filter-group]').forEach((item) => { const active = item.dataset.value === '' && item.dataset.filterGroup === 'type'; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(active)); });
+      document.querySelectorAll('[data-filter-group]').forEach((item) => { const active = (item as HTMLElement).dataset.value === '' && (item as HTMLElement).dataset.filterGroup === 'type'; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(active)); });
       document.querySelectorAll('[data-tag]').forEach((item) => { item.classList.remove('active'); item.setAttribute('aria-pressed', 'false'); });
       filter();
     });
-    document.addEventListener('keydown', (event) => { if (event.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'SELECT') { event.preventDefault(); searchInput.focus(); } });
-    document.querySelectorAll('[data-tag]').forEach((button) => button.addEventListener('click', () => { activeTag = activeTag === button.dataset.tag ? '' : button.dataset.tag; document.querySelectorAll('[data-tag]').forEach((item) => { const active = item === button && activeTag; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(Boolean(active))); }); filter(); }));
+    document.addEventListener('keydown', (event: KeyboardEvent) => { if (event.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'SELECT') { event.preventDefault(); searchInput.focus(); } });
+    document.querySelectorAll('[data-tag]').forEach((button) => button.addEventListener('click', () => { activeTag = activeTag === (button as HTMLElement).dataset.tag ? '' : (button as HTMLElement).dataset.tag; document.querySelectorAll('[data-tag]').forEach((item) => { const active = item === button && activeTag; item.classList.toggle('active', Boolean(active)); item.setAttribute('aria-pressed', String(Boolean(active))); }); filter(); }));
+    document.querySelectorAll('.chips, .quick-filters').forEach((group) => {
+      const buttons = [...group.querySelectorAll('button')] as HTMLButtonElement[];
+      (group as HTMLElement).addEventListener('keydown', (event: KeyboardEvent) => {
+        if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+        event.preventDefault();
+        const current = buttons.indexOf(document.activeElement as HTMLButtonElement);
+        if (current < 0) return;
+        const next = (current + (event.key === 'ArrowRight' ? 1 : -1) + buttons.length) % buttons.length;
+        buttons[next].focus();
+      });
+    });
   </script>
 </Base>
 
 <style>
   .hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--border); } .eyebrow { color: var(--accent); font: 500 .72rem "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 1rem; } h1 { font-size: clamp(3rem, 8vw, 6.5rem); line-height: .95; letter-spacing: -.07em; margin: 0 0 1.5rem; } h1 span { color: var(--accent); } .lede { max-width: 650px; font-size: 1.1rem; color: var(--text-muted); } .hero-stats { display: flex; gap: 3rem; margin-top: 2.5rem; flex-wrap: wrap; } .hero-stats div { display: grid; gap: .15rem; } .hero-stats strong { font: 500 1.45rem "DM Mono", monospace; color: var(--accent-light); } .hero-stats small { color: var(--text-dim); font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
-  .catalog { padding-top: 3rem; } .section-heading { display:flex; justify-content:space-between; align-items:end; gap:1rem; } h2 { margin:0; font-size:2rem; } #result-count { color:var(--text-dim); font:500 .75rem "DM Mono",monospace; } .filters { margin:1.5rem 0 .75rem; position:sticky; top:68px; z-index:1; padding:1rem 0; background:rgba(17,17,17,.94); backdrop-filter:blur(12px); } .search-box { display:flex; align-items:center; min-height:3.1rem; padding:0 .85rem; background:var(--bg-card); border:1px solid var(--border-light); border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,.12); } .search-box:focus-within { border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-glow); } .search-box label { display:block; color:var(--accent); font:500 1.1rem "DM Mono",monospace; } .search-box input { flex:1; min-width:0; padding:.7rem; border:0; outline:0; background:transparent; color:var(--text); font-size:1rem; } .search-box input::placeholder { color:var(--text-dim); } .search-box kbd { padding:.15rem .4rem; color:var(--text-dim); border:1px solid var(--border); border-radius:4px; font:500 .7rem "DM Mono",monospace; } .search-box button { margin-left:.5rem; padding:.1rem .4rem; color:var(--text-muted); background:transparent; border:0; cursor:pointer; font-size:1.35rem; line-height:1; } .search-box button:hover { color:var(--accent); } .quick-filters { display:flex; gap:.45rem; overflow-x:auto; padding:1rem 0 .2rem; scrollbar-width:none; } .quick-filter,.clear-filters { cursor:pointer; white-space:nowrap; padding:.5rem .7rem; color:var(--text-muted); background:transparent; border:1px solid var(--border); border-radius:5px; font:500 .72rem "DM Mono",monospace; } .quick-filter:hover,.quick-filter.active,.clear-filters:hover { color:var(--accent); border-color:var(--accent); background:var(--accent-glow); } .advanced-filters { border-top:1px solid var(--border); margin-top:.8rem; padding-top:.8rem; } .advanced-filters summary { cursor:pointer; display:flex; justify-content:space-between; color:var(--text-muted); font-size:.82rem; } .filter-summary { color:var(--text-dim); font:500 .7rem "DM Mono",monospace; } .advanced-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:.7rem; margin-top:1rem; } .clear-filters { margin-top:.8rem; } label { display:grid; gap:.35rem; color:var(--text-dim); font:500 .68rem "DM Mono",monospace; text-transform:uppercase; } input,select { width:100%; min-width:0; padding:.7rem .75rem; color:var(--text); background:var(--bg-card); border:1px solid var(--border); border-radius:6px; font:400 .82rem "Space Grotesk",sans-serif; } input:focus,select:focus { outline:1px solid var(--accent); } .chips { display:flex; gap:.4rem; flex-wrap:wrap; margin-bottom:1.5rem; } .chips button { cursor:pointer; padding:.3rem .55rem; color:var(--text-muted); background:transparent; border:1px solid var(--border); border-radius:4px; font:400 .7rem "DM Mono",monospace; } .chips button:hover,.chips button.active { color:var(--accent); border-color:var(--accent); background:var(--accent-glow); } .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  .catalog { padding-top: 3rem; } .section-heading { display:flex; justify-content:space-between; align-items:end; gap:1rem; } h2 { margin:0; font-size:2rem; } #result-count { color:var(--text-dim); font:500 .75rem "DM Mono",monospace; } .browse-links { margin:.4rem 0 0; font-size:.8rem; color:var(--text-dim); } .browse-links a { color:var(--text-muted); } .browse-links a:hover { color:var(--accent); } .filters { margin:1.5rem 0 .75rem; position:sticky; top:68px; z-index:1; padding:1rem 0; background:rgba(17,17,17,.94); backdrop-filter:blur(12px); } .search-box { display:flex; align-items:center; min-height:3.1rem; padding:0 .85rem; background:var(--bg-card); border:1px solid var(--border-light); border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,.12); } .search-box:focus-within { border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-glow); } .search-box label { display:block; color:var(--accent); font:500 1.1rem "DM Mono",monospace; } .search-box input { flex:1; min-width:0; padding:.7rem; border:0; outline:0; background:transparent; color:var(--text); font-size:1rem; } .search-box input::placeholder { color:var(--text-dim); } .search-box kbd { padding:.15rem .4rem; color:var(--text-dim); border:1px solid var(--border); border-radius:4px; font:500 .7rem "DM Mono",monospace; } .search-box button { margin-left:.5rem; padding:.1rem .4rem; color:var(--text-muted); background:transparent; border:0; cursor:pointer; font-size:1.35rem; line-height:1; } .search-box button:hover { color:var(--accent); } .quick-filters { display:flex; gap:.45rem; overflow-x:auto; padding:1rem 0 .2rem; scrollbar-width:none; } .quick-filter,.clear-filters { cursor:pointer; white-space:nowrap; padding:.5rem .7rem; color:var(--text-muted); background:transparent; border:1px solid var(--border); border-radius:5px; font:500 .72rem "DM Mono",monospace; } .quick-filter:hover,.quick-filter.active,.clear-filters:hover { color:var(--accent); border-color:var(--accent); background:var(--accent-glow); } .advanced-filters { border-top:1px solid var(--border); margin-top:.8rem; padding-top:.8rem; } .advanced-filters summary { cursor:pointer; display:flex; justify-content:space-between; color:var(--text-muted); font-size:.82rem; } .filter-summary { color:var(--text-dim); font:500 .7rem "DM Mono",monospace; } .advanced-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:.7rem; margin-top:1rem; } .clear-filters { margin-top:.8rem; } label { display:grid; gap:.35rem; color:var(--text-dim); font:500 .68rem "DM Mono",monospace; text-transform:uppercase; } input,select { width:100%; min-width:0; padding:.7rem .75rem; color:var(--text); background:var(--bg-card); border:1px solid var(--border); border-radius:6px; font:400 .82rem "Space Grotesk",sans-serif; } input:focus,select:focus { outline:1px solid var(--accent); } .chips { display:flex; gap:.4rem; flex-wrap:wrap; margin-bottom:1.5rem; } .chips button { cursor:pointer; padding:.3rem .55rem; color:var(--text-muted); background:transparent; border:1px solid var(--border); border-radius:4px; font:400 .7rem "DM Mono",monospace; } .chips button:hover,.chips button.active { color:var(--accent); border-color:var(--accent); background:var(--accent-glow); } .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
   .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:.8rem; } .plan-card { display:flex; flex-direction:column; min-height:175px; color:inherit; text-decoration:none; } .plan-card.is-filtered { display:none; } .plan-card.filter-in { animation: filterIn .28s ease both; animation-delay:var(--delay); } @keyframes filterIn { from { opacity:0; transform:translateY(8px) scale(.98); } to { opacity:1; transform:none; } } .plan-card h3 { margin:.8rem 0 .35rem; font-size:1.15rem; } .plan-card p { flex:1; margin:0; font-size:.82rem; } .plan-top,.plan-bottom { display:flex; align-items:center; gap:.45rem; color:var(--text-dim); font:500 .68rem "DM Mono",monospace; text-transform:uppercase; } .price-band { margin-left:auto; color:var(--accent-light); } .type-dot { width:7px; height:7px; border-radius:50%; background:#aaaaaa; } .type-paid { background:#eeeeee; } .type-freemium { background:#777777; } .plan-bottom { padding-top:.8rem; border-top:1px solid var(--border); color:var(--text-muted); } .plan-bottom span:last-child { margin-left:auto; color:var(--text-dim); } .empty { color:var(--text-muted); padding:3rem 0; }
   @media (max-width:800px) { .filters { top:108px; } .advanced-grid { grid-template-columns:1fr 1fr; } } @media (max-width:520px) { .hero { padding-top:2.5rem; } .hero-stats { gap:1.5rem; } .filters { top:108px; } .search-box { min-height:3.4rem; } .search-box input { font-size:.9rem; } .search-box kbd { display:none; } .advanced-grid { grid-template-columns:1fr; } }
   @media (prefers-reduced-motion: reduce) { .plan-card.filter-in { animation:none; } }

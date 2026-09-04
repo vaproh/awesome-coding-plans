@@ -6,6 +6,7 @@ quotaModel: "Credits"
 bestForTags: ["solo", "multimodal", "ide"]
 modelAccess: "Single"
 flags: ["multimodal"]
+updated: "2026-09-03"
 website: "https://platform.stepfun.ai/step-plan"
 models: "Step 3.7 Flash, Step 3.5 Flash, StepAudio 2.5, Step Image Edit 2"
 quota: "$6.99-$99/mo; 400M-40,000M credits; $1 ~ 7M credits"

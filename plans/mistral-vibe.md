@@ -6,6 +6,7 @@ quotaModel: "Sessions"
 bestForTags: ["solo", "cli", "ide"]
 modelAccess: "Frontier"
 flags: ["open-source"]
+updated: "2026-09-03"
 website: "https://mistral.ai/pricing/"
 models: "Mistral Medium 3.5, Devstral 2, Codestral, Mistral Small"
 quota: "Free $10/mo credits, 2 sessions; Pro $14.99/mo, 100/day"

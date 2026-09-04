@@ -6,6 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["team", "enterprise", "agent", "heavy"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
+updated: "2026-09-03"
 website: "https://factory.ai/pricing"
 models: "Multi-model via autonomous Droid agent"
 quota: "$20-$200/mo; Pro standard, Plus ~5x, Max ~10x Pro limits"

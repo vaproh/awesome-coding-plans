@@ -1,0 +1,35 @@
+---
+interface PlanEntry {
+  id: string;
+  data: {
+    title: string;
+    type: string;
+    price: string;
+    quota: string;
+    priceRange: string;
+  };
+}
+
+interface Props {
+  plans: PlanEntry[];
+}
+
+const { plans } = Astro.props;
+const typeLabel = (type: string) => (type === "Free" ? "Free tier" : type === "Freemium" ? "Free + paid" : "Paid only");
+---
+
+<table>
+  <thead>
+    <tr><th>Plan</th><th>Price</th><th>Quota</th><th>Type</th></tr>
+  </thead>
+  <tbody>
+    {plans.map((plan) => (
+      <tr>
+        <td><a href={`/plans/${plan.id}/`}>{plan.data.title}</a></td>
+        <td>{plan.data.price}</td>
+        <td>{plan.data.quota}</td>
+        <td>{typeLabel(plan.data.type)}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>

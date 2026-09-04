@@ -6,6 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "ide", "agent"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
+updated: "2026-09-03"
 website: "https://www.trae.ai/pricing"
 models: "Multi-model via ByteDance's Trae IDE"
 quota: "Free $3/mo usage; Pro $10/mo $20 usage; Ultra $100/mo $400"

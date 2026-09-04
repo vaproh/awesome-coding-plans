@@ -9,3 +9,8 @@
   from = "/plans/:slug"
   to = "/plans/:slug/"
   status = 301
+
+[[redirects]]
+  from = "/api/plans.json"
+  to = "/plans.json"
+  status = 200

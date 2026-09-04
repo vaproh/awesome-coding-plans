@@ -33,6 +33,7 @@ Each plan file carries the catalog metadata used by the website: plan type (`Fre
 | Plan | Price | Models | Best For |
 |------|-------|--------|----------|
 | [GitHub Copilot](plans/github-copilot.md) | $10/mo | 30+ models | Most models |
+| [Amazon Q Developer](plans/amazon-q-developer.md) | Free / $19/mo | Claude via AWS | AWS IDE + CLI |
 | [Perch AI](plans/perch-ai.md) | $10/mo | 15+ models | Smart routing |
 | [OpenCode Go](plans/opencode-go.md) | $10/mo | 24 models | Best value |
 | [Trae Pro](plans/trae-pro.md) | $10/mo | Multi-model | SOLO mode, unlimited autocomplete |
@@ -41,6 +42,7 @@ Each plan file carries the catalog metadata used by the website: plan type (`Fre
 | [Mistral Vibe](plans/mistral-vibe.md) | $14.99/mo | 7 models | European AI |
 | [Kilo Code](plans/kilo-pass.md) | Free (Teams $15/mo) | Any model | Open-source, BYOK |
 | [GLM Coding Plan](plans/glm-coding-plan.md) | $18/mo | 2 models | GLM-5.3 flagship |
+| [Gemini Code Assist](plans/gemini-code-assist.md) | $19/mo | Gemini family | Google IDE + CLI |
 | [Standard Compute](plans/standard-compute.md) | $19/mo | All frontiers | No windows |
 | [Claude Plans](plans/claude-plans.md) | $17-20/mo | 4 models | Frontier quality |
 
@@ -55,6 +57,7 @@ Each plan file carries the catalog metadata used by the website: plan type (`Fre
 | [Windsurf](plans/windsurf.md) | $20/mo | Multi-model | Cascade agent |
 | [Factory Droid](plans/factory-droid.md) | $20/mo | Multi-model | Autonomous agent |
 | [Qoder Pro](plans/qoder-pro.md) | $20/mo | Agentic | Alibaba Cloud |
+| [Replit Agent](plans/replit-agent.md) | Free / $20/mo | Frontier via credits | Build apps from prompts |
 | [MiniMax Token Plan](plans/minimax-token-plan.md) | $22/mo | 5+ models | Multimodal |
 | [Synthetic](plans/synthetic.md) | $30/mo | 16 open | Privacy |
 | [Fireworks Fire Pass](plans/fireworks-fire-pass.md) | Discontinued | Kimi K3 | Was flat-rate, sunsetted |

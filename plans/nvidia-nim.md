@@ -6,6 +6,7 @@ quotaModel: "Requests"
 bestForTags: ["solo", "api", "light"]
 modelAccess: "Multi-model"
 flags: ["open-source", "byok"]
+updated: "2026-09-03"
 website: "https://build.nvidia.com"
 models: "DeepSeek V4 Pro/Flash, GLM-5.1/4.7, MiniMax M2.7"
 quota: "Completely free; up to 40 rpm; no credit card required"

@@ -6,6 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "ide", "agent"]
 modelAccess: "Multi-model"
 flags: ["multimodal", "student-discount"]
+updated: "2026-09-03"
 website: "https://windsurf.com/pricing"
 models: "Claude Opus/Sonnet/Haiku, GPT-5.x, Gemini 3.1 Pro, SWE-1.5"
 quota: "Free limited; Pro $20/mo ~17-500 fast; Max $200/mo ~42-1,190"

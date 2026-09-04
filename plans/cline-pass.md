@@ -6,6 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "agent", "ide"]
 modelAccess: "Multi-model"
 flags: ["open-source", "byok"]
+updated: "2026-09-03"
 website: "https://cline.bot/cline-pass"
 models: "GLM-5.x, Kimi K2.6-K3, DeepSeek V4, MiMo V2.5, MiniMax M3, Qwen3.x"
 quota: "$9.99/mo ($4.99 first month); 2-5x standard API rate limits"

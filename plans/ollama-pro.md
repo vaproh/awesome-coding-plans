@@ -6,6 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "api", "heavy"]
 modelAccess: "Multi-model"
 flags: ["offline", "open-source", "multimodal"]
+updated: "2026-09-03"
 website: "https://ollama.com/pricing"
 models: "Kimi K3, DeepSeek V4, GLM-5.x, Qwen3.5, MiniMax M3, Gemma4"
 quota: "$0-$500/mo; $60-$1,000/mo usage credits included"

@@ -1,116 +1,64 @@
 # TODO
 
-Last updated: September 3, 2026
+Last updated: September 4, 2026
 
-## Data gaps in `plans.json` catalog
+## Completed
 
-The frontmatter carries filter metadata (`type`, `priceRange`, `quotaModel`, `bestForTags`, `modelAccess`, `flags`), but three machine-readable fields are still empty because they live in the Markdown body, not the frontmatter:
+### Data completion (was Priority 1 + 2)
 
-| Field | Filled | Empty | Source |
-|-------|--------|-------|--------|
-| `price` | 30 | 0 | Auto-extracted from body |
-| `models` | 0 | **30** | Needs frontmatter or parser extraction |
-| `quota` | 0 | **30** | Needs frontmatter or parser extraction |
-| `bestFor` | 0 | **30** | Needs frontmatter or parser extraction |
-| `website` | 0 | **30** | Auto-extracted but not propagated to catalog |
+- [x] `plans.json` fully populated: `price`, `models`, `quota`, `bestFor`, `website`, and `updated` for all 33 plans.
+- [x] Every `plans/*.md` frontmatter carries the same fields; per-plan verified dates surface on detail pages.
+- [x] Added Gemini Code Assist, Amazon Q Developer, and Replit Agent plans (researched September 4, 2026).
 
-### Fix path
+### Site structure (was Priority 3 + 4)
 
-Two options, pick one:
+- [x] Browse pages: `/by-price`, `/by-model-access`, `/by-tag`, `/tools`, generated from the catalog via a shared `PlanTable` component.
+- [x] Comparison tables now generate from catalog data per price band; curated "Best Picks" remain hand-edited.
+- [x] `/guide` decision page and `/changelog` added and linked from the navbar/footer.
 
-1. **Add fields to frontmatter** (recommended). Add `models`, `quota`, `bestFor`, and `website` to every root `plans/*.md` frontmatter block. This keeps the source of truth human-readable and editable. Then `build-static.mjs` already reads them via `parseFrontmatter()`.
+### SEO (was Priority 5)
 
-2. **Parse from body**. Extract the first pricing table row for `quota`, the model list for `models`, and the `**Website:**` link for `website` during `build-static.mjs`. Faster to implement but harder to maintain.
+- [x] 1200x630 `og.png` (generated with sharp), referenced by all pages with `og:image:width/height`.
+- [x] `theme-color`, `twitter:card summary_large_image` on every page.
+- [x] `BreadcrumbList` JSON-LD on plan detail pages, `ItemList` JSON-LD on the catalog, `FAQPage` on FAQ.
+- [x] `/api/plans.json` Netlify rewrite to `/plans.json`.
+- [x] Sitemap covers all 11 site pages plus all 33 plan routes.
 
-### Per-plan extraction needed
+### Accessibility (was Priority 6)
 
-For each of the 30 plans, the body contains:
-- `**Website:**` line with a `[label](url)` link (for `website`)
-- A `### Models` table or list (for `models`)
-- A `### Plans` / `### Pricing` table or list with quota details (for `quota`)
-- A paragraph or line describing who the plan is best for (for `bestFor`)
+- [x] Skip-to-content link on every page (Astro pages + static plan template).
+- [x] `:focus-visible` styles globally.
+- [x] `aria-pressed` on all filter and tag buttons, synced on every state change.
+- [x] Arrow-key navigation within quick-filter and tag-chip groups.
+- [ ] Screen-reader pass over the filter UI (needs a human/AT session; keyboard and ARIA structure verified by inspection only).
 
----
+### Performance (was Priority 7)
 
-## Priority 1: Fill `website` in catalog
+- [x] Fonts self-hosted via `public/fonts` + `public/fonts.css` (Space Grotesk variable, DM Mono 400/500); Google Fonts requests and preconnects removed; `scripts/sync-fonts.mjs` runs in predev/prebuild.
+- [x] `og.png` is the only remaining binary asset; no images in plan bodies, so lazy-loading is N/A.
+- [ ] Inlining critical CSS: dismissed. Astro already ships one small hashed stylesheet per page; manual inlining adds build complexity for no measurable gain at this size.
 
-- [x] Done. `build-static.mjs` now extracts `website` before building the catalog entry, so the body fallback lands in `plans.json`.
+### Data freshness (was Priority 8)
 
----
+- [x] Per-plan `updated` field in frontmatter and `plans.json`, shown as a "verified" badge on each detail page.
+- [x] `check-links.yml` now runs lychee weekly (Sundays) over README, plans.md, CONTRIBUTING, and all `plans/*.md`, so plan websites get checked for 404s automatically.
+- [ ] Weekly price-diff automation (would need scraping per vendor; overkill until vendors force it).
 
-## Priority 2: Add `models`, `quota`, `bestFor` to frontmatter
+### Developer experience (was Priority 9)
 
-- [x] Done. All 30 root `plans/*.md` files now carry `website`, `models`, `quota`, and `bestFor` frontmatter. `plans.json` is fully populated across all five data fields.
+- [x] Dead code removed: `pageNav`/`navLinks`/`navHtml`, inert `flex: 1`, no `.top-search` remnants.
+- [x] CSS variables renamed to semantic names: `--freemium`, `--discontinued` (monochrome grays).
+- [x] `npm run check` script (`astro check` with `@astrojs/check` + `typescript` devDeps); 0 errors, 0 warnings.
 
----
+### Content quality (was Priority 10)
 
-## Priority 3: Category pages
+- [x] Existing 30 plans re-verified September 3, 2026; 3 new plans verified September 4, 2026.
+- [x] Claude Max confirmed current ($100/$200, 5x/20x) and already documented inside `claude-plans.md`; no separate file needed.
+- [x] `/guide` "how to choose" page.
+- [x] `/changelog` page.
 
-Currently only three content pages: Catalog, Comparison, Student Discounts, FAQ. Add:
+## Remaining ideas (not committed)
 
-- `/by-model-access` - Group plans by Single / Multi-model / Aggregator / Frontier
-- `/by-price` - Budget, Mid, Premium, Enterprise tiers with cards
-- `/by-tag` - Agent, IDE, CLI, API, BYOK, Offline categories
-- `/tools` - Comparison of coding tools (IDEs, CLI agents, extensions)
-
----
-
-## Priority 4: Comparison table data
-
-The `comparison.astro` page has manually curated tables. These should be generated from `plans.json` to stay in sync. Build a `<ComparisonTable>` component that filters and sorts plans by category.
-
----
-
-## Priority 5: Search engine optimization
-
-- [ ] Add `og:image` as a proper 1200x630 PNG/SVG (current `favicon.svg` is tiny)
-- [ ] Add `<meta name="theme-color">` matching the dark background
-- [ ] Add breadcrumbs with `BreadcrumbList` JSON-LD to plan detail pages
-- [ ] Add `ItemList` JSON-LD to the catalog index page
-- [ ] Consider adding `/api/plans.json` redirect for discoverability
-
----
-
-## Priority 6: Accessibility
-
-- [ ] Add `aria-pressed` to tag filter buttons (currently missing)
-- [ ] Add keyboard navigation for tag chips (arrow keys within `.chips`)
-- [ ] Add skip-to-content link at the top of the layout
-- [ ] Test with a screen reader on the filter UI
-- [ ] Add focus-visible styles for keyboard navigation
-
----
-
-## Priority 7: Performance
-
-- [ ] Replace Google Fonts with self-hosted fonts (removes external request)
-- [ ] Add `loading="lazy"` to any images if added later
-- [ ] Inline critical CSS for above-the-fold content
-- [ ] Add `rel="preconnect"` for any remaining external origins
-
----
-
-## Priority 8: Data freshness
-
-- [ ] Add a GitHub Action that checks plan websites weekly and flags 404s or price changes
-- [ ] Add a "last verified" badge to each plan card (currently only in footer/site-wide)
-- [ ] Add an `updated` field to each plan frontmatter for per-plan freshness
-
----
-
-## Priority 9: Developer experience
-
-- [x] Remove dead `pageNav`/`navLinks`/`navHtml` from `build-static.mjs`
-- [x] Remove dead `flex: 1` from `.main` in `Base.astro`
-- [ ] Remove dead `.top-search` CSS from `Base.astro` if any remains
-- [ ] Rename `--free`, `--orange`, `--red` CSS variables to neutral names
-- [ ] Add a `typecheck` or `lint` script to `astro-site/package.json`
-
----
-
-## Priority 10: Content quality
-
-- [ ] Verify all 30 plan prices against official sources (last verified Sep 3, 2026)
-- [ ] Add missing plans: Anthropic Max, Google Gemini Code Assist, Amazon Q Developer, Replit Agent
-- [ ] Add a "How to choose" guide page with decision tree
-- [ ] Add a "Changelog" page tracking plan additions and price changes
+- Screen-reader testing session (accessibility above).
+- Automated per-vendor price scraping when catalogs drift.
+- Additional plans if new notable coding subscriptions appear; file an issue via the `new_plan.yml` template.

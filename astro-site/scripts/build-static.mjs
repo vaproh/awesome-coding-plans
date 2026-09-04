@@ -49,7 +49,7 @@ for (const file of files) {
   const websiteMatch = body.match(/\[.*?\]\((https?:\/\/[^\)]+)\)/);
   const website = data.website || (websiteMatch ? websiteMatch[1] : "");
 
-  catalog.push({ slug, title, type: data.type || "Paid", price: data.price || inferPrice(body), priceRange: data.priceRange || "Premium", quotaModel: data.quotaModel || "Mixed", models: data.models || "", quota: data.quota || "", bestFor: data.bestFor || "", bestForTags: data.bestForTags || [], modelAccess: data.modelAccess || "Multi-model", flags: data.flags || [], website });
+  catalog.push({ slug, title, type: data.type || "Paid", price: data.price || inferPrice(body), priceRange: data.priceRange || "Premium", quotaModel: data.quotaModel || "Mixed", models: data.models || "", quota: data.quota || "", bestFor: data.bestFor || "", bestForTags: data.bestForTags || [], modelAccess: data.modelAccess || "Multi-model", flags: data.flags || [], website, updated: data.updated || "2026-09-03" });
 
   // Remove the first heading from content
   const contentWithoutTitle = body.replace(/^#\s+.+\n\n/, "");
@@ -67,6 +67,8 @@ for (const file of files) {
     .replace(/{{PRICE_RANGE}}/g, escapeHtml(data.priceRange || "Premium"))
     .replace(/{{MODEL_ACCESS}}/g, escapeHtml(data.modelAccess || "Multi-model"))
     .replace(/{{PRICE}}/g, escapeHtml(data.price || inferPrice(body)))
+    .replace(/{{UPDATED}}/g, escapeHtml(data.updated || "September 3, 2026"))
+    .replace(/{{PLAN_COUNT}}/g, String(files.length))
     .replace(/{{QUOTA}}/g, escapeHtml(data.quota || "See plan details"))
     .replace(/{{QUOTA_MODEL}}/g, escapeHtml(data.quotaModel || "Mixed"))
     .replace(/{{BEST_FOR}}/g, escapeHtml(data.bestFor || "AI coding"))
@@ -79,7 +81,8 @@ for (const file of files) {
 }
 
 console.log(`Generated ${generated} plan pages`);
-writeFileSync(join(distDir, "plans.json"), JSON.stringify({ updated: "2026-09-03", plans: catalog }, null, 2));
+const latestUpdated = catalog.map((plan) => plan.updated).sort().at(-1);
+writeFileSync(join(distDir, "plans.json"), JSON.stringify({ updated: latestUpdated, plans: catalog }, null, 2));
 const sitemapPath = join(distDir, "sitemap-0.xml");
 try {
   const sitemap = readFileSync(sitemapPath, "utf-8");

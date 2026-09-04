@@ -1,0 +1,42 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Changelog | Awesome Coding Plans" description="Notable changes to the Awesome Coding Plans catalog: new plans, price corrections, and site features.">
+  <section class="changelog reveal">
+    <p class="eyebrow">changelog</p>
+    <h1>What <span>changed.</span></h1>
+    <p class="lede">Notable catalog and site changes, newest first. Plan bodies carry their own per-plan verified date.</p>
+
+    <section class="entry">
+      <h2>September 4, 2026</h2>
+      <ul>
+        <li>Added Gemini Code Assist, Amazon Q Developer, and Replit Agent plans (catalog now {33} plans).</li>
+        <li>Completed machine-readable metadata for every plan: website, models, quota, best-for, and per-plan verified dates in <a href="/plans.json">plans.json</a>.</li>
+        <li>Comparison tables now generate from catalog data instead of hand-maintained rows.</li>
+        <li>Added browse pages (price, model access, tag, tool), a decision guide, self-hosted fonts, richer SEO metadata, and a custom 404, FAQ, footer, and sitemap covering all plan routes.</li>
+      </ul>
+    </section>
+
+    <section class="entry">
+      <h2>September 3, 2026</h2>
+      <ul>
+        <li>Website launched on Netlify with a filterable catalog, comparison page, and student discounts page.</li>
+        <li>Full price verification pass across all listed plans; Fireworks Fire Pass marked discontinued.</li>
+        <li>Catalog grew from 19 to 30 plans, including Factory Droid, Augment Code, Qoder Pro, Kilo Code, Trae Pro, and Google Antigravity.</li>
+      </ul>
+    </section>
+  </section>
+</Base>
+
+<style>
+  .changelog { max-width: 760px; padding: 4rem 0 2rem; }
+  .eyebrow { color: var(--accent); font: 500 .72rem "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 1rem; }
+  h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: .95; letter-spacing: -.07em; margin: 0 0 1.5rem; }
+  h1 span { color: var(--accent); }
+  .lede { font-size: 1.05rem; margin-bottom: 2.5rem; }
+  .entry { border-top: 1px solid var(--border); padding: 1.5rem 0; }
+  .entry h2 { font-size: 1.1rem; margin: 0 0 .75rem; }
+  .entry ul { margin: 0; padding-left: 1.2rem; }
+  .entry li { margin: .3rem 0; }
+</style>

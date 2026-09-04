@@ -6,6 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "ide", "agent"]
 modelAccess: "Multi-model"
 flags: ["multimodal", "student-discount"]
+updated: "2026-09-03"
 website: "https://cursor.com/pricing"
 models: "Cursor Models (Grok 4.6, Composer 2.5) + 30+ third-party models"
 quota: "500 premium requests/mo, $20 usage pool; extra API-priced"

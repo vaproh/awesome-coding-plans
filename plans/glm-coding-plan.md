@@ -6,6 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "cli", "agent", "heavy"]
 modelAccess: "Single"
 flags: ["multimodal"]
+updated: "2026-09-03"
 website: "https://z.ai/subscribe"
 models: "GLM-5.3, GLM-5.3-Flash, GLM-5.2/5.1, GLM-4.7"
 quota: "$18-$168/mo; 2K-28K credits/5h, 10K-140K credits/week"

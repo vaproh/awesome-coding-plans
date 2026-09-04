@@ -26,5 +26,5 @@ jobs:
             --exclude https://x.com/.*
             --exclude https://twitter.com/.*
             --exclude https://education.github.com/.*
-            ./README.md ./plans.md ./CONTRIBUTING.md
+            ./README.md ./plans.md ./CONTRIBUTING.md ./plans/*.md
           fail: true

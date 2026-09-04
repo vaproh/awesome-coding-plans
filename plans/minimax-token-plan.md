@@ -6,6 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api", "multimodal", "heavy"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
+updated: "2026-09-03"
 website: "https://platform.minimax.io/subscribe/token-plan"
 models: "M3, M2.7, M2.7-highspeed, image and speech models"
 quota: "$22-$132/mo; ~1.7B-12.5B M3 tokens; 5h rolling + weekly"

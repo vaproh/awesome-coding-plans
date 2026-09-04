@@ -1,13 +1,15 @@
 # Awesome Coding Plans
 
-> A maintained, coding-focused comparison of AI subscriptions, token plans, coding agents, and student offers.
+> A maintained, coding-focused comparison of 33 AI subscriptions, token plans, coding agents, and student offers.
 
 ## Machine-readable catalog
 
-- [plans.json](https://awesome-coding-plans.netlify.app/plans.json): complete plan catalog with type, price band, quota model, model access, tags, flags, and official links.
-- [Comparison](https://awesome-coding-plans.netlify.app/comparison): curated side-by-side picks.
+- [plans.json](https://awesome-coding-plans.netlify.app/plans.json): complete plan catalog with type, price band, quota model, model access, tags, flags, verified dates, and official links. Also served at [/api/plans.json](https://awesome-coding-plans.netlify.app/api/plans.json).
+- [Comparison](https://awesome-coding-plans.netlify.app/comparison): curated picks plus auto-generated tables per price band.
 - [Student discounts](https://awesome-coding-plans.netlify.app/student-discounts): coding-related student offers.
+- [Browse by price](https://awesome-coding-plans.netlify.app/by-price), [model access](https://awesome-coding-plans.netlify.app/by-model-access), [tag](https://awesome-coding-plans.netlify.app/by-tag), [tool](https://awesome-coding-plans.netlify.app/tools): grouped views over the same catalog.
+- [Guide](https://awesome-coding-plans.netlify.app/guide): how to choose a plan. [Changelog](https://awesome-coding-plans.netlify.app/changelog): catalog history.
 
 ## Source and freshness
 
-The canonical source is the [GitHub repository](https://github.com/vaproh/awesome-coding-plans). Prices and availability can change; verify the official link on each plan page before purchasing.
+The canonical source is the [GitHub repository](https://github.com/vaproh/awesome-coding-plans). Each plan carries a `updated` field in plans.json and a verified date on its page. Prices and availability can change; verify the official link on each plan page before purchasing.

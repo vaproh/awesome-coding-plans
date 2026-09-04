@@ -6,6 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api", "light"]
 modelAccess: "Aggregator"
 flags: ["byok"]
+updated: "2026-09-03"
 website: "https://nano-gpt.com/pricing"
 models: "GLM 5, Kimi K2.5, MiniMax M2.7, DeepSeek V3.2 (subscription)"
 quota: "$12/mo covers 4 flagships; PAYG from $0.10 for 1000+ models"

@@ -6,6 +6,7 @@ quotaModel: "Credits"
 bestForTags: ["solo", "heavy", "api"]
 modelAccess: "Single"
 flags: ["multimodal"]
+updated: "2026-09-03"
 website: "https://mimo.mi.com/pricing"
 models: "MiMo V2.5 Pro (text), MiMo V2.5 (multimodal), ASR, TTS models"
 quota: "$6-$100/mo; 4.1B-82B credits; no weekly/5h caps"
