@@ -1,10 +1,10 @@
 ---
 title: "Trae Pro"
 price: "Free"
-models: ""
-quota: ""
+models: "Multi-model via ByteDance's Trae IDE"
+quota: "Free $3/mo usage; Pro $10/mo $20 usage; Ultra $100/mo $400"
 website: "https://www.trae.ai/pricing"
-bestFor: ""
+bestFor: "IDE users wanting ByteDance's AI agent with tiered pools"
 type: "Paid"
 priceRange: "Budget"
 quotaModel: "Mixed"

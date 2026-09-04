@@ -1,10 +1,10 @@
 ---
 title: "Cline Pass"
 price: "$9.99/mo"
-models: ""
-quota: ""
+models: "GLM-5.x, Kimi K2.6-K3, DeepSeek V4, MiMo V2.5, MiniMax M3, Qwen3.x"
+quota: "$9.99/mo ($4.99 first month); 2-5x standard API rate limits"
 website: "https://cline.bot/cline-pass"
-bestFor: ""
+bestFor: "Cline agent users wanting higher limits on open-weight models"
 type: "Paid"
 priceRange: "Budget"
 quotaModel: "Mixed"

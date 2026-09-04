@@ -33,20 +33,6 @@ const files = readdirSync(sourceDir).filter((f) => f.endsWith(".md") && f !== "s
 // Read the base template
 const template = readFileSync(join(__dirname, "../src/templates/plan.html"), "utf-8");
 
-// Build nav links
-const navLinks = files
-  .map((f) => {
-    const slug = f.replace(".md", "");
-    const content = readFileSync(join(sourceDir, f), "utf-8");
-    const { data } = parseFrontmatter(content);
-    const titleMatch = content.match(/^#\s+(.+)$/m);
-    const title = data.title || (titleMatch ? titleMatch[1].trim() : slug);
-    return { slug, title };
-  })
-  .sort((a, b) => a.title.localeCompare(b.title));
-
-const navHtml = navLinks.map((l) => `<a href="/plans/${l.slug}/">${l.title}</a>`).join("\n      ");
-
 let generated = 0;
 const catalog = [];
 
@@ -58,25 +44,18 @@ for (const file of files) {
   // Extract title
   const titleMatch = body.match(/^#\s+(.+)$/m);
   const title = data.title || (titleMatch ? titleMatch[1].trim() : slug);
-  catalog.push({ slug, title, type: data.type || "Paid", price: data.price || inferPrice(body), priceRange: data.priceRange || "Premium", quotaModel: data.quotaModel || "Mixed", models: data.models || "", quota: data.quota || "", bestFor: data.bestFor || "", bestForTags: data.bestForTags || [], modelAccess: data.modelAccess || "Multi-model", flags: data.flags || [], website: data.website || "" });
 
-  // Extract website
+  // Extract website before building the catalog entry so the body fallback lands in plans.json
   const websiteMatch = body.match(/\[.*?\]\((https?:\/\/[^\)]+)\)/);
   const website = data.website || (websiteMatch ? websiteMatch[1] : "");
+
+  catalog.push({ slug, title, type: data.type || "Paid", price: data.price || inferPrice(body), priceRange: data.priceRange || "Premium", quotaModel: data.quotaModel || "Mixed", models: data.models || "", quota: data.quota || "", bestFor: data.bestFor || "", bestForTags: data.bestForTags || [], modelAccess: data.modelAccess || "Multi-model", flags: data.flags || [], website });
 
   // Remove the first heading from content
   const contentWithoutTitle = body.replace(/^#\s+.+\n\n/, "");
 
   // Convert markdown to HTML
   const htmlContent = marked.parse(contentWithoutTitle);
-
-  // Build page nav with active state
-  const pageNav = navLinks
-    .map(
-      (l) =>
-        `<a href="/plans/${l.slug}/" class="${l.slug === slug ? "active" : ""}">${l.title}</a>`
-    )
-    .join("\n      ");
 
   // Replace template placeholders
   let page = template
@@ -91,8 +70,7 @@ for (const file of files) {
     .replace(/{{QUOTA}}/g, escapeHtml(data.quota || "See plan details"))
     .replace(/{{QUOTA_MODEL}}/g, escapeHtml(data.quotaModel || "Mixed"))
     .replace(/{{BEST_FOR}}/g, escapeHtml(data.bestFor || "AI coding"))
-    .replace(/{{TAGS}}/g, (Array.isArray(data.bestForTags) ? data.bestForTags : []).map((tag) => `<span class="badge">${escapeHtml(tag)}</span>`).join(""))
-    .replace(/{{NAV}}/g, pageNav);
+    .replace(/{{TAGS}}/g, (Array.isArray(data.bestForTags) ? data.bestForTags : []).map((tag) => `<span class="badge">${escapeHtml(tag)}</span>`).join(""));
 
   // Write the file
   mkdirSync(join(distDir, "plans", slug), { recursive: true });

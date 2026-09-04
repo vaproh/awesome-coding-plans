@@ -6,6 +6,10 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "ide", "agent"]
 modelAccess: "Aggregator"
 flags: ["open-source", "byok", "offline"]
+website: "https://kilo.ai/pricing"
+models: "Works with any AI model via BYOK or Kilo-managed inference"
+quota: "Free for individuals; Teams $15/user/mo; Enterprise custom"
+bestFor: "Open-source coding assistant users needing team governance"
 ---
 
 # Kilo Code

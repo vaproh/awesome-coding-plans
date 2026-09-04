@@ -6,6 +6,10 @@ quotaModel: "Mixed"
 bestForTags: ["agent", "ide", "student"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
+website: "https://antigravity.google/"
+models: "Gemini 3.x Flash/Pro, Claude Sonnet & Opus 4.6, GPT-OSS-120B"
+quota: "Free tier with basic weekly rate limits; Pro/Ultra add generous limits"
+bestFor: "Agent-first IDE for autonomous coding with multi-model access"
 ---
 
 # Google Antigravity

@@ -1,10 +1,10 @@
 ---
 title: "Synthetic"
 price: "$30/mo"
-models: ""
-quota: ""
+models: "Kimi K3, Nemotron-3-Super, gpt-oss-120b, Qwen3.8-27B, GLM-4.7/5.x"
+quota: "$30/mo; 500 reqs/5h, $24/week credits; 1 concurrent per model"
 website: "https://synthetic.new/pricing"
-bestFor: ""
+bestFor: "Privacy-focused users wanting flat-fee open-weight access"
 type: "Paid"
 priceRange: "Premium"
 quotaModel: "Requests"

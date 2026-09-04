@@ -1,10 +1,10 @@
 ---
 title: "OpenAI Codex Plans"
 price: "$8/mo"
-models: ""
-quota: ""
+models: "OpenAI core, advanced, and frontier Pro models"
+quota: "Go $8/mo (no Codex); Plus $20/mo; Pro $100/mo (5x Plus)"
 website: "https://openai.com/pricing"
-bestFor: ""
+bestFor: "ChatGPT users wanting Codex agent and deep research"
 type: "Paid"
 priceRange: "Premium"
 quotaModel: "Mixed"

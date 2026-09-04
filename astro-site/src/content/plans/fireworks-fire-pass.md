@@ -1,10 +1,10 @@
 ---
 title: "Fireworks Fire Pass"
 price: "Discontinued"
-models: ""
-quota: ""
+models: "kimi-k3-fast and other open-weight models (when active)"
+quota: "Discontinued; V1 $7/wk, V2 $49/mo, V3 TBA"
 website: "https://docs.fireworks.ai/firepass"
-bestFor: ""
+bestFor: "Developers wanting zero per-token costs on open-weight models"
 type: "Paid"
 priceRange: "Premium"
 quotaModel: "Mixed"

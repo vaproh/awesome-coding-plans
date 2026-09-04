@@ -6,6 +6,10 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api", "heavy"]
 modelAccess: "Multi-model"
 flags: ["open-source", "byok"]
+website: "https://chutes.ai/pricing"
+models: "GLM-4.7/5.x, Kimi K2.5, DeepSeek V3.2, Qwen3/3.5, MiniMax M2.5+"
+quota: "$3-$20/mo; ~5x PAYGO value/month, 3-10% off PAYGO"
+bestFor: "Budget users wanting cheapest decentralized AI inference"
 ---
 
 # Chutes

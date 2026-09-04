@@ -1,10 +1,10 @@
 ---
 title: "Kilo Code"
 price: "Free"
-models: ""
-quota: ""
+models: "Works with any AI model via BYOK or Kilo-managed inference"
+quota: "Free for individuals; Teams $15/user/mo; Enterprise custom"
 website: "https://kilo.ai/pricing"
-bestFor: ""
+bestFor: "Open-source coding assistant users needing team governance"
 type: "Freemium"
 priceRange: "Mid"
 quotaModel: "Mixed"

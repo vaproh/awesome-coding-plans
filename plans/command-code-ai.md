@@ -6,6 +6,10 @@ quotaModel: "Credits"
 bestForTags: ["solo", "api", "agent", "heavy"]
 modelAccess: "Aggregator"
 flags: ["byok", "multimodal"]
+website: "https://commandcode.ai/pricing"
+models: "taste-1, GPT-5.6 Luna/Sol, Grok 4.5/4.6, Qwen Max, GLM-5.2, 30+"
+quota: "$1-$200/mo; $10-$150 credits; up to 15K-219K requests"
+bestFor: "Solo devs wanting a style-learning model and deep discounts"
 ---
 
 # Command code ai

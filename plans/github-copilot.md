@@ -6,6 +6,10 @@ quotaModel: "Credits"
 bestForTags: ["solo", "team", "ide", "student"]
 modelAccess: "Multi-model"
 flags: ["student-discount", "multimodal"]
+website: "https://github.com/features/copilot/plans"
+models: "Claude, GPT, Gemini, Grok, Kimi, MAI-Code, Raptor mini"
+quota: "1,500-20,000 credits/mo; unlimited completions; credits for agent"
+bestFor: "Solo and team devs wanting the broadest model catalog"
 ---
 
 # Github copilot

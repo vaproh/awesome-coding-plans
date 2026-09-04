@@ -34,33 +34,13 @@ For each of the 30 plans, the body contains:
 
 ## Priority 1: Fill `website` in catalog
 
-Every plan body already has a `**Website:**` link. The `build-static.mjs` regex extracts it but only uses it for the HTML page, not `plans.json`. Fix: push extracted `website` into the catalog entry.
-
-File: `astro-site/scripts/build-static.mjs` line ~65.
+- [x] Done. `build-static.mjs` now extracts `website` before building the catalog entry, so the body fallback lands in `plans.json`.
 
 ---
 
 ## Priority 2: Add `models`, `quota`, `bestFor` to frontmatter
 
-Add these four fields to every root `plans/*.md`:
-
-```yaml
----
-title: "Cursor"
-type: "Paid"
-priceRange: "Premium"
-quotaModel: "Mixed"
-bestForTags: ["solo", "team", "ide", "agent"]
-modelAccess: "Multi-model"
-flags: ["multimodal", "student-discount"]
-models: "Cursor Models pool + 30 third-party models"
-quota: "500 slow + 500 fast premium requests/mo"
-bestFor: "Solo and team IDE users who want agent assistance"
-website: "https://cursor.com/pricing"
----
-```
-
-The `split-plans.mjs` already copies frontmatter as-is, so the schema in `src/content.config.ts` already defaults these to `""`. No loader change needed.
+- [x] Done. All 30 root `plans/*.md` files now carry `website`, `models`, `quota`, and `bestFor` frontmatter. `plans.json` is fully populated across all five data fields.
 
 ---
 
@@ -120,10 +100,10 @@ The `comparison.astro` page has manually curated tables. These should be generat
 
 ## Priority 9: Developer experience
 
-- [ ] Remove dead `pageNav` variable from `build-static.mjs`
+- [x] Remove dead `pageNav`/`navLinks`/`navHtml` from `build-static.mjs`
+- [x] Remove dead `flex: 1` from `.main` in `Base.astro`
 - [ ] Remove dead `.top-search` CSS from `Base.astro` if any remains
-- [ ] Remove dead `flex: 1` from `.main` (inert with `display: block` parent)
-- [ ] Rename `--free`, `--orange`, `--red` CSS variables to `--muted-1`, `--muted-2`, `--muted-3` or similar neutral names
+- [ ] Rename `--free`, `--orange`, `--red` CSS variables to neutral names
 - [ ] Add a `typecheck` or `lint` script to `astro-site/package.json`
 
 ---

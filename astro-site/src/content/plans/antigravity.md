@@ -1,10 +1,10 @@
 ---
 title: "Google Antigravity"
 price: "Free"
-models: ""
-quota: ""
+models: "Gemini 3.x Flash/Pro, Claude Sonnet & Opus 4.6, GPT-OSS-120B"
+quota: "Free tier with basic weekly rate limits; Pro/Ultra add generous limits"
 website: "https://antigravity.google/"
-bestFor: ""
+bestFor: "Agent-first IDE for autonomous coding with multi-model access"
 type: "Free"
 priceRange: "Free"
 quotaModel: "Mixed"

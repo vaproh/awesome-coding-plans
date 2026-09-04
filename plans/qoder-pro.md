@@ -6,6 +6,10 @@ quotaModel: "Credits"
 bestForTags: ["solo", "agent", "ide", "heavy"]
 modelAccess: "Single"
 flags: ["multimodal"]
+website: "https://qoder.com/pricing"
+models: "Qoder Pro models via Alibaba Cloud (single-model focused)"
+quota: "$0-$200/mo; 300-20,000 credits; 2-week trial on free"
+bestFor: "Alibaba Cloud users wanting agentic coding with Quest Mode"
 ---
 
 # Qoder Pro

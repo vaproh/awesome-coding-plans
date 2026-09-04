@@ -6,6 +6,10 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "agent", "heavy"]
 modelAccess: "Frontier"
 flags: ["multimodal", "student-discount"]
+website: "https://www.anthropic.com/pricing"
+models: "Claude Opus 5, Sonnet 5, Haiku 4.5, Fable 5"
+quota: "Free limited; Pro $17-20/mo; Max $100-200/mo (5-20x Pro)"
+bestFor: "Solo and team users wanting Claude's full model lineup"
 ---
 
 # Claude plans

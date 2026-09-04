@@ -1,10 +1,10 @@
 ---
 title: "Mistral Vibe"
 price: "Free"
-models: ""
-quota: ""
+models: "Mistral Medium 3.5, Devstral 2, Codestral, Mistral Small"
+quota: "Free $10/mo credits, 2 sessions; Pro $14.99/mo, 100/day"
 website: "https://mistral.ai/pricing/"
-bestFor: ""
+bestFor: "Solo devs wanting Mistral's unified AI agent for code"
 type: "Paid"
 priceRange: "Mid"
 quotaModel: "Sessions"

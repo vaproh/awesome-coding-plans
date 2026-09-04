@@ -1,10 +1,10 @@
 ---
 title: "Claude Plans"
 price: "Free"
-models: ""
-quota: ""
+models: "Claude Opus 5, Sonnet 5, Haiku 4.5, Fable 5"
+quota: "Free limited; Pro $17-20/mo; Max $100-200/mo (5-20x Pro)"
 website: "https://www.anthropic.com/pricing"
-bestFor: ""
+bestFor: "Solo and team users wanting Claude's full model lineup"
 type: "Paid"
 priceRange: "Mid"
 quotaModel: "Mixed"

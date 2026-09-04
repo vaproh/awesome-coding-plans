@@ -1,10 +1,10 @@
 ---
 title: "Augment Code"
 price: "$100/mo"
-models: ""
-quota: ""
+models: "Frontier models via context engine; model-agnostic coding assistant"
+quota: "$100/mo flat for up to 50 seats; usage pooled across team"
 website: "https://augmentcode.com/pricing"
-bestFor: ""
+bestFor: "Enterprise teams needing codebase-aware AI coding with flat pricing"
 type: "Paid"
 priceRange: "Enterprise"
 quotaModel: "Mixed"

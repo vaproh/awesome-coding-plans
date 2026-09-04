@@ -6,6 +6,10 @@ quotaModel: "Sessions"
 bestForTags: ["solo", "cli", "ide"]
 modelAccess: "Frontier"
 flags: ["open-source"]
+website: "https://mistral.ai/pricing/"
+models: "Mistral Medium 3.5, Devstral 2, Codestral, Mistral Small"
+quota: "Free $10/mo credits, 2 sessions; Pro $14.99/mo, 100/day"
+bestFor: "Solo devs wanting Mistral's unified AI agent for code"
 ---
 
 # Mistral vibe

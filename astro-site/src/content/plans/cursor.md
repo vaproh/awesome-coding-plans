@@ -1,10 +1,10 @@
 ---
 title: "Cursor"
 price: "Free"
-models: ""
-quota: ""
+models: "Cursor Models (Grok 4.6, Composer 2.5) + 30+ third-party models"
+quota: "500 premium requests/mo, $20 usage pool; extra API-priced"
 website: "https://cursor.com/pricing"
-bestFor: ""
+bestFor: "Solo and team IDE users wanting agent assistance"
 type: "Paid"
 priceRange: "Premium"
 quotaModel: "Mixed"

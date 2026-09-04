@@ -1,10 +1,10 @@
 ---
 title: "NanoGPT"
 price: "$12/mo"
-models: ""
-quota: ""
+models: "GLM 5, Kimi K2.5, MiniMax M2.7, DeepSeek V3.2 (subscription)"
+quota: "$12/mo covers 4 flagships; PAYG from $0.10 for 1000+ models"
 website: "https://nano-gpt.com/pricing"
-bestFor: ""
+bestFor: "Budget API users wanting 1000+ models at list prices"
 type: "Paid"
 priceRange: "Mid"
 quotaModel: "Mixed"

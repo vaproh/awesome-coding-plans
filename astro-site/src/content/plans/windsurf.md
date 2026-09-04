@@ -1,10 +1,10 @@
 ---
 title: "Windsurf"
 price: "Free"
-models: ""
-quota: ""
+models: "Claude Opus/Sonnet/Haiku, GPT-5.x, Gemini 3.1 Pro, SWE-1.5"
+quota: "Free limited; Pro $20/mo ~17-500 fast; Max $200/mo ~42-1,190"
 website: "https://windsurf.com/pricing"
-bestFor: ""
+bestFor: "Solo and team IDE users wanting Cascade agent with quotas"
 type: "Freemium"
 priceRange: "Premium"
 quotaModel: "Mixed"

@@ -1,10 +1,10 @@
 ---
 title: "Ollama Pro"
 price: "Free"
-models: ""
-quota: ""
+models: "Kimi K3, DeepSeek V4, GLM-5.x, Qwen3.5, MiniMax M3, Gemma4"
+quota: "$0-$500/mo; $60-$1,000/mo usage credits included"
 website: "https://ollama.com/pricing"
-bestFor: ""
+bestFor: "Local-first devs wanting cloud fallback with included credits"
 type: "Freemium"
 priceRange: "Premium"
 quotaModel: "Mixed"

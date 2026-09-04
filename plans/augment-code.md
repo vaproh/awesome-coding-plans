@@ -6,6 +6,10 @@ quotaModel: "Mixed"
 bestForTags: ["team", "enterprise", "ide", "heavy"]
 modelAccess: "Frontier"
 flags: ["multimodal"]
+website: "https://augmentcode.com/pricing"
+models: "Frontier models via context engine; model-agnostic coding assistant"
+quota: "$100/mo flat for up to 50 seats; usage pooled across team"
+bestFor: "Enterprise teams needing codebase-aware AI coding with flat pricing"
 ---
 
 # Augment Code

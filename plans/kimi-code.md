@@ -6,6 +6,10 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "agent", "cli", "heavy"]
 modelAccess: "Single"
 flags: ["multimodal"]
+website: "https://www.kimi.com/coding"
+models: "Kimi K3 (2.8T params), K2.7 Code, highspeed variants"
+quota: "Free to Allegro CNY699/mo; K3 from CNY99, 1M ctx from CNY199"
+bestFor: "Solo devs wanting Kimi K3 flagship with agent swarm"
 ---
 
 # Kimi code

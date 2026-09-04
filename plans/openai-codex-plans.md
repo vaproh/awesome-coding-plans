@@ -6,6 +6,10 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "agent", "ide", "heavy"]
 modelAccess: "Frontier"
 flags: ["multimodal", "student-discount"]
+website: "https://openai.com/pricing"
+models: "OpenAI core, advanced, and frontier Pro models"
+quota: "Go $8/mo (no Codex); Plus $20/mo; Pro $100/mo (5x Plus)"
+bestFor: "ChatGPT users wanting Codex agent and deep research"
 ---
 
 # Openai codex plans

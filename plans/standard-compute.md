@@ -6,6 +6,10 @@ quotaModel: "Unlimited"
 bestForTags: ["solo", "heavy", "agent", "api"]
 modelAccess: "Frontier"
 flags: ["open-source"]
+website: "https://standardcompute.com/coding-subscription"
+models: "Claude Opus 5, GPT-5.6 Sol, Gemini 3.1 Pro, GLM 5.2, Kimi K3"
+quota: "$19-$2,499/mo; ~$65-$9,300/mo compute budget; no token meter"
+bestFor: "Heavy users wanting flat-rate access to all frontier models"
 ---
 
 # Standard compute

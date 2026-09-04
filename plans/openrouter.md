@@ -6,6 +6,10 @@ quotaModel: "Requests"
 bestForTags: ["solo", "api", "light"]
 modelAccess: "Aggregator"
 flags: ["byok", "multimodal"]
+website: "https://openrouter.ai"
+models: "300+ models including hy3, minimax-m2.5, qwen3-coder (free)"
+quota: "Free 50 reqs/day on select models; PAYG at list price"
+bestFor: "Devs wanting one API endpoint for hundreds of models"
 ---
 
 # OpenRouter

@@ -1,10 +1,10 @@
 ---
 title: "NVIDIA NIM"
 price: "Free"
-models: ""
-quota: ""
+models: "DeepSeek V4 Pro/Flash, GLM-5.1/4.7, MiniMax M2.7"
+quota: "Completely free; up to 40 rpm; no credit card required"
 website: "https://build.nvidia.com"
-bestFor: ""
+bestFor: "Free-tier users wanting open-weight models, no signup"
 type: "Free"
 priceRange: "Free"
 quotaModel: "Requests"

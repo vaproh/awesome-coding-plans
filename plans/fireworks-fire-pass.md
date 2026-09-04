@@ -6,6 +6,10 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
+website: "https://docs.fireworks.ai/firepass"
+models: "kimi-k3-fast and other open-weight models (when active)"
+quota: "Discontinued; V1 $7/wk, V2 $49/mo, V3 TBA"
+bestFor: "Developers wanting zero per-token costs on open-weight models"
 ---
 
 # Fireworks Fire Pass

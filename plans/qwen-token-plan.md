@@ -6,6 +6,10 @@ quotaModel: "Credits"
 bestForTags: ["solo", "api", "light"]
 modelAccess: "Multi-model"
 flags: ["open-source", "multimodal"]
+website: "https://docs.qwencloud.com/coding-plan/overview"
+models: "Qwen3.8-Max/Flash, DeepSeek V4 Pro, Qwen3.7-Plus, GLM"
+quota: "$6-$68/mo; 2,500-40,000 credits/7 days; 50% night discount"
+bestFor: "Budget users wanting Qwen and partner models with weekly credits"
 ---
 
 # Qwen token plan

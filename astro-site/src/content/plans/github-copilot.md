@@ -1,10 +1,10 @@
 ---
 title: "GitHub Copilot"
 price: "Free"
-models: ""
-quota: ""
+models: "Claude, GPT, Gemini, Grok, Kimi, MAI-Code, Raptor mini"
+quota: "1,500-20,000 credits/mo; unlimited completions; credits for agent"
 website: "https://github.com/features/copilot/plans"
-bestFor: ""
+bestFor: "Solo and team devs wanting the broadest model catalog"
 type: "Freemium"
 priceRange: "Mid"
 quotaModel: "Credits"

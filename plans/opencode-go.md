@@ -6,6 +6,10 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "cli", "agent", "heavy"]
 modelAccess: "Multi-model"
 flags: ["open-source"]
+website: "https://opencode.ai"
+models: "Grok 4.6, GLM-5.3, Kimi K3, Qwen3.8 Max, DeepSeek V4, MiniMax M3"
+quota: "$10/mo; $12/5h, $30/week, $60/month dollar-based limits"
+bestFor: "CLI users wanting one subscription for many frontier models"
 ---
 
 # Opencode go

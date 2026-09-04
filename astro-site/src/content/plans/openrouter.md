@@ -1,10 +1,10 @@
 ---
 title: "OpenRouter"
 price: "Free"
-models: ""
-quota: ""
+models: "300+ models including hy3, minimax-m2.5, qwen3-coder (free)"
+quota: "Free 50 reqs/day on select models; PAYG at list price"
 website: "https://openrouter.ai"
-bestFor: ""
+bestFor: "Devs wanting one API endpoint for hundreds of models"
 type: "Freemium"
 priceRange: "Free"
 quotaModel: "Requests"
