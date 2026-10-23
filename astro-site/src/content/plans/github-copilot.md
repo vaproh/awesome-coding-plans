@@ -1,6 +1,6 @@
 ---
 title: "GitHub Copilot"
-price: "Free"
+price: "$0-100/mo"
 models: "Claude 5.5 family, GPT-6/5.6, Gemini 4 Argon/3.8, Grok 4.7, Kimi, MAI-Code, Raptor mini"
 quota: "1,500-20,000 credits/mo; unlimited completions; credits for agent"
 website: "https://github.com/features/copilot/plans"

@@ -1,5 +1,6 @@
 ---
 title: "OpenRouter"
+price: "Free / PAYG"
 type: "Freemium"
 priceRange: "Free"
 quotaModel: "Requests"

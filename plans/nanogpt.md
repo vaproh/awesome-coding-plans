@@ -1,5 +1,6 @@
 ---
 title: "NanoGPT"
+price: "$12/mo"
 type: "Paid"
 priceRange: "Mid"
 quotaModel: "Mixed"

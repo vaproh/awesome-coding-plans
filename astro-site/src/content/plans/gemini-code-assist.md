@@ -1,6 +1,6 @@
 ---
 title: "Gemini Code Assist"
-price: ""
+price: "$19-45/mo"
 models: "Gemini 3 Flash/Pro family"
 quota: "Standard 1,500 agent req/day; Enterprise 2,000/day; 6,000 code req/day"
 website: "https://cloud.google.com/products/gemini/pricing"

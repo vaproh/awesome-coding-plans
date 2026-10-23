@@ -1,5 +1,6 @@
 ---
 title: "OpenCode Go"
+price: "$10-40/mo"
 type: "Paid"
 priceRange: "Mid"
 quotaModel: "Mixed"

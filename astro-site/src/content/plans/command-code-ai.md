@@ -1,6 +1,6 @@
 ---
 title: "Command Code AI"
-price: "Free"
+price: "$1-200/mo"
 models: "taste-1, GPT-5.6 Luna/Sol, GPT-6 Sol/Luna, Grok 4.5/4.6, Claude Sonnet 5.5/Haiku 5.5, 30+"
 quota: "$1/$10/$20/$100/$200 per mo; $10/$70/$80/$150/$300 credits; ~9K/75K/100K/230K/370K requests"
 website: "https://commandcode.ai/pricing"

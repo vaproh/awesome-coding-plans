@@ -1,5 +1,6 @@
 ---
 title: "Step Plan"
+price: "$6.99-$99/mo"
 type: "Paid"
 priceRange: "Budget"
 quotaModel: "Credits"

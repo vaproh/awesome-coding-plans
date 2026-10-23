@@ -1,5 +1,6 @@
 ---
 title: "Mistral Vibe"
+price: "$0-24.99/mo"
 type: "Paid"
 priceRange: "Mid"
 quotaModel: "Sessions"

@@ -1,5 +1,6 @@
 ---
 title: "NVIDIA NIM"
+price: "Free"
 type: "Free"
 priceRange: "Free"
 quotaModel: "Requests"

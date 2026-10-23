@@ -1,5 +1,6 @@
 ---
 title: "Qwen Token Plan"
+price: "$6-$68/mo"
 type: "Paid"
 priceRange: "Budget"
 quotaModel: "Credits"

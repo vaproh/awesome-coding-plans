@@ -1,5 +1,6 @@
 ---
 title: "Windsurf"
+price: "$0-200/mo"
 type: "Freemium"
 priceRange: "Premium"
 quotaModel: "Mixed"

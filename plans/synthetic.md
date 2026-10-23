@@ -1,5 +1,6 @@
 ---
 title: "Synthetic"
+price: "$9-90/mo"
 type: "Paid"
 priceRange: "Premium"
 quotaModel: "Requests"

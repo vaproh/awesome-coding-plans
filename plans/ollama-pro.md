@@ -1,5 +1,6 @@
 ---
 title: "Ollama Pro"
+price: "$0-500/mo"
 type: "Freemium"
 priceRange: "Premium"
 quotaModel: "Mixed"

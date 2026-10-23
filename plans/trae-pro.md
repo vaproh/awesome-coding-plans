@@ -1,5 +1,6 @@
 ---
 title: "Trae Pro"
+price: "$0-200/mo"
 type: "Paid"
 priceRange: "Premium"
 quotaModel: "Mixed"

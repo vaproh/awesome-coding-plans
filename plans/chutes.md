@@ -1,5 +1,6 @@
 ---
 title: "Chutes"
+price: "$10-20/mo"
 type: "Paid"
 priceRange: "Budget"
 quotaModel: "Mixed"

@@ -1,5 +1,6 @@
 ---
 title: "Perch AI"
+price: "Free / $10/mo"
 type: "Paid"
 priceRange: "Mid"
 quotaModel: "Mixed"

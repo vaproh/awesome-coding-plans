@@ -1,6 +1,6 @@
 ---
 title: "Chutes"
-price: "$10/mo"
+price: "$10-20/mo"
 models: "GLM-5.x, Kimi K2.6/K3, DeepSeek V3.2/V4 Flash, Qwen3.5/3.8, MiniMax M2.5+"
 quota: "Plus $10/mo (2,000 req/day, $50 cap); Pro $20/mo (5,000 req/day, $100 cap); 6%/10% off PAYGO"
 website: "https://chutes.ai/pricing"

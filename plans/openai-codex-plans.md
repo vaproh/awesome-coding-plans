@@ -1,5 +1,6 @@
 ---
 title: "OpenAI Codex Plans"
+price: "$8-500/mo"
 type: "Paid"
 priceRange: "Premium"
 quotaModel: "Mixed"

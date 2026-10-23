@@ -1,5 +1,6 @@
 ---
 title: "Augment Code"
+price: "$20-100/mo"
 type: "Paid"
 priceRange: "Enterprise"
 quotaModel: "Mixed"

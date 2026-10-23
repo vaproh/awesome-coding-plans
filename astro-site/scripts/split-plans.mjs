@@ -53,8 +53,8 @@ for (const file of files) {
   const websiteMatch = content.match(/\[.*?\]\((https?:\/\/[^\)]+)\)/);
   const website = data.website || (websiteMatch ? websiteMatch[1] : "");
 
-  // Extract price from content (look for price patterns)
-  const priceMatch = content.match(/\$[\d.]+(?:-\$?[\d.]+)?\/mo|￥[\d.]+\/mo|Free|Discontinued/);
+  // Extract price from content (prefer an explicit $/mo figure over a bare "Free")
+  const priceMatch = content.match(/\$[\d.]+(?:-\$?[\d.]+)?\/mo|￥[\d.]+\/mo/) || content.match(/Free|Discontinued/);
   const price = priceMatch ? priceMatch[0] : "";
 
   // Check if file already has frontmatter

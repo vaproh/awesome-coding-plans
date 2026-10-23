@@ -1,6 +1,6 @@
 ---
 title: "Windsurf"
-price: "Free"
+price: "$0-200/mo"
 models: "Claude, GPT, Gemini, xAI + SWE-2 proprietary (via Devin Desktop)"
 quota: "Free limited; Pro $20/mo daily+weekly quota; Max $200/mo larger weekly quota"
 website: "https://windsurf.com/pricing"

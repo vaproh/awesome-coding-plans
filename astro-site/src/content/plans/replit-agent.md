@@ -1,6 +1,6 @@
 ---
 title: "Replit Agent"
-price: "Free"
+price: "$0-100/mo"
 models: "Frontier models (Claude, OpenAI) via effort-based credits"
 quota: "Core $20/mo usage credits; Pro $100/mo pooled credits, 10 parallel agents"
 website: "https://replit.com/pricing"

@@ -1,6 +1,6 @@
 ---
 title: "Synthetic"
-price: "$9/mo"
+price: "$9-90/mo"
 models: "Kimi K3, Nemotron-3-Super, gpt-oss-120b, Qwen3.8-27B, GLM-4.7/5.x, DeepSeek-V4.1-Flash"
 quota: "Go $9/mo / Standard $30/mo / Big $90/mo; weekly regenerating credits; extra usage at API rates"
 website: "https://synthetic.new/pricing"

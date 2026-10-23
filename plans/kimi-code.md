@@ -1,5 +1,6 @@
 ---
 title: "Kimi Code"
+price: "Free / ¥49-699/mo"
 type: "Freemium"
 priceRange: "Mid"
 quotaModel: "Mixed"

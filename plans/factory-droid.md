@@ -1,5 +1,6 @@
 ---
 title: "Factory Droid"
+price: "$20-$200/mo"
 type: "Paid"
 priceRange: "Premium"
 quotaModel: "Mixed"

@@ -1,6 +1,6 @@
 ---
 title: "Kimi Code"
-price: "Free"
+price: "Free / ¥49-699/mo"
 models: "Kimi K3 (2.8T params), kimi-for-coding (K2.8 Preview), highspeed variants"
 quota: "Free to Allegro CNY699/mo; K3 from CNY99, 1M ctx from CNY199; new members 5h rolling only, Extra Usage top-up"
 website: "https://www.kimi.com/coding"

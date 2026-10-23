@@ -1,5 +1,6 @@
 ---
 title: "GLM Coding Plan"
+price: "$18-$168/mo"
 type: "Paid"
 priceRange: "Mid"
 quotaModel: "Mixed"

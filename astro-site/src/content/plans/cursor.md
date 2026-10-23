@@ -1,6 +1,6 @@
 ---
 title: "Cursor"
-price: "Free"
+price: "$0-200/mo"
 models: "Cursor Agent + Grok models; third-party frontier at API list price (no allowance)"
 quota: "Free limited; Plus $8/mo; Premium $30/mo 4x; Super $100/mo 15x; Ultra $200/mo 50x; weekly refresh, top-ups for overage"
 website: "https://cursor.com/pricing"

@@ -1,6 +1,6 @@
 ---
 title: "Mistral Vibe"
-price: "Free"
+price: "$0-24.99/mo"
 models: "Mistral Medium 3.5, Devstral 2, Codestral, Mistral Small"
 quota: "Free limited; Pro $14.99/mo ($25.5 credits); Student $5.99; Team $24.99/user; Enterprise custom"
 website: "https://mistral.ai/pricing/"

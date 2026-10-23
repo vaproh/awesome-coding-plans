@@ -1,5 +1,6 @@
 ---
 title: "Cline Pass"
+price: "$9.99/mo"
 type: "Paid"
 priceRange: "Budget"
 quotaModel: "Mixed"

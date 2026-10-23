@@ -1,5 +1,6 @@
 ---
 title: "Replit Agent"
+price: "$0-100/mo"
 type: "Freemium"
 priceRange: "Premium"
 quotaModel: "Credits"

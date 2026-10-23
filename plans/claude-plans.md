@@ -1,5 +1,6 @@
 ---
 title: "Claude Plans"
+price: "$0-200/mo"
 type: "Paid"
 priceRange: "Mid"
 quotaModel: "Mixed"

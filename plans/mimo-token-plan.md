@@ -1,5 +1,6 @@
 ---
 title: "MiMo Token Plan"
+price: "$6-$100/mo"
 type: "Paid"
 priceRange: "Budget"
 quotaModel: "Credits"

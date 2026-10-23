@@ -1,5 +1,6 @@
 ---
 title: "GitHub Copilot"
+price: "$0-100/mo"
 type: "Freemium"
 priceRange: "Mid"
 quotaModel: "Credits"

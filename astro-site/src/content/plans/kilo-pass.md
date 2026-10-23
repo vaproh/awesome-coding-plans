@@ -1,6 +1,6 @@
 ---
 title: "Kilo Code"
-price: "Free"
+price: "$0-199/mo"
 models: "Works with any AI model via BYOK or Kilo-managed inference"
 quota: "Free $0; Teams $15/user/mo; Enterprise custom; Kilo Pass from $19/mo (1:1 credits + up to 50% bonus)"
 website: "https://kilo.ai/pricing"

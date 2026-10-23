@@ -1,5 +1,6 @@
 ---
 title: "Qoder Pro"
+price: "$0-$200/mo"
 type: "Paid"
 priceRange: "Premium"
 quotaModel: "Credits"

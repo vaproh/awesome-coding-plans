@@ -1,6 +1,6 @@
 ---
 title: "Perch AI"
-price: "$10/mo"
+price: "Free / $10/mo"
 models: "Gemini 4 Argon, Claude Opus 5.5/Sonnet 5.5/Haiku 5.5, GPT-6.1 Sol, GPT-6 Sol/Luna, GLM 5.3, Kimi K3, Grok 4.7, Qwen 3.8, DeepSeek V4, MiniMax M3"
 quota: "Starter free 20,000 PT/mo (~$20); Pro $10/mo Early Access (list $20) up to $150/mo"
 website: "https://www.perchai.app/"

@@ -1,5 +1,6 @@
 ---
 title: "Google Antigravity"
+price: "$0-200/mo"
 type: "Free"
 priceRange: "Free"
 quotaModel: "Mixed"

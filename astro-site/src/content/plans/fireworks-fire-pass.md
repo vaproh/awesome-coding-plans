@@ -1,6 +1,6 @@
 ---
 title: "Fireworks Fire Pass"
-price: "$28/mo"
+price: "Closed to new subs"
 models: "kimi-fast-latest (Kimi K3 Fast, 1.04M ctx); enabled routes vary"
 quota: "Not open to new subscriptions; existing/promo passes active"
 website: "https://docs.fireworks.ai/firepass"

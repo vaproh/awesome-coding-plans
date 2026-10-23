@@ -1,5 +1,6 @@
 ---
 title: "Kilo Code"
+price: "$0-199/mo"
 type: "Freemium"
 priceRange: "Mid"
 quotaModel: "Mixed"

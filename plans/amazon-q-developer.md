@@ -1,5 +1,6 @@
 ---
 title: "Amazon Q Developer"
+price: "$0-19/mo"
 type: "Freemium"
 priceRange: "Mid"
 quotaModel: "Requests"

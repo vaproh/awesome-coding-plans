@@ -25,7 +25,7 @@ function parseFrontmatter(content) {
 }
 
 const escapeHtml = (value = "") => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
-const inferPrice = (body) => (body.match(/\$[\d.]+(?:-\$?[\d.]+)?\/mo|￥[\d.]+\/mo|Free|Discontinued/) || ["See plan details"])[0];
+const inferPrice = (body) => ((body.match(/\$[\d.]+(?:-\$?[\d.]+)?\/mo|￥[\d.]+\/mo/) || body.match(/Free|Discontinued/) || ["See plan details"])[0]);
 const formatDate = (iso) => iso ? new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }) : "See plan details";
 
 // Get all plan markdown files

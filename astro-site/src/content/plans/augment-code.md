@@ -1,6 +1,6 @@
 ---
 title: "Augment Code"
-price: "$20/mo"
+price: "$20-100/mo"
 models: "Frontier models via context engine; model-agnostic coding assistant"
 quota: "Standard $20/mo $20 pooled; Business $100/mo $100 pooled; ≤50 seats flat, Enterprise custom"
 website: "https://augmentcode.com/pricing"

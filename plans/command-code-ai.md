@@ -1,5 +1,6 @@
 ---
 title: "Command Code AI"
+price: "$1-200/mo"
 type: "Freemium"
 priceRange: "Premium"
 quotaModel: "Credits"

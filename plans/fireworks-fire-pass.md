@@ -1,5 +1,6 @@
 ---
 title: "Fireworks Fire Pass"
+price: "Closed to new subs"
 type: "Paid"
 priceRange: "Premium"
 quotaModel: "Mixed"

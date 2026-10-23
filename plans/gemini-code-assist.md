@@ -1,5 +1,6 @@
 ---
 title: "Gemini Code Assist"
+price: "$19-45/mo"
 type: "Paid"
 priceRange: "Mid"
 quotaModel: "Requests"

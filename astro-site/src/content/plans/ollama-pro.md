@@ -1,6 +1,6 @@
 ---
 title: "Ollama Pro"
-price: "Free"
+price: "$0-500/mo"
 models: "Kimi K3/K2.7/K2.6, DeepSeek V4/V4.1, GLM-5.x, MiniMax M3/M2.7, Gemma4, Nemotron-3, Mistral Large 4"
 quota: "$0-$500/mo; $60-$1,000/mo usage credits included"
 website: "https://ollama.com/pricing"

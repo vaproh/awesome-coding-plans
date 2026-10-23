@@ -1,6 +1,6 @@
 ---
 title: "OpenAI Codex Plans"
-price: "$8/mo"
+price: "$8-500/mo"
 models: "GPT-6 Astra, GPT-6.1 Sol, GPT-6 Sol/Luna, GPT-5.6 family"
 quota: "Go $8/mo (limited Codex); Plus $20/mo (Codex yes); Pro $100/$200/$500/mo; credits extend usage"
 website: "https://openai.com/pricing"

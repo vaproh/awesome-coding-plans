@@ -1,6 +1,6 @@
 ---
 title: "Google Antigravity"
-price: "Free"
+price: "$0-200/mo"
 models: "Gemini 4 Argon, Gemini 3.x Flash/Pro, Claude Sonnet 5.5, GPT-OSS-120B (removal Nov 2 2026)"
 quota: "Free tier w/ weekly limits; Google AI Pro ~$20/mo; Ultra $100/mo (5x) or $200/mo (20x)"
 website: "https://antigravity.google/"

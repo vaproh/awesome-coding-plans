@@ -1,6 +1,6 @@
 ---
 title: "Amazon Q Developer"
-price: "Free"
+price: "$0-19/mo"
 models: "Latest Claude models via AWS"
 quota: "Free 50 agentic req/mo; Pro 1,000 agentic req/mo, 4,000 LOC/mo pooled + $0.003/LOC overage"
 website: "https://aws.amazon.com/q/developer/pricing/"
