@@ -44,9 +44,9 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | [Cursor](plans/cursor.md) | $8-200/mo | Cursor Agent + Grok; 3rd-party at list price | Weekly pooled allowance | AI-native IDE |
 | [Windsurf](plans/windsurf.md) | $20/mo | Claude, GPT, Gemini, SWE-1.7 | Daily/weekly quota | Devin Desktop agent |
 | [Factory Droid](plans/factory-droid.md) | $20/mo | Multi-model | Standard rate limits | Autonomous agent |
-| [Qoder Pro](plans/qoder-pro.md) | $20/mo | Agentic | 2,000 credits | Alibaba Cloud |
+| [Qoder Pro](plans/qoder-pro.md) | $10-200/mo | Agentic | 1,000-20,000 credits | Alibaba Cloud |
 | [Replit Agent](plans/replit-agent.md) | Free / $20/mo | Frontier via credits | $20/mo credits | Build apps from prompts |
-| [MiniMax](plans/minimax-token-plan.md) | $22/mo (legacy) | M3.1 Flash, H3 video | Token Plan closed to new subs | Multimodal |
+| [MiniMax](plans/minimax-token-plan.md) | $220-1,320/yr | M3.1 Flash, H3 video | M Plan for new subs | Multimodal |
 | [Synthetic](plans/synthetic.md) | $9-90/mo | 16 open | Weekly credits, Fast/Infinite modes | Privacy |
 | [Fireworks Fire Pass](plans/fireworks-fire-pass.md) | Closed to new subs | Kimi K3 Fast | Was flat-rate | Existing passes active |
 | [Augment Code](plans/augment-code.md) | $100/mo | Context engine | $100/mo included | Large codebases |
@@ -113,8 +113,8 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | [Cursor](plans/cursor.md) | $8-200/mo | Cursor Agent + Grok | AI-native IDE |
 | [Windsurf](plans/windsurf.md) | $20/mo | Multi-model | Cascade agent |
 | [Factory Droid](plans/factory-droid.md) | $20/mo | Multi-model | Autonomous agent |
-| [Qoder Pro](plans/qoder-pro.md) | $20/mo | Agentic | Alibaba Cloud |
-| [MiniMax](plans/minimax-token-plan.md) | $22/mo (legacy) | M Plan for new subs | Multimodal |
+| [Qoder Pro](plans/qoder-pro.md) | $10-200/mo | Agentic | Alibaba Cloud |
+| [MiniMax](plans/minimax-token-plan.md) | $220-1,320/yr | M3.1 Flash, H3 video | M Plan for new subs | Multimodal |
 | [Synthetic](plans/synthetic.md) | $9-90/mo | 16 models | Privacy |
 | [Augment Code](plans/augment-code.md) | $100/mo | Context engine | Large codebases, up to 50 seats |
 
@@ -133,7 +133,7 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | **Best for Students** | GitHub Copilot Student | Free |
 | **Best Free Tier** | Kimi Code (Adagio) | Free |
 | **Best IDE** | Cursor Premium | $30/mo |
-| **Best Multimodal** | MiniMax Plus (legacy) | $22/mo |
+| **Best Multimodal** | MiniMax Build | $1,320/yr |
 | **Best for Privacy** | Synthetic | $30/mo |
 | **Best Agent Platform** | Kimi Allegro | ¥699/mo |
 

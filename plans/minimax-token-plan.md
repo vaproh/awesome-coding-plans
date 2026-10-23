@@ -1,5 +1,6 @@
 ---
 title: "MiniMax Token Plan"
+price: "from $220/yr"
 type: "Paid"
 priceRange: "Premium"
 quotaModel: "Mixed"
@@ -9,7 +10,7 @@ flags: ["multimodal"]
 updated: "2026-10-23"
 website: "https://platform.minimax.io/subscribe/token-plan"
 models: "M3.1 Flash (text), H3 (video, Explore/Build), image and speech models"
-quota: "Token Plan legacy (existing subs only); M Plan: Go / Explore (3x) / Build (7.5x)"
+quota: "Token Plan legacy (existing subs only); M Plan Go $220/yr, Explore $550/yr, Build $1,320/yr"
 bestFor: "Multimodal devs needing language, speech, and video AI"
 ---
 
@@ -33,13 +34,13 @@ Full-spectrum AI subscription covering language, speech, video, and image models
 
 ### Plans (M Plan)
 
-| Tier | Relative Size | Notes |
-|------|---------------|-------|
-| **Go** | Base | Entry tier |
-| **Explore** | 3x Go | Mid tier |
-| **Build** | 7.5x Go | Highest limits |
+| Tier | Price | Relative Size | Notes |
+|------|-------|---------------|-------|
+| **Go** | $220/yr | Base | Entry tier |
+| **Explore** | $550/yr | 3x Go | Mid tier, adds H3 video |
+| **Build** | $1,320/yr | 7.5x Go | Highest limits, H3 video |
 
-> Dollar prices live on a JS-rendered page — verify on platform.minimax.io before subscribing.
+> Yearly prices billed annually (2 months free). Monthly toggle prices not captured — verify on minimax.io/m-plan before subscribing. "Revamped M Plan" ships 2x tokens vs the old Token Plan.
 
 ### Legacy Token Plan (existing subscribers only)
 

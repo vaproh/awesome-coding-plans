@@ -6,10 +6,10 @@ quotaModel: "Credits"
 bestForTags: ["solo", "agent", "ide", "heavy"]
 modelAccess: "Single"
 flags: ["multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://qoder.com/pricing"
 models: "Qoder Pro models via Alibaba Cloud (single-model focused)"
-quota: "$0-$200/mo; 300-20,000 credits; 2-week trial on free"
+quota: "$0-$200/mo; 1,000-20,000 credits; 2-week Pro trial on free; first-purchase bonus credits"
 bestFor: "Alibaba Cloud users wanting agentic coding with Quest Mode"
 ---
 
@@ -23,11 +23,13 @@ AI coding agent by Alibaba Cloud. Supports agentic workflows, Quest Mode, and Re
 
 | Tier | Price | Credits | Notes |
 |------|-------|---------|-------|
-| **Free** | $0 | 2-week trial + 300 credits | Limited completions, BYOK |
-| **Pro** | $20/mo | 2,000 | + 2,000 bonus on first purchase |
-| **Pro+** | $60/mo | 6,000 | + 6,000 bonus on first purchase |
-| **Ultra** | $200/mo | 20,000 | + 1,000 bonus on renewals |
-| **Credit Pack** | $20 | 1,500 | Add-on, 1 month validity |
+| **Free** | $0 | 2-week Pro trial + 300 credits | Limited completions, BYOK; trial needs latest client, no VMs |
+| **Lite** | $10/mo | 1,000 | + 2,000 bonus first purchase, + 1,000 on renewals; cost-effective models |
+| **Pro** | $20/mo | 2,000 | + 2,000 bonus first purchase, + 1,000 on renewals |
+| **Pro+** | $60/mo | 6,000 | + 6,000 bonus first purchase, + 2,000 on renewals |
+| **Ultra** | $200/mo | 20,000 | + 3,000 bonus on renewals; early access features |
+| **Credit Pack** | $20 | 1,500 | Add-on for Lite/Pro/Pro+/Ultra, 1 month validity |
+| **QoderWake Cloud Computer** | $10/unit/mo | — | 24/7 persistent cloud runtime, 1 month validity |
 
 ### Key Features
 - **Quest Mode** — autonomous task completion

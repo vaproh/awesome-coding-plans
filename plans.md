@@ -55,9 +55,9 @@ Each plan file carries the catalog metadata used by the website: plan type (`Fre
 | [Cursor](plans/cursor.md) | $8-200/mo | Cursor Agent + Grok | AI-native IDE |
 | [Windsurf](plans/windsurf.md) | $20/mo | Multi-model | Cascade agent |
 | [Factory Droid](plans/factory-droid.md) | $20/mo | Multi-model | Autonomous agent |
-| [Qoder Pro](plans/qoder-pro.md) | $20/mo | Agentic | Alibaba Cloud |
+| [Qoder Pro](plans/qoder-pro.md) | $10-200/mo | Agentic | Alibaba Cloud |
 | [Replit Agent](plans/replit-agent.md) | Free / $20/mo | Frontier via credits | Build apps from prompts |
-| [MiniMax Token Plan](plans/minimax-token-plan.md) | $22/mo (legacy) | M Plan for new subs | Multimodal |
+| [MiniMax Token Plan](plans/minimax-token-plan.md) | $220-1,320/yr | M3.1 Flash, H3 video | M Plan for new subs | Multimodal |
 | [Synthetic](plans/synthetic.md) | $9-90/mo | 16 open | Privacy |
 | [Fireworks Fire Pass](plans/fireworks-fire-pass.md) | Closed to new subs | Kimi K3 | Existing passes active |
 | [Augment Code](plans/augment-code.md) | $100/mo | Context engine | Large codebases, up to 50 seats |

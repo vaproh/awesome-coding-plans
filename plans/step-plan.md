@@ -42,7 +42,7 @@ StepFun's subscription for flagship models with smart routing. Credit-based mont
 | **Pro** | $29/mo | 8,000M | Heavy use |
 | **Max** | $99/mo | 40,000M | Professional workloads |
 
-> **$1 ≈ 7M Credits.** All tiers get same high-speed model performance. Quarterly/Yearly discounts available.
+> **$1 ≈ 7M Credits.** All tiers get same high-speed model performance. Quarterly/Yearly discounts available. All tiers currently show **Out of stock** on the pricing page — purchases may be paused; new free-trial claims are closed.
 
 ### Key Features
 - **No request-frequency limits** — spend credits flexibly
