@@ -38,7 +38,7 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | [Kilo Code](plans/kilo-pass.md) | Free / $15/mo | Any model | Teams $15/mo | Open-source, BYOK |
 | [GLM Coding Plan](plans/glm-coding-plan.md) | $18/mo | GLM-5.3, 5.3-Flash | 2K/5h + 10K/wk | GLM flagship |
 | [Claude](plans/claude-plans.md) | $17-20/mo | Opus 5, Sonnet 5, Haiku 4.5 | ~5x Free | Frontier quality |
-| [Standard Compute](plans/standard-compute.md) | $19/mo | All frontiers + open | Flat monthly budget | No token meter |
+| [Standard Compute](plans/standard-compute.md) | $19/mo | All frontiers + open | Flat monthly budget | No 5h/weekly windows |
 | [Command Code](plans/command-code-ai.md) | $1-200/mo | 30+ models | Credits + deals | taste-1, free models |
 | [Ollama Pro](plans/ollama-pro.md) | $20/mo | Open models | $60/mo usage | Local + cloud hybrid |
 | [Codex](plans/openai-codex-plans.md) | $8-500/mo | GPT-6, GPT-5.6 | Tiered | OpenAI ecosystem |
@@ -102,7 +102,7 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | [Mistral](plans/mistral-vibe.md) | $14.99/mo | 7 models | European, open weights |
 | [Kilo Code](plans/kilo-pass.md) | Free (Teams $15/mo) | Any model | Open-source, BYOK |
 | [GLM](plans/glm-coding-plan.md) | $18/mo | 2 models | GLM-5.3 flagship |
-| [Standard Compute](plans/standard-compute.md) | $19/mo | All frontiers | No token meter, no windows |
+| [Standard Compute](plans/standard-compute.md) | $19/mo | All frontiers | No 5h/weekly windows |
 | [Claude](plans/claude-plans.md) | $17-20/mo | 4 models | Frontier quality |
 
 ### Premium Plans ($20+)
