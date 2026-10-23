@@ -99,8 +99,21 @@ writeFileSync(join(distDir, "plans.json"), JSON.stringify({ updated: latestUpdat
 const sitemapPath = join(distDir, "sitemap-0.xml");
 try {
   const sitemap = readFileSync(sitemapPath, "utf-8");
-  const planUrls = catalog.map(({ slug }) => `<url><loc>https://awesome-coding-plans.netlify.app/plans/${slug}/</loc></url>`).join("");
-  writeFileSync(sitemapPath, sitemap.replace("</urlset>", `${planUrls}</urlset>`));
+  // Rebuild the sitemap from scratch so every URL carries a <lastmod>:
+  // catalog-derived pages use the site-wide latest plan date, plan pages
+  // use their own verified date. Static page list comes from the Astro
+  // integration output so it can't drift out of sync.
+  const escapeXml = (value = "") => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+  const siteOrigin = "https://awesome-coding-plans.netlify.app";
+  const staticLocs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
+    .map((m) => m[1])
+    .filter((loc) => loc.startsWith(siteOrigin) && !loc.includes("/plans/") && !loc.endsWith("/404/") && !loc.endsWith("/404"));
+  const entry = (loc, lastmod) => `  <url>\n    <loc>${escapeXml(loc)}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
+  const urls = [
+    ...staticLocs.map((loc) => entry(loc, latestUpdated)),
+    ...catalog.map(({ slug, updated }) => entry(`${siteOrigin}/plans/${slug}/`, updated || latestUpdated)),
+  ];
+  writeFileSync(sitemapPath, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`);
 } catch {
   // Sitemap integration is optional for local script-only runs.
 }
