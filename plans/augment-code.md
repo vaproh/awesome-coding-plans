@@ -6,7 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["team", "enterprise", "ide", "heavy"]
 modelAccess: "Frontier"
 flags: ["multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://augmentcode.com/pricing"
 models: "Frontier models via context engine; model-agnostic coding assistant"
 quota: "Standard $20/mo $20 pooled; Business $100/mo $100 pooled; ≤50 seats flat, Enterprise custom"

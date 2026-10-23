@@ -6,7 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "agent", "ide", "heavy"]
 modelAccess: "Frontier"
 flags: ["multimodal", "student-discount"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://openai.com/pricing"
 models: "GPT-6 Astra, GPT-6.1 Sol, GPT-6 Sol/Luna, GPT-5.6 family"
 quota: "Go $8/mo (limited Codex); Plus $20/mo (Codex yes); Pro $100/$200/$500/mo; credits extend usage"

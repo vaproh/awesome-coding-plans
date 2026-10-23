@@ -1,8 +1,8 @@
 ---
 title: "MiniMax Token Plan"
-price: "$22-$132/mo"
-models: "M3, M2.7, M2.7-highspeed, image and speech models"
-quota: "$22-$132/mo; ~1.7B-12.5B M3 tokens; 5h rolling + weekly"
+price: "$22/mo"
+models: "M3.1 Flash (text), H3 (video, Explore/Build), image and speech models"
+quota: "Token Plan legacy (existing subs only); M Plan: Go / Explore (3x) / Build (7.5x)"
 website: "https://platform.minimax.io/subscribe/token-plan"
 bestFor: "Multimodal devs needing language, speech, and video AI"
 type: "Paid"
@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api", "multimodal", "heavy"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 ---
 
 # Minimax token plan
@@ -21,17 +21,28 @@ updated: "2026-10-12"
 
 Full-spectrum AI subscription covering language, speech, video, and image models.
 
+> **Token Plan is closed to new purchases** — existing subscribers keep their price and benefits (upgrade path: Plus → M Plan Go/Explore/Build, Max → Explore/Build, Ultra → Build). New buyers go to the **M Plan**.
+
 ### Models
 
 | Model | Type | Notes |
 |-------|------|-------|
-| `M3` | Flagship language | Latest generation |
-| `M2.7` | Previous gen language | Shared quota with M3 |
-| `M2.7-highspeed` | Fast variant | 3x quota usage |
+| `M3.1 Flash` | Flagship language | Current text model (M3.1-Flash-Preview retired) |
+| `H3` | Video generation | Explore/Build only |
 | Image models | Image generation | Shared quota |
 | Speech models | TTS / ASR | Shared quota |
 
-### Plans
+### Plans (M Plan)
+
+| Tier | Relative Size | Notes |
+|------|---------------|-------|
+| **Go** | Base | Entry tier |
+| **Explore** | 3x Go | Mid tier |
+| **Build** | 7.5x Go | Highest limits |
+
+> Dollar prices live on a JS-rendered page — verify on platform.minimax.io before subscribing.
+
+### Legacy Token Plan (existing subscribers only)
 
 | Tier | Price | Est. M3 Tokens/mo | Agents | Video Gen |
 |------|-------|-------------------|--------|-----------|

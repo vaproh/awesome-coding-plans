@@ -6,10 +6,10 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api", "heavy"]
 modelAccess: "Multi-model"
 flags: ["open-source", "byok"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://chutes.ai/pricing"
 models: "GLM-5.x, Kimi K2.6/K3, DeepSeek V3.2/V4 Flash, Qwen3.5/3.8, MiniMax M2.5+"
-quota: "Plus $10/mo, Pro $20/mo; daily request quota + 6-10% off PAYGO (Base $3 discontinued)"
+quota: "Plus $10/mo (2,000 req/day, $50 cap); Pro $20/mo (5,000 req/day, $100 cap); 6%/10% off PAYGO"
 bestFor: "Budget users wanting cheapest decentralized AI inference"
 ---
 
@@ -31,10 +31,10 @@ Decentralized AI inference with optional subscription tiers. Known for cheapest 
 
 ### Plans
 
-| Tier | Price | Quota Model | PAYGO Discount |
-|------|-------|-------------|----------------|
-| **Plus** | $10/mo | Bundled daily request quota | 6% off PAYGO |
-| **Pro** | $20/mo | Larger daily request quota | 10% off PAYGO |
+| Tier | Price | Requests/Day | Monthly Cap | 4h Burst | PAYGO Discount |
+|------|-------|--------------|-------------|----------|----------------|
+| **Plus** | $10/mo | 2,000 | $50/mo usage | $4.17 | 6% off PAYGO |
+| **Pro** | $20/mo | 5,000 | $100/mo usage | $8.33 | 10% off PAYGO |
 
 ### Key Features
 - **TEE (Trusted Execution Environment)** — confidential compute

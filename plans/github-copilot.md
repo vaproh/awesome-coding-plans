@@ -6,9 +6,9 @@ quotaModel: "Credits"
 bestForTags: ["solo", "team", "ide", "student"]
 modelAccess: "Multi-model"
 flags: ["student-discount", "multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://github.com/features/copilot/plans"
-models: "Claude, GPT, Gemini, Grok, Kimi, MAI-Code, Raptor mini"
+models: "Claude 5.5 family, GPT-6/5.6, Gemini 4 Argon/3.8, Grok 4.7, Kimi, MAI-Code, Raptor mini"
 quota: "1,500-20,000 credits/mo; unlimited completions; credits for agent"
 bestFor: "Solo and team devs wanting the broadest model catalog"
 ---
@@ -24,10 +24,10 @@ The industry-standard AI coding assistant with the broadest model catalog. Uses 
 
 | Provider | Models |
 |----------|--------|
-| **Anthropic** | Claude Opus 5, Opus 4.8, Sonnet 5, Sonnet 4.6, Haiku 4.5, Fable 5, Fable 5.1 |
-| **OpenAI** | GPT-5.6 Sol/Terra/Luna, GPT-5.5, GPT-5.4, GPT-5.3-Codex, GPT-5 mini |
-| **Google** | Gemini 3.7 Flash, 3.6 Flash, 3.5 Flash, 3.1 Pro |
-| **xAI** | Grok 4.6, Grok 4.5 |
+| **Anthropic** | Claude Opus 5.5/5, Opus 4.8, Sonnet 5.5/5, Sonnet 4.6, Haiku 5.5/4.5, Fable 5, Fable 5.1 |
+| **OpenAI** | GPT-6 Astra/Luna/Sol, GPT-6.1 Sol, GPT-5.6 Sol/Terra/Luna, GPT-5.5, GPT-5.4, GPT-5.3-Codex, GPT-5 mini |
+| **Google** | Gemini 4 Argon, Gemini 3.8 Flash, 3.7/3.6/3.5 Flash, 3.1 Pro |
+| **xAI** | Grok 4.7, Grok 4.6, Grok 4.5 |
 | **Moonshot** | Kimi K3, Kimi K2.7 Code |
 | **Microsoft** | MAI-Code-1.1-Flash |
 | **GitHub** | Raptor mini (fine-tuned) |

@@ -5,7 +5,7 @@
 🌐 **Website:** [awesome-coding-plans.netlify.app](https://awesome-coding-plans.netlify.app)
 
 ![Plans](https://img.shields.io/badge/plans-33-blue)
-![Last Updated](https://img.shields.io/badge/updated-October%2012%2C%202026-green)
+![Last Updated](https://img.shields.io/badge/updated-October%2023%2C%202026-green)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3fec95af-0feb-49b4-b424-f2a98b4d2586/deploy-status)](https://app.netlify.com/projects/awesome-coding-plans/deploys)
 
@@ -18,10 +18,9 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | Plan | Price | Models | Quota Model | Best For |
 |------|-------|--------|-------------|----------|
 | [Antigravity](plans/antigravity.md) | Free | Gemini 3, Claude, GPT-OSS | 5h + weekly | Agentic IDE |
-| [NVIDIA NIM](plans/nvidia-nim.md) | Free | DeepSeek, GLM, MiniMax | 40 rpm | Free open models |
+| [NVIDIA NIM](plans/nvidia-nim.md) | Free | Nemotron, DeepSeek | Rate-limited | Free open models |
 | [OpenRouter](plans/openrouter.md) | Free / PAYG | 500+ models | 50 req/day free | Multi-model gateway |
 | [Chutes](plans/chutes.md) | $10/mo | 13+ open | Daily quota + 6-10% off PAYGO | Cheapest PAYG |
-| [Trae Lite](plans/trae-pro.md) | $8/mo | Multi-model | $8/mo usage | AI-native IDE entry |
 | [MiMo](plans/mimo-token-plan.md) | $6/mo | 6 MiMo | 4.1B Credits/mo | No weekly/5h caps |
 | [Qwen](plans/qwen-token-plan.md) | ~$6/mo | Qwen3.8, DeepSeek V4, GLM | 2,500 Credits/7d | Multi-model |
 | [Step](plans/step-plan.md) | $6.99/mo | Step 3.7/3.5, audio, image | 400M Credits | Multimodal |
@@ -29,7 +28,7 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | [GitHub Copilot](plans/github-copilot.md) | $10/mo | 30+ models | 1,500 AI Credits | Most models |
 | [Amazon Q Developer](plans/amazon-q-developer.md) | Free / $19/mo | Claude via AWS | 50 agentic req/mo free | AWS IDE + CLI |
 | [Gemini Code Assist](plans/gemini-code-assist.md) | $19/mo | Gemini family | 1,500 agent req/day | Google IDE + CLI |
-| [Cline Pass](plans/cline-pass.md) | $9.99/mo | 14 open | 2-5x rate limits | Cline users |
+| [Cline Pass](plans/cline-pass.md) | $9.99/mo | 12 open | 2-5x rate limits | Cline users |
 | [OpenCode Go](plans/opencode-go.md) | $10/mo | 24 models | $10 Go, $40 Go Plus, per-model caps | Best value |
 | [Perch](plans/perch-ai.md) | $10/mo | 15+ models | Up to $150 usage | Smart routing, BYOK |
 | [Trae Pro](plans/trae-pro.md) | $20/mo | Multi-model | $20 + Bonus | SOLO mode |
@@ -42,13 +41,13 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | [Command Code](plans/command-code-ai.md) | $1-200/mo | 30+ models | Credits + deals | taste-1, free models |
 | [Ollama Pro](plans/ollama-pro.md) | $20/mo | Open models | $60/mo usage | Local + cloud hybrid |
 | [Codex](plans/openai-codex-plans.md) | $8-500/mo | GPT-6, GPT-5.6 | Tiered | OpenAI ecosystem |
-| [Cursor](plans/cursor.md) | $20/mo | Grok 4.7, Composer 2.5 | $20/70/400 3rd-party pool | AI-native IDE |
+| [Cursor](plans/cursor.md) | $8-200/mo | Cursor Agent + Grok; 3rd-party at list price | Weekly pooled allowance | AI-native IDE |
 | [Windsurf](plans/windsurf.md) | $20/mo | Claude, GPT, Gemini, SWE-1.7 | Daily/weekly quota | Devin Desktop agent |
 | [Factory Droid](plans/factory-droid.md) | $20/mo | Multi-model | Standard rate limits | Autonomous agent |
 | [Qoder Pro](plans/qoder-pro.md) | $20/mo | Agentic | 2,000 credits | Alibaba Cloud |
 | [Replit Agent](plans/replit-agent.md) | Free / $20/mo | Frontier via credits | $20/mo credits | Build apps from prompts |
-| [MiniMax](plans/minimax-token-plan.md) | $22/mo | M3, M2.7, image, speech | 5h rolling + weekly | Multimodal |
-| [Synthetic](plans/synthetic.md) | $30/mo | 16 open | 500 req/5h + weekly | Privacy, no token meter |
+| [MiniMax](plans/minimax-token-plan.md) | $22/mo (legacy) | M3.1 Flash, H3 video | Token Plan closed to new subs | Multimodal |
+| [Synthetic](plans/synthetic.md) | $9-90/mo | 16 open | Weekly credits, Fast/Infinite modes | Privacy |
 | [Fireworks Fire Pass](plans/fireworks-fire-pass.md) | Closed to new subs | Kimi K3 Fast | Was flat-rate | Existing passes active |
 | [Augment Code](plans/augment-code.md) | $100/mo | Context engine | $100/mo included | Large codebases |
 
@@ -74,7 +73,7 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | Plan | Price | Models | Best For |
 |------|-------|--------|----------|
 | [Kimi Code](plans/kimi-code.md) | Free | K2.7 Code | Free coding agent |
-| [NVIDIA NIM](plans/nvidia-nim.md) | Free | DeepSeek, GLM, MiniMax | Free open models |
+| [NVIDIA NIM](plans/nvidia-nim.md) | Free | Nemotron, DeepSeek | Free open models |
 | [OpenRouter](plans/openrouter.md) | Free | 50 req/day | Testing multi-model |
 | [Antigravity](plans/antigravity.md) | Free | Gemini 3, Claude, GPT-OSS | Agentic IDE |
 
@@ -86,8 +85,7 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | [MiMo](plans/mimo-token-plan.md) | $6/mo | 6 models | No weekly/5h caps |
 | [Qwen](plans/qwen-token-plan.md) | ~$6/mo | 5+ models | Multi-model |
 | [Step](plans/step-plan.md) | $6.99/mo | 4+ models | Multimodal |
-| [Trae Lite](plans/trae-pro.md) | $3/mo | Multi-model | AI-native IDE entry |
-| [Cline Pass](plans/cline-pass.md) | $9.99/mo | 14 models | Cline users |
+| [Cline Pass](plans/cline-pass.md) | $9.99/mo | 12 models | Cline users |
 
 ### Mid-Range ($10-$20)
 
@@ -112,12 +110,12 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | [Command Code](plans/command-code-ai.md) | $1-200/mo | 30+ models | taste-1, free models |
 | [Ollama Pro](plans/ollama-pro.md) | $20/mo | Open models | Local + cloud |
 | [Codex](plans/openai-codex-plans.md) | $8-500/mo | Tiered | OpenAI ecosystem |
-| [Cursor](plans/cursor.md) | $20/mo | Multi-model | AI-native IDE |
+| [Cursor](plans/cursor.md) | $8-200/mo | Cursor Agent + Grok | AI-native IDE |
 | [Windsurf](plans/windsurf.md) | $20/mo | Multi-model | Cascade agent |
 | [Factory Droid](plans/factory-droid.md) | $20/mo | Multi-model | Autonomous agent |
 | [Qoder Pro](plans/qoder-pro.md) | $20/mo | Agentic | Alibaba Cloud |
-| [MiniMax](plans/minimax-token-plan.md) | $22/mo | 5+ models | Multimodal |
-| [Synthetic](plans/synthetic.md) | $30/mo | 16 models | Privacy |
+| [MiniMax](plans/minimax-token-plan.md) | $22/mo (legacy) | M Plan for new subs | Multimodal |
+| [Synthetic](plans/synthetic.md) | $9-90/mo | 16 models | Privacy |
 | [Augment Code](plans/augment-code.md) | $100/mo | Context engine | Large codebases, up to 50 seats |
 
 ---
@@ -134,8 +132,8 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | **Best for Heavy Use** | Standard Compute | $19/mo |
 | **Best for Students** | GitHub Copilot Student | Free |
 | **Best Free Tier** | Kimi Code (Adagio) | Free |
-| **Best IDE** | Cursor Pro | $20/mo |
-| **Best Multimodal** | MiniMax Plus | $22/mo |
+| **Best IDE** | Cursor Premium | $30/mo |
+| **Best Multimodal** | MiniMax Plus (legacy) | $22/mo |
 | **Best for Privacy** | Synthetic | $30/mo |
 | **Best Agent Platform** | Kimi Allegro | ¥699/mo |
 
@@ -146,11 +144,10 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | Plan | Price | Models | Quota | Best For |
 |------|-------|--------|-------|----------|
 | [Chutes](plans/chutes.md) | $10/mo | 13+ open | Daily quota + 6% off PAYGO | Cheapest sub |
-| [Trae Lite](plans/trae-pro.md) | $8 | Multi-model | $8/mo usage | AI-native IDE entry |
 | [MiMo Lite](plans/mimo-token-plan.md) | $6 | 6 MiMo | 4.1B Credits/mo | No weekly/5h caps |
-| [Qwen Lite](plans/qwen-token-plan.md) | ~$6 | Qwen3.8, DeepSeek V4, GLM | 2,500 Credits/7d | Multi-model |
+| [Qwen Lite](plans/qwen-token-plan.md) | $6 | Qwen3.8, DeepSeek V4, Kimi, GLM | 11,500 credits/mo | Multi-model |
 | [Step Mini](plans/step-plan.md) | $6.99 | Step 3.7/3.5 Flash, audio, image | 400M Credits | Multimodal |
-| [Cline Pass](plans/cline-pass.md) | $9.99 | 14 open models | 2-5x rate limits | Cline users |
+| [Cline Pass](plans/cline-pass.md) | $9.99 | 12 open models | 2-5x rate limits | Cline users |
 
 ---
 
@@ -178,7 +175,7 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 |---------|--------------|----------|
 | **Claude for Education** | Free Pro | Partner university email |
 | **GitHub Copilot** | Free | Student verification |
-| **Google AI Pro** | Free 1 year | US college student |
+| **Google AI Plus** | Free 1 year | Eligible students |
 | **ChatGPT Plus** | Free 4 months | US college student |
 | **Kiro** | Free 1 year | 11 partner universities |
 | **Perplexity** | $10/mo or free via referrals | Student email |
@@ -201,4 +198,4 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-*Last updated: October 12, 2026. Pricing and model availability may change. Always verify on official websites before subscribing.*
+*Last updated: October 23, 2026. Pricing and model availability may change. Always verify on official websites before subscribing.*

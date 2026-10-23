@@ -6,10 +6,10 @@ quotaModel: "Credits"
 bestForTags: ["solo", "api", "light"]
 modelAccess: "Multi-model"
 flags: ["open-source", "multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://docs.qwencloud.com/coding-plan/overview"
 models: "Qwen3.8-Max (0902), Qwen3.8-Flash, DeepSeek V4 Pro, Kimi-K3, GLM-5.2 + vision/image/audio"
-quota: "Lite ¥39/$6 – Pro ¥499/$68/mo; monthly credits; 60% night discount from 22:00"
+quota: "Personal $6-$68/mo; 11.5K-180K credits/mo; Team seats $20/$75/$200; 60% night discount from 22:00"
 bestFor: "Budget users wanting Qwen and partner models with monthly credits"
 ---
 
@@ -32,13 +32,16 @@ Alibaba Cloud's credit-based plan for AI coding. Access to Qwen, DeepSeek, GLM, 
 | `qwen-image-3.0-pro` | Image generation |
 | Vision / audio families | Multimodal |
 
-### Plans (Token Plan, monthly credits)
+### Plans (Personal Edition, monthly credits, limited-time prices)
 
 | Tier | Price | Credits/mo | Concurrent Agents |
 |------|-------|-----------|-------------------|
-| **Lite** | ¥39 (~$6)/mo | 11,500 | 1-2 |
-| **Standard** | ¥139/mo | 45,000 | 3-4 |
-| **Pro** | ¥499 (~$68)/mo | 180,000 | 6-8 |
+| **Lite** | $6/mo | 11,500 | 1-2 |
+| **Essential** | $10/mo | 25,500 | 2-4 |
+| **Standard** | $18/mo | 45,000 | 3-4 |
+| **Pro** | $68/mo | 180,000 | 6-8 |
+
+**Team Edition** seats ($20/$75/$200) and **Credit Packs** ($15/20K) also available. Singapore-region only; no ¥ prices shown anymore.
 
 > **Night discount:** 60% off (40% rate) from 22:00 on Qwen3.8-Max/Flash. Old request-based Lite plan discontinued Apr 2026.
 

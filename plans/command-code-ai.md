@@ -6,7 +6,7 @@ quotaModel: "Credits"
 bestForTags: ["solo", "api", "agent", "heavy"]
 modelAccess: "Aggregator"
 flags: ["byok", "multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://commandcode.ai/pricing"
 models: "taste-1, GPT-5.6 Luna/Sol, GPT-6 Sol/Luna, Grok 4.5/4.6, Claude Sonnet 5.5/Haiku 5.5, 30+"
 quota: "$1/$10/$20/$100/$200 per mo; $10/$70/$80/$150/$300 credits; ~9K/75K/100K/230K/370K requests"
@@ -43,8 +43,8 @@ Multi-model coding subscription with "taste-1" — a model that learns and appli
 | **Go** | $1/mo + fee | $10 | ~$15 with deals | ~9K | Entry tier |
 | **GOAT** | $10/mo + fee | $70 | ~$100 with deals | ~75K | Best value |
 | **Pro** | $20/mo + fee | $80 | — | ~100K | Mid-tier |
-| **Max 10x** | $100/mo + fee | $150 | ~$300 with deals | ~230K | Priority support |
-| **Max 20x** | $200/mo + fee | $300 | ~$600 | ~370K | Highest limits |
+| **Max 10x** | $100/mo + fee | $150 | ~$300 with deals | ~219K | Priority support |
+| **Max 20x** | $200/mo + fee | $300 | ~$600 | ~437K | Highest limits |
 
 ### API Plan
 

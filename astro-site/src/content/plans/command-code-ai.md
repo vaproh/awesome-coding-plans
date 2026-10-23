@@ -11,7 +11,7 @@ quotaModel: "Credits"
 bestForTags: ["solo", "api", "agent", "heavy"]
 modelAccess: "Aggregator"
 flags: ["byok", "multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 ---
 
 # Command code ai
@@ -44,8 +44,8 @@ Multi-model coding subscription with "taste-1" — a model that learns and appli
 | **Go** | $1/mo + fee | $10 | ~$15 with deals | ~9K | Entry tier |
 | **GOAT** | $10/mo + fee | $70 | ~$100 with deals | ~75K | Best value |
 | **Pro** | $20/mo + fee | $80 | — | ~100K | Mid-tier |
-| **Max 10x** | $100/mo + fee | $150 | ~$300 with deals | ~230K | Priority support |
-| **Max 20x** | $200/mo + fee | $300 | ~$600 | ~370K | Highest limits |
+| **Max 10x** | $100/mo + fee | $150 | ~$300 with deals | ~219K | Priority support |
+| **Max 20x** | $200/mo + fee | $300 | ~$600 | ~437K | Highest limits |
 
 ### API Plan
 

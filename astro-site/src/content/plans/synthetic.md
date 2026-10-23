@@ -1,8 +1,8 @@
 ---
 title: "Synthetic"
-price: "$30/mo"
-models: "Kimi K3, Nemotron-3-Super, gpt-oss-120b, Qwen3.8-27B, GLM-4.7/5.x"
-quota: "$30/mo; 500 reqs/5h, $24/week credits; 1 concurrent per model"
+price: "$9/mo"
+models: "Kimi K3, Nemotron-3-Super, gpt-oss-120b, Qwen3.8-27B, GLM-4.7/5.x, DeepSeek-V4.1-Flash"
+quota: "Go $9/mo / Standard $30/mo / Big $90/mo; weekly regenerating credits; extra usage at API rates"
 website: "https://synthetic.new/pricing"
 bestFor: "Privacy-focused users wanting flat-fee open-weight access"
 type: "Paid"
@@ -11,7 +11,7 @@ quotaModel: "Requests"
 bestForTags: ["solo", "api", "heavy"]
 modelAccess: "Multi-model"
 flags: ["open-source", "offline"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 ---
 
 # Synthetic
@@ -32,18 +32,24 @@ Flat-fee subscription for open-weight models on private infrastructure. No train
 | GLM-4.7-Flash | 192K | Included |
 | GLM-5.2 | 512K | Included |
 | GLM-5.3-Flash | 512K | Beta |
+| DeepSeek-V4.1-Flash | — | Included |
 
-### Plan
+### Plans
 
-| Tier | Price | Requests/5h | Weekly Credits | Concurrency |
-|------|-------|-------------|----------------|-------------|
-| **Subscription Pack** | $30/mo ($1/day) | 500 | $24/week (~$102/mo value) | 1 per model |
+| Tier | Price | Credits | Notes |
+|------|-------|---------|-------|
+| **Go** | $9/mo | Weekly regenerating credits | Entry tier |
+| **Standard** | $30/mo | Weekly regenerating credits | Main tier |
+| **Big** | $90/mo | Weekly regenerating credits | Highest limits, Infinite mode beta |
+
+> Exact per-tier credit amounts aren't published as fixed numbers — check the pricing page. Extra usage billed at API rates.
 
 ### Key Features
 - **Anthropic-compatible endpoint** — drops into Claude Code
 - **OpenAI-compatible endpoint** — works with any agent
-- **No token metering** — flat monthly price
-- **1 concurrent request per model** (parallel across different models)
+- **Weekly regenerating credits** — apply at discounted model rates
+- **Fast mode** — 2x faster responses, burns limits 2x
+- **Infinite mode (beta)** — no limit burn, slower; DeepSeek V4.1 Flash only, Big plan
 - **Stack packs** for higher limits
 - **No training on data**, prompts deleted in 14 days
 - **Codebase indexing** included (via Nomic embeddings)

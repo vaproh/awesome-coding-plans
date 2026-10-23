@@ -1,8 +1,8 @@
 ---
 title: "Cursor"
 price: "Free"
-models: "Grok 4.7/4.6/4.5, Composer 2.5 + frontier third-party models"
-quota: "Two pools: Cursor-models included + $20/$70/$400 third-party usage; overage at API rates"
+models: "Cursor Agent + Grok models; third-party frontier at API list price (no allowance)"
+quota: "Free limited; Plus $8/mo; Premium $30/mo 4x; Super $100/mo 15x; Ultra $200/mo 50x; weekly refresh, top-ups for overage"
 website: "https://cursor.com/pricing"
 bestFor: "Solo and team IDE users wanting agent assistance"
 type: "Paid"
@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "ide", "agent"]
 modelAccess: "Multi-model"
 flags: ["multimodal", "student-discount"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 ---
 
 # Cursor
@@ -19,42 +19,38 @@ updated: "2026-10-12"
 
 **Website:** [cursor.com/pricing](https://cursor.com/pricing) | **Docs:** [Cursor Models & Pricing](https://cursor.com/docs/models-and-pricing)
 
-AI-native code editor with two usage pools: Cursor's own models (generous) and third-party models (at API price).
+AI-native code editor with one pooled AI allowance shared across Cursor and Grok models, refreshing weekly. Third-party frontier models billed at API list price with spending caps.
 
 ### Models
 
-**Cursor Models pool (generous usage):**
+**Included pool (usage multipliers apply):**
 
 | Model | Provider | Notes |
 |-------|----------|-------|
-| Grok 4.7 | Cursor + xAI | Newest gen |
-| Grok 4.6 | Cursor + xAI | Jointly trained |
-| Grok 4.6 (Fast) | Cursor + xAI | Higher effort |
-| Grok 4.5 | Cursor + xAI | Previous gen |
-| Composer 2.5 | Cursor | Default agent model |
-| Composer 2.5 (Fast) | Cursor | Fast mode |
+| Cursor Agent | Cursor | Autonomous coding agent (Premium+) |
+| Grok models | Cursor + xAI | All paid tiers (Plus is Grok-only) |
 
-**Other Models pool (billed at API price):**
-All frontier models — Claude, GPT, Gemini, etc. Pro includes $20 of third-party usage, Pro Plus $70, Ultra $400.
+**Third-party (billed at API list price, no included allowance):**
+Claude, GPT, Gemini, etc. — pay exactly what you use, controlled by spending caps.
 
 ### Plans
 
-| Tier | Price | Cursor Models | 3rd-party Pool | Agent Multiplier |
-|------|-------|---------------|----------------|------------------|
-| **Hobby** | Free | Limited | None | — |
-| **Start (India)** | ₹649/mo | Included | None | — |
-| **Pro** | $20/mo ($16/yr) | Included | $20 included | 1x |
-| **Pro Plus** | $60/mo ($48/yr) | Included | $70 included | 3x |
-| **Ultra** | $200/mo ($160/yr) | Included | $400 included | 20x |
-| **Teams Std** | $40/user/mo | Included | Per-seat pool | — |
-| **Teams Premium** | $120/user/mo | Included | Larger pool | 5x Standard |
+| Tier | Price | Included Usage | Notes |
+|------|-------|----------------|-------|
+| **Hobby** | Free | Limited | — |
+| **Plus** | $8/mo | Basic pooled allowance | Grok models only |
+| **Premium** | $30/mo | 4x Plus | Cursor Agent, cloud agents, BugBot |
+| **Super** | $100/mo | 15x Plus | Higher limits |
+| **Ultra** | $200/mo | 50x Plus | Highest limits |
+| **Teams** | $30+/user/mo | Per-seat pool | Centralized billing |
+| **Enterprise** | Custom | Custom | SSO, audit logs, SLA |
 
 ### Key Features
-- **Two pools:** Cursor models (big allowance) + third-party (dollar allowance)
-- **No hard stop** — overage billed at API rates in arrears
+- **Single pooled allowance** — shared across Cursor + Grok models, refreshes weekly
+- **Top-ups** — continue past the allowance instead of a hard stop
+- **Third-party at list price** — no markup, no included allowance, spending caps
 - **BugBot** automated code review
 - **Cloud agents** for background tasks
 - **MCP support**, skills, hooks
-- **Monthly pools don't roll over**
 
 ---

@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["team", "enterprise", "agent", "heavy"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 ---
 
 # Factory Droid

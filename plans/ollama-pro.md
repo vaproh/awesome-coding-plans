@@ -6,7 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "api", "heavy"]
 modelAccess: "Multi-model"
 flags: ["offline", "open-source", "multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://ollama.com/pricing"
 models: "Kimi K3/K2.7/K2.6, DeepSeek V4/V4.1, GLM-5.x, MiniMax M3/M2.7, Gemma4, Nemotron-3, Mistral Large 4"
 quota: "$0-$500/mo; $60-$1,000/mo usage credits included"
@@ -22,7 +22,7 @@ Run and access frontier models locally with cloud assistance. Pro includes $60 o
 ### Models
 
 Access to open-weight models including:
-- Kimi K3, K2.7 Code, K2.6, DeepSeek V4.1 Flash/Pro, GLM-5.3/5.2, MiniMax M3/M2.7, Gemma4, GPT-OSS 120b/20b, Nemotron-3, Mistral Large 4, and more
+- Kimi K3, K2.7 Code, K2.6, DeepSeek V4.1 Flash/Pro, GLM-5.3/5.2, MiniMax M3/M2.7, Gemma4, GPT-OSS 120b/20b, Nemotron-3 nano/ultra, Mistral Large 3/4, clef, muse-spark-open, minimax-m3.1-flash, glm-5.3-flash, and more
 
 ### Plans
 

@@ -6,7 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api", "light"]
 modelAccess: "Aggregator"
 flags: ["byok"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://nano-gpt.com/pricing"
 models: "Rotating: GLM 5.x, Kimi K2.5/K3, MiniMax M2.7, DeepSeek V3.2/V4 (check live endpoint)"
 quota: "$12/mo: 60M input tokens/wk, 100 images/day, 5% discount; PAYG from $0.10"

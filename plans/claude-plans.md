@@ -6,7 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "agent", "heavy"]
 modelAccess: "Frontier"
 flags: ["multimodal", "student-discount"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://www.anthropic.com/pricing"
 models: "Claude Opus 5.5, Sonnet 5.5, Haiku 5.5, Fable 5.1"
 quota: "Free limited; Pro $17/mo annual or $20/mo; Max 5x $100/mo, Max 20x $200/mo; Max includes $100/$200 API credits"

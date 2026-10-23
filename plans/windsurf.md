@@ -6,9 +6,9 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "ide", "agent"]
 modelAccess: "Multi-model"
 flags: ["multimodal", "student-discount"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://windsurf.com/pricing"
-models: "Claude, GPT, Gemini, xAI + SWE-1.7 proprietary (via Devin Desktop)"
+models: "Claude, GPT, Gemini, xAI + SWE-2 proprietary (via Devin Desktop)"
 quota: "Free limited; Pro $20/mo daily+weekly quota; Max $200/mo larger weekly quota"
 bestFor: "Solo and team IDE users wanting Cascade agent with quotas"
 ---
@@ -29,7 +29,7 @@ AI-native IDE (VS Code fork) with Cascade agent. Uses daily + weekly quota windo
 | **Premium Plus** | Claude Opus 4.6/4.8/5, GPT-5.4, GPT-5.3-Codex |
 | **Premium** | Claude Sonnet 4.6, GPT-5.2, Gemini 3.1 Pro |
 | **Lightweight** | Claude Haiku, GPT-5.4 mini, Flash models |
-| **Proprietary** | SWE-1.7 (successor to SWE-1.5) |
+| **Proprietary** | SWE-2 (successor to SWE-1.7/1.5) |
 
 ### Plans
 
@@ -44,7 +44,7 @@ AI-native IDE (VS Code fork) with Cascade agent. Uses daily + weekly quota windo
 ### Key Features
 - **Daily + weekly quotas** refresh automatically (no more credit pool)
 - **"Fast requests"** = top-tier models; **"slow requests"** = lightweight (unlimited but rate-limited)
-- **SWE-1.5** proprietary model included
+- **SWE-2** proprietary model included
 - **Cloud agents** for background development
 - **BYOK supported** — bypass quota entirely, pay API directly
 - **Parallel agents** on Max tier

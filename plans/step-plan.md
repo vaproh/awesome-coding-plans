@@ -6,9 +6,9 @@ quotaModel: "Credits"
 bestForTags: ["solo", "multimodal", "ide"]
 modelAccess: "Single"
 flags: ["multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://platform.stepfun.ai/step-plan"
-models: "Step 3.7 Flash, Step 3.5 Flash, StepAudio 2.5, Step Image Edit 2"
+models: "Step 5 Preview, Step 3.7/3.5 Flash, StepAudio 2.5, Step Image Edit 2"
 quota: "$6.99-$99/mo; 400M-40,000M credits; $1 ~ 7M credits"
 bestFor: "Budget users wanting StepFun's multimodal models"
 ---
@@ -24,6 +24,7 @@ StepFun's subscription for flagship models with smart routing. Credit-based mont
 
 | Model | Type | Notes |
 |-------|------|-------|
+| `step-5-preview` | Flagship (preview) | Newest generation, Step Code harness |
 | `step-3.7-flash` | Multimodal reasoning | Native image/video, 3 effort levels |
 | `step-3.5-flash` | Agent/coding | 196B total / 11B activated MoE |
 | `step-3.5-flash-2603` | High-frequency agent | Token-efficient, low-inference mode |
@@ -36,10 +37,10 @@ StepFun's subscription for flagship models with smart routing. Credit-based mont
 
 | Tier | Price | Monthly Credits | Notes |
 |------|-------|-----------------|-------|
-| **Flash Mini** | $6.99/mo | 400M | Getting started |
-| **Flash Plus** | $9.99/mo | 1,600M | Priority API access |
-| **Flash Pro** | $29/mo | 8,000M | Heavy use |
-| **Flash Max** | $99/mo | 40,000M | Professional workloads |
+| **Mini** | $6.99/mo | 400M | Getting started |
+| **Plus** | $9.99/mo | 1,600M | Priority API access |
+| **Pro** | $29/mo | 8,000M | Heavy use |
+| **Max** | $99/mo | 40,000M | Professional workloads |
 
 > **$1 ≈ 7M Credits.** All tiers get same high-speed model performance. Quarterly/Yearly discounts available.
 

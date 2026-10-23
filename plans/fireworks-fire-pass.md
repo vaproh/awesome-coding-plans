@@ -6,7 +6,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://docs.fireworks.ai/firepass"
 models: "kimi-fast-latest (Kimi K3 Fast, 1.04M ctx); enabled routes vary"
 quota: "Not open to new subscriptions; existing/promo passes active"
@@ -39,5 +39,5 @@ Flat-rate access to Fireworks' inference platform with no per-token charges on s
 - **Zero per-token costs** on included open-weight models
 - **Dedicated Fire Pass API key** — separate from main Fireworks key
 - **OpenAI/Anthropic compatible** — works with Claude Code, OpenCode, Cline, Kilo Code, OpenClaw
-- **256K context window** on included models
+- **1.04M context / 131K output** on included models
 - **Image support** enabled

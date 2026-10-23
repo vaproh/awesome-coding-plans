@@ -40,18 +40,15 @@ Free Copilot for verified students. Sign-ups reopened June 17, 2026.
 
 ---
 
-### Google AI Pro for Students
+### Google AI for Students
 
 **Website:** [gemini.google/students](https://gemini.google/students)
 
-| Region | What You Get | Duration |
-|--------|-------------|----------|
-| **US students** | Google AI Pro free (Gemini 3, Antigravity) | 1 year |
-| **International** | Google AI Plus free | 1 year |
+| Offer | What You Get | Duration |
+|-------|-------------|----------|
+| **Google AI Plus student plan** | Free for 1 year (2x limits, 400 GB, Gemini Omni) | 1 year |
 
-**US plan includes:** 4x higher Gemini usage, Antigravity agentic IDE, Gemini in Gmail/Docs, 5 TB storage.
-
-**Eligibility:** 18+, US college students (international varies). Redeem by December 31, 2026.
+**Eligibility:** 18+, eligible students. Redeem by December 31, 2026; payment method required.
 **After trial:** Auto-charges unless cancelled.
 
 ---
@@ -116,7 +113,7 @@ The old program gave 1 year free Cursor Pro via SheerID. Existing users keep the
 |---------|--------------|----------|
 | **Claude for Education** | Free Pro | Partner university email |
 | **GitHub Copilot** | Free | Student verification |
-| **Google AI Pro** | Free 1 year | US college student |
+| **Google AI Plus** | Free 1 year | Eligible students |
 | **ChatGPT Plus** | Free 4 months | US college student |
 | **Kiro** | Free 1 year | 11 partner universities |
 | **Perplexity** | $10/mo or free via referrals | Student email |
@@ -125,4 +122,4 @@ The old program gave 1 year free Cursor Pro via SheerID. Existing users keep the
 
 ---
 
-*Last updated: October 12, 2026. Always verify on official websites before subscribing.*
+*Last updated: October 23, 2026. Always verify on official websites before subscribing.*

@@ -1,6 +1,12 @@
 # TODO
 
-Last updated: October 12, 2026
+Last updated: October 23, 2026
+
+## Completed (October 23, 2026 verification pass)
+
+- Merged vendor PR #1 for Standard Compute (explicit $19/mo price, Credits quota, pacing retired, Pro Plus $549/mo).
+- Re-verified all plans against official pricing pages; Cursor/Synthetic/MiniMax majors applied; Qoder Pro left unverified (JS page).
+- README.md, plans.md, comparison Best Picks, student pages, and `/changelog` updated.
 
 ## Completed (October 12, 2026 verification pass)
 

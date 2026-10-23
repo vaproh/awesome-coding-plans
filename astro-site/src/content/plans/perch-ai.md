@@ -1,7 +1,7 @@
 ---
 title: "Perch AI"
 price: "$10/mo"
-models: "Claude Sonnet 5.5/Haiku 5.5, GPT-6.1 Sol, GPT-6 Sol/Luna, GPT-5.6 family, GLM 5.3, Kimi K3, Grok 4.6, Qwen 3.8, DeepSeek V4, MiniMax M3"
+models: "Gemini 4 Argon, Claude Opus 5.5/Sonnet 5.5/Haiku 5.5, GPT-6.1 Sol, GPT-6 Sol/Luna, GLM 5.3, Kimi K3, Grok 4.7, Qwen 3.8, DeepSeek V4, MiniMax M3"
 quota: "Starter free 20,000 PT/mo (~$20); Pro $10/mo Early Access (list $20) up to $150/mo"
 website: "https://www.perchai.app/"
 bestFor: "Model-agnostic users wanting smart routing across models"
@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api", "heavy"]
 modelAccess: "Aggregator"
 flags: ["byok", "open-source"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 ---
 
 # Perch ai
@@ -24,10 +24,10 @@ Model-agnostic AI assistant with smart routing ("Roost"). Every premium model fo
 ### Models
 
 **Starter (Free, 20,000 PT/mo):**
-- Laguna S 2.1, DeepSeek V4.1 Flash, GLM 5.3 Flash (+ promo Qwen 3.8 Max/Flash thru Oct 13, 2026)
+- Laguna S 2.1, DeepSeek V4.1 Flash, GLM 5.3 Flash (+ limited-time MiniMax M3.1 Flash)
 
 **Pro (adds premium registry):**
-- Claude Sonnet 5.5 + Haiku 5.5, GPT-6.1 Sol, GPT-6 Sol/Luna, GPT-5.6 Sol/Terra/Luna, GLM 5.3, Kimi K3, Grok 4.6, Qwen 3.8 Max/Flash, DeepSeek V4 Pro, MiniMax M3, Nemotron, Inkling
+- Gemini 4 Argon, Claude Opus 5.5 + Sonnet 5.5 + Haiku 5.5, GPT-6.1 Sol, GPT-6 Sol/Luna, GPT-5.6 Sol/Terra/Luna, GLM 5.3, Kimi K3, Grok 4.7, Qwen 3.8 Max/Flash, DeepSeek V4 Pro, MiniMax M3, Nemotron, Inkling
 
 ### Plans
 

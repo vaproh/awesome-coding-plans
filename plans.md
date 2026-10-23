@@ -2,7 +2,7 @@
 
 > Individual plan deep-dives. For overview and quick picks, see [README.md](README.md).
 
-*Last updated: October 12, 2026*
+*Last updated: October 23, 2026*
 
 Each plan file carries the catalog metadata used by the website: plan type (`Free`, `Paid`, or `Freemium`), price range, quota model, model access, best-for tags, and special flags.
 
@@ -13,7 +13,7 @@ Each plan file carries the catalog metadata used by the website: plan type (`Fre
 | Plan | Price | Models | Best For |
 |------|-------|--------|----------|
 | [Kimi Code](plans/kimi-code.md) | Free | K2.7 Code | Free coding agent |
-| [NVIDIA NIM](plans/nvidia-nim.md) | Free | DeepSeek, GLM, MiniMax | Free open models |
+| [NVIDIA NIM](plans/nvidia-nim.md) | Free | Nemotron, DeepSeek | Free open models |
 | [OpenRouter](plans/openrouter.md) | Free | 50 req/day select models | Testing multi-model |
 | [Antigravity](plans/antigravity.md) | Free | Gemini 3, Claude, GPT-OSS | Agentic IDE preview |
 
@@ -25,8 +25,7 @@ Each plan file carries the catalog metadata used by the website: plan type (`Fre
 | [MiMo Token Plan](plans/mimo-token-plan.md) | $6/mo | 6 models | No weekly/5h caps |
 | [Qwen Token Plan](plans/qwen-token-plan.md) | ~$6/mo | 5+ models | Multi-model |
 | [Step Plan](plans/step-plan.md) | $6.99/mo | 4+ models | Multimodal |
-| [Trae Lite](plans/trae-pro.md) | $8/mo | Multi-model | AI-native IDE entry |
-| [Cline Pass](plans/cline-pass.md) | $9.99/mo | 14 open | Cline users |
+| [Cline Pass](plans/cline-pass.md) | $9.99/mo | 12 open | Cline users |
 
 ## Mid-Range Plans ($10-$20)
 
@@ -53,13 +52,13 @@ Each plan file carries the catalog metadata used by the website: plan type (`Fre
 | [Command Code](plans/command-code-ai.md) | $1-200/mo | 30+ models | taste-1, free models |
 | [Ollama Pro](plans/ollama-pro.md) | $20/mo | Open models | Local + cloud hybrid |
 | [OpenAI Codex](plans/openai-codex-plans.md) | $20/mo | Tiered | OpenAI ecosystem |
-| [Cursor](plans/cursor.md) | $20/mo | Multi-model | AI-native IDE |
+| [Cursor](plans/cursor.md) | $8-200/mo | Cursor Agent + Grok | AI-native IDE |
 | [Windsurf](plans/windsurf.md) | $20/mo | Multi-model | Cascade agent |
 | [Factory Droid](plans/factory-droid.md) | $20/mo | Multi-model | Autonomous agent |
 | [Qoder Pro](plans/qoder-pro.md) | $20/mo | Agentic | Alibaba Cloud |
 | [Replit Agent](plans/replit-agent.md) | Free / $20/mo | Frontier via credits | Build apps from prompts |
-| [MiniMax Token Plan](plans/minimax-token-plan.md) | $22/mo | 5+ models | Multimodal |
-| [Synthetic](plans/synthetic.md) | $30/mo | 16 open | Privacy |
+| [MiniMax Token Plan](plans/minimax-token-plan.md) | $22/mo (legacy) | M Plan for new subs | Multimodal |
+| [Synthetic](plans/synthetic.md) | $9-90/mo | 16 open | Privacy |
 | [Fireworks Fire Pass](plans/fireworks-fire-pass.md) | Closed to new subs | Kimi K3 | Existing passes active |
 | [Augment Code](plans/augment-code.md) | $100/mo | Context engine | Large codebases, up to 50 seats |
 

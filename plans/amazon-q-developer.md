@@ -10,7 +10,7 @@ website: "https://aws.amazon.com/q/developer/pricing/"
 models: "Latest Claude models via AWS"
 quota: "Free 50 agentic req/mo; Pro 1,000 agentic req/mo, 4,000 LOC/mo pooled + $0.003/LOC overage"
 bestFor: "AWS teams wanting agentic coding inside IDEs, CLI, and CI"
-updated: "2026-10-12"
+updated: "2026-10-23"
 ---
 
 # Amazon Q Developer

@@ -10,7 +10,7 @@ website: "https://replit.com/pricing"
 models: "Frontier models (Claude, OpenAI) via effort-based credits"
 quota: "Core $20/mo usage credits; Pro $100/mo pooled credits, 10 parallel agents"
 bestFor: "Builders shipping full apps from prompts without local setup"
-updated: "2026-10-12"
+updated: "2026-10-23"
 ---
 
 # Replit Agent

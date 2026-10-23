@@ -11,7 +11,7 @@ quotaModel: "Requests"
 bestForTags: ["solo", "api", "light"]
 modelAccess: "Aggregator"
 flags: ["byok", "multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 ---
 
 # OpenRouter
@@ -22,12 +22,7 @@ Multi-model API gateway with select models free (limited). Access 500+ models ac
 
 ### Free Models (50 reqs/day, 20/min; 1,000/day after $10 credits)
 
-| Model | Provider |
-|-------|----------|
-| `hy3-preview` | Tencent |
-| `minimax-m2.5` | MiniMax |
-| `qwen3-coder` | Alibaba |
-| And more rotating selection (25+ free) | |
+Rotating selection of ~25 free models — see [openrouter.ai/models](https://openrouter.ai/models) for the live list.
 
 ### Plans
 

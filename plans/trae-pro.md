@@ -6,10 +6,10 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "ide", "agent"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 website: "https://www.trae.ai/pricing"
 models: "Multi-model via ByteDance's Trae IDE"
-quota: "Free limited; Lite $8/mo $8 usage; Pro $20/mo $20 usage; Pro+ $60/mo $60 usage; Ultra $200/mo $200 usage"
+quota: "Free limited; Pro $20/mo $20 usage; Pro+ $60/mo $60 usage; Ultra $200/mo $200 usage (Lite $8 not on live page)"
 bestFor: "IDE users wanting ByteDance's AI agent with tiered pools"
 ---
 
@@ -17,14 +17,13 @@ bestFor: "IDE users wanting ByteDance's AI agent with tiered pools"
 
 **Website:** [trae.ai/pricing](https://www.trae.ai/pricing)
 
-AI-native IDE by ByteDance. Five tiers from free to Ultra. SOLO mode on all paid tiers (Lite+) with unlimited autocomplete.
+AI-native IDE by ByteDance. Four tiers from free to Ultra (Lite $8 no longer on the live pricing page — possibly discontinued). SOLO mode on all paid tiers with unlimited autocomplete.
 
 ### Plans
 
 | Tier | Price | Basic Usage | Autocomplete | Cloud Tasks | Notes |
 |------|-------|-------------|--------------|-------------|-------|
 | **Free** | $0 | Limited | 5,000/mo | 2 | Standard queue |
-| **Lite** | $8/mo ($80/yr) | $8/mo | Unlimited | 2 | SOLO mode, fast queue |
 | **Pro** | $20/mo ($200/yr) | $20/mo | Unlimited | 10 | SOLO mode, fast queue |
 | **Pro+** | $60/mo ($600/yr) | $60/mo | Unlimited | 15 | Fast queue |
 | **Ultra** | $200/mo ($2,000/yr) | $200/mo | Unlimited | 20 | Early access to SOTA models |

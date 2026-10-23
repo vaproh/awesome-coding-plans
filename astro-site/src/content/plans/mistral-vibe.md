@@ -2,7 +2,7 @@
 title: "Mistral Vibe"
 price: "Free"
 models: "Mistral Medium 3.5, Devstral 2, Codestral, Mistral Small"
-quota: "Free $10 credits; Pro $14.99/mo ($30 credits); Student $5.99; Team $24.99/user; Enterprise custom"
+quota: "Free limited; Pro $14.99/mo ($25.5 credits); Student $5.99; Team $24.99/user; Enterprise custom"
 website: "https://mistral.ai/pricing/"
 bestFor: "Solo devs wanting Mistral's unified AI agent for code"
 type: "Paid"
@@ -11,7 +11,7 @@ quotaModel: "Sessions"
 bestForTags: ["solo", "cli", "ide"]
 modelAccess: "Frontier"
 flags: ["open-source"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 ---
 
 # Mistral vibe
@@ -37,8 +37,8 @@ Mistral's unified AI agent for work and code. Formerly "Le Chat."
 
 | Tier | Price | API Credits | Sessions/Day | Best For |
 |------|-------|-------------|---------------|----------|
-| **Free** | $0 | $10/mo | 2 | Trying Vibe |
-| **Pro** | $14.99/mo | $30/mo | ~100 (higher ceilings) | All-day coding |
+| **Free** | $0 | Limited access | 2 | Trying Vibe |
+| **Pro** | $14.99/mo | $25.5/mo | ~100 (higher ceilings) | All-day coding |
 | **Student** | $5.99/mo | $15/mo | ~100 | Verified students |
 | **Team** | $24.99/user/mo | $50/mo | Higher | Shared workspace |
 | **Enterprise** | Custom | Custom | Custom | Private deployment |

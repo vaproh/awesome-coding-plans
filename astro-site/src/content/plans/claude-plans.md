@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "agent", "heavy"]
 modelAccess: "Frontier"
 flags: ["multimodal", "student-discount"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 ---
 
 # Claude plans

@@ -1,7 +1,7 @@
 ---
 title: "Google Antigravity"
 price: "Free"
-models: "Gemini 3.x Flash/Pro, Claude Sonnet 5.5, GPT-OSS-120B (removal Nov 2 2026)"
+models: "Gemini 4 Argon, Gemini 3.x Flash/Pro, Claude Sonnet 5.5, GPT-OSS-120B (removal Nov 2 2026)"
 quota: "Free tier w/ weekly limits; Google AI Pro ~$20/mo; Ultra $100/mo (5x) or $200/mo (20x)"
 website: "https://antigravity.google/"
 bestFor: "Agent-first IDE for autonomous coding with multi-model access"
@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["agent", "ide", "student"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
-updated: "2026-10-12"
+updated: "2026-10-23"
 ---
 
 # Google Antigravity
@@ -24,6 +24,7 @@ Google's agentic development platform. Now generally available with free tier an
 
 | Model | Provider |
 |-------|----------|
+| `Gemini 4 Argon` | Google (Pro/Ultra) |
 | `Gemini 3.8 Flash` | Google |
 | `Gemini 3.7 Flash` | Google |
 | `Gemini 3.6 Flash` | Google |
