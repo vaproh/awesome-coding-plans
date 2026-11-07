@@ -55,13 +55,15 @@ Free Copilot for verified students. Sign-ups reopened June 17, 2026.
 
 ### ChatGPT for Students
 
+> ⚠️ **Expired October 31, 2026** (claim deadline passed; not confirmed whether extended).
+
 **Website:** [chatgpt.com/students](https://chatgpt.com/students/2026/)
 
 | Offer | Value | Details |
 |-------|-------|---------|
-| **ChatGPT Plus free** | $80 value (4 x $20) | 4 months free for eligible US college students |
+| **ChatGPT Plus free** | $80 value (4 x $20) | Was 4 months free for eligible US college students |
 
-**Eligibility:** Full-time or part-time students at eligible US institutions. Claim by October 31, 2026 (SheerID verification, payment method may be required).
+**Eligibility (when active):** Full-time or part-time students at eligible US institutions. Claim by October 31, 2026 (SheerID verification, payment method may be required).
 
 ---
 
@@ -122,4 +124,4 @@ The old program gave 1 year free Cursor Pro via SheerID. Existing users keep the
 
 ---
 
-*Last updated: October 23, 2026. Always verify on official websites before subscribing.*
+*Last updated: November 7, 2026. Always verify on official websites before subscribing.*

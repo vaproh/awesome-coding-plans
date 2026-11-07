@@ -11,7 +11,7 @@ website: "https://cloud.google.com/products/gemini/pricing"
 models: "Gemini 3 Flash/Pro family"
 quota: "Standard 1,500 agent req/day; Enterprise 2,000/day; 6,000 code req/day"
 bestFor: "Teams and enterprises standardizing on Gemini inside IDEs and CLI"
-updated: "2026-10-23"
+updated: "2026-11-07"
 ---
 
 # Gemini Code Assist

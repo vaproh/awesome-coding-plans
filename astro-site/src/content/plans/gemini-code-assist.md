@@ -11,7 +11,7 @@ quotaModel: "Requests"
 bestForTags: ["solo", "team", "enterprise", "ide", "agent"]
 modelAccess: "Single"
 flags: ["multimodal"]
-updated: "2026-10-23"
+updated: "2026-11-07"
 ---
 
 # Gemini Code Assist

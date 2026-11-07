@@ -11,7 +11,7 @@ quotaModel: "Requests"
 bestForTags: ["solo", "team", "enterprise", "ide", "cli", "agent"]
 modelAccess: "Single"
 flags: []
-updated: "2026-10-23"
+updated: "2026-11-07"
 ---
 
 # Amazon Q Developer

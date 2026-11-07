@@ -5,7 +5,7 @@
 🌐 **Website:** [awesome-coding-plans.netlify.app](https://awesome-coding-plans.netlify.app)
 
 ![Plans](https://img.shields.io/badge/plans-33-blue)
-![Last Updated](https://img.shields.io/badge/updated-October%2023%2C%202026-green)
+![Last Updated](https://img.shields.io/badge/updated-November%207%2C%202026-green)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3fec95af-0feb-49b4-b424-f2a98b4d2586/deploy-status)](https://app.netlify.com/projects/awesome-coding-plans/deploys)
 
@@ -19,13 +19,13 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 |------|-------|--------|-------------|----------|
 | [Antigravity](plans/antigravity.md) | Free | Gemini 3, Claude, GPT-OSS | 5h + weekly | Agentic IDE |
 | [NVIDIA NIM](plans/nvidia-nim.md) | Free | Nemotron, DeepSeek | Rate-limited | Free open models |
-| [OpenRouter](plans/openrouter.md) | Free / PAYG | 500+ models | 50 req/day free | Multi-model gateway |
-| [Chutes](plans/chutes.md) | $10/mo | 13+ open | Daily quota + 6-10% off PAYGO | Cheapest PAYG |
+| [OpenRouter](plans/openrouter.md) | Free / PAYG | 600+ models | 50 req/day free | Multi-model gateway |
+| [Chutes](plans/chutes.md) | PAYG | 13+ open | Per-token, no subscription | Cheapest PAYG |
 | [MiMo](plans/mimo-token-plan.md) | $6/mo | 6 MiMo | 4.1B Credits/mo | No weekly/5h caps |
-| [Qwen](plans/qwen-token-plan.md) | ~$6/mo | Qwen3.8, DeepSeek V4, GLM | 2,500 Credits/7d | Multi-model |
+| [Qwen](plans/qwen-token-plan.md) | ~$6/mo | Qwen3.8, DeepSeek V4, GLM | 11,500 credits/mo | Multi-model |
 | [Step](plans/step-plan.md) | $6.99/mo | Step 3.7/3.5, audio, image | 400M Credits | Multimodal |
-| [Kimi Code](plans/kimi-code.md) | Free / ¥49 | K3, K2.7 Code | 5h + weekly | K3 flagship |
-| [GitHub Copilot](plans/github-copilot.md) | $10/mo | 30+ models | 1,500 AI Credits | Most models |
+| [Kimi Code](plans/kimi-code.md) | Free / ¥49 | K3.1 Pro, K3 | 5h rolling (new members) | K3 flagship |
+| [GitHub Copilot](plans/github-copilot.md) | $10/mo | 30+ models | $15 credits | Most models |
 | [Amazon Q Developer](plans/amazon-q-developer.md) | Free / $19/mo | Claude via AWS | 50 agentic req/mo free | AWS IDE + CLI |
 | [Gemini Code Assist](plans/gemini-code-assist.md) | $19/mo | Gemini family | 1,500 agent req/day | Google IDE + CLI |
 | [Cline Pass](plans/cline-pass.md) | $9.99/mo | 12 open | 2-5x rate limits | Cline users |
@@ -81,7 +81,7 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 
 | Plan | Price | Models | Best For |
 |------|-------|--------|----------|
-| [Chutes](plans/chutes.md) | $3/mo | 13+ open | Cheapest PAYG |
+| [Chutes](plans/chutes.md) | PAYG | 13+ open | Cheapest PAYG |
 | [MiMo](plans/mimo-token-plan.md) | $6/mo | 6 models | No weekly/5h caps |
 | [Qwen](plans/qwen-token-plan.md) | ~$6/mo | 5+ models | Multi-model |
 | [Step](plans/step-plan.md) | $6.99/mo | 4+ models | Multimodal |
@@ -143,9 +143,9 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 
 | Plan | Price | Models | Quota | Best For |
 |------|-------|--------|-------|----------|
-| [Chutes](plans/chutes.md) | $10/mo | 13+ open | Daily quota + 6% off PAYGO | Cheapest sub |
+| [Chutes](plans/chutes.md) | PAYG | 13+ open | Per-token, no minimum | Cheapest sub |
 | [MiMo Lite](plans/mimo-token-plan.md) | $6 | 6 MiMo | 4.1B Credits/mo | No weekly/5h caps |
-| [Qwen Lite](plans/qwen-token-plan.md) | $6 | Qwen3.8, DeepSeek V4, Kimi, GLM | 11,500 credits/mo | Multi-model |
+| [Qwen Lite](plans/qwen-token-plan.md) | $6 | Qwen3.8, DeepSeek V4, GLM | 11,500 credits/mo | Multi-model |
 | [Step Mini](plans/step-plan.md) | $6.99 | Step 3.7/3.5 Flash, audio, image | 400M Credits | Multimodal |
 | [Cline Pass](plans/cline-pass.md) | $9.99 | 12 open models | 2-5x rate limits | Cline users |
 
@@ -155,15 +155,15 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 
 | Plan | Price | Models | Quota | Best For |
 |------|-------|--------|-------|----------|
-| [GitHub Copilot](plans/github-copilot.md) | $10 | 30+ models | 1,500 AI Credits | Most models |
+| [GitHub Copilot](plans/github-copilot.md) | $10 | 30+ models | $15 credits | Most models |
 | [Perch Pro](plans/perch-ai.md) | $10 | 15+ models | Up to $150 usage | Smart routing |
 | [OpenCode Go](plans/opencode-go.md) | $10 | 24 models | $10 Go, $40 Go Plus, per-model caps | Best value |
 | [Trae Pro](plans/trae-pro.md) | $20 | Multi-model | $20 + Bonus | SOLO mode, unlimited autocomplete |
 | [NanoGPT](plans/nanogpt.md) | $12 | 4+ models | Weekly token limits | 1000+ via PAYGO |
-| [Kimi Moderato](plans/kimi-code.md) | ~$14 | K3 (256K), K2.7 Code | 60 agent credits | K3 flagship access |
-| [Mistral Pro](plans/mistral-vibe.md) | $14.99 | Medium 3.5, Devstral 2, Codestral | 100 sessions/day | European AI |
+| [Kimi Moderato](plans/kimi-code.md) | ~$14 | K3.1 Pro, K3 (256K) | 60 agent credits | K3 flagship access |
+| [Mistral Pro](plans/mistral-vibe.md) | $14.99 | Medium 3.5, Devstral 2, Codestral | Higher ceilings | European AI |
 | [Kilo Code](plans/kilo-pass.md) | Free | Any model | Teams $15/mo | Open-source, BYOK |
-| [Claude Pro](plans/claude-plans.md) | $17-20 | Opus 5, Sonnet 5, Haiku 4.5 | ~5x Free | Frontier quality |
+| [Claude Pro](plans/claude-plans.md) | $17-20 | Opus/Sonnet/Haiku 5.5 | 5x Max, 10x Ultra | Frontier quality |
 | [GLM Lite](plans/glm-coding-plan.md) | $18 | GLM-5.3, 5.3-Flash | 2K/5h + 10K/wk | Flagship at low price |
 | [Standard Compute](plans/standard-compute.md) | $19 | All frontiers + open | Flat budget | No windows ever |
 
@@ -176,7 +176,7 @@ Every plan source includes machine-readable metadata for `Free`, `Paid`, or `Fre
 | **Claude for Education** | Free Pro | Partner university email |
 | **GitHub Copilot** | Free | Student verification |
 | **Google AI Plus** | Free 1 year | Eligible students |
-| **ChatGPT Plus** | Free 4 months | US college student |
+| **ChatGPT Plus** | Expired Oct 31, 2026 | Was free 4 months |
 | **Kiro** | Free 1 year | 11 partner universities |
 | **Perplexity** | $10/mo or free via referrals | Student email |
 | **Cursor** | ❌ Discontinued | Hobby plan free |
@@ -198,4 +198,4 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-*Last updated: October 23, 2026. Pricing and model availability may change. Always verify on official websites before subscribing.*
+*Last updated: November 7, 2026. Pricing and model availability may change. Always verify on official websites before subscribing.*

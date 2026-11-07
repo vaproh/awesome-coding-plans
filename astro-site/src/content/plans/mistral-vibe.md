@@ -11,7 +11,7 @@ quotaModel: "Sessions"
 bestForTags: ["solo", "cli", "ide"]
 modelAccess: "Frontier"
 flags: ["open-source"]
-updated: "2026-10-23"
+updated: "2026-11-07"
 ---
 
 # Mistral vibe
@@ -38,8 +38,8 @@ Mistral's unified AI agent for work and code. Formerly "Le Chat."
 | Tier | Price | API Credits | Sessions/Day | Best For |
 |------|-------|-------------|---------------|----------|
 | **Free** | $0 | Limited access | 2 | Trying Vibe |
-| **Pro** | $14.99/mo | $25.5/mo | ~100 (higher ceilings) | All-day coding |
-| **Student** | $5.99/mo | $15/mo | ~100 | Verified students |
+| **Pro** | $14.99/mo | $25.5/mo | Higher ceilings | All-day coding |
+| **Student** | $5.99/mo | $15/mo | Higher ceilings | Verified students |
 | **Team** | $24.99/user/mo | $50/mo | Higher | Shared workspace |
 | **Enterprise** | Custom | Custom | Custom | Private deployment |
 
@@ -48,7 +48,7 @@ Mistral's unified AI agent for work and code. Formerly "Le Chat."
 - **Vibe Web** — browser-based
 - **VS Code integration**
 - **24-hour max session duration**
-- **100 sessions/day** on paid plans
+- **Sessions** — fair-use ceilings (exact daily caps not published; 24-hour max session duration)
 - **Fine-tuning** available for Enterprise
 
 ---

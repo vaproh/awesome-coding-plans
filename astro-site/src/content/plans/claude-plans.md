@@ -2,7 +2,7 @@
 title: "Claude Plans"
 price: "$0-200/mo"
 models: "Claude Opus 5.5, Sonnet 5.5, Haiku 5.5, Fable 5.1"
-quota: "Free limited; Pro $17/mo annual or $20/mo; Max 5x $100/mo, Max 20x $200/mo; Max includes $100/$200 API credits"
+quota: "Free limited; Pro $17/mo annual or $20/mo; Max $100/mo (5x); Ultra $200/mo (10x weekly, no 5h limit); API credits included"
 website: "https://www.anthropic.com/pricing"
 bestFor: "Solo and team users wanting Claude's full model lineup"
 type: "Paid"
@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "agent", "heavy"]
 modelAccess: "Frontier"
 flags: ["multimodal", "student-discount"]
-updated: "2026-10-23"
+updated: "2026-11-07"
 ---
 
 # Claude plans
@@ -36,8 +36,8 @@ Anthropic's official subscription tiers with access to Claude models across prod
 |------|-------|-------|----------|
 | **Free** | $0 | Limited | Chat, code gen, web search, memory, MCP |
 | **Pro** | $17/mo (annual) / $20/mo | More than Free | Claude Code, Cowork, Design, Science, Research |
-| **Max 5x** | $100/mo | 5x Pro (5h + weekly) | Higher output limits, early access, priority, $100/mo API credits |
-| **Max 20x** | $200/mo | 20x Pro (5h + weekly) | Higher output limits, early access, priority, $200/mo API credits |
+| **Max** | $100/mo | 5x Pro (5h + weekly) | Higher output limits, early access, priority, $100/mo API credits |
+| **Ultra** | $200/mo | No 5-hour limit, 10x weekly | Higher output limits, early access, priority, $200/mo API credits |
 
 ### Key Features
 - **Claude Code** — terminal/IDE coding agent

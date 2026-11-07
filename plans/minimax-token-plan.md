@@ -7,7 +7,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api", "multimodal", "heavy"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
-updated: "2026-10-23"
+updated: "2026-11-07"
 website: "https://platform.minimax.io/subscribe/token-plan"
 models: "M3.1 Flash (text), H3 (video, Explore/Build), image and speech models"
 quota: "Token Plan legacy (existing subs only); M Plan Go $220/yr, Explore $550/yr, Build $1,320/yr"

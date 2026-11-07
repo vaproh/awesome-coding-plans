@@ -1,6 +1,12 @@
 # TODO
 
-Last updated: October 23, 2026
+Last updated: November 7, 2026
+
+## Completed (November 7, 2026 verification pass)
+
+- Re-verified all 33 plans; Chutes subs wound down (pure PAYG), Claude Max/Ultra rename, Perch Ultra $30, Command Code credits + free models, Copilot dollar credits, Kimi K3.1 Pro, Cline/Qwen/OpenCode model refreshes, Antigravity soften, ChatGPT student expired.
+- NanoGPT re-verified via rendered-page fetch; Qoder left at Oct 23 (JS page, unverified).
+- README.md, plans.md, student pages, `/changelog` updated.
 
 ## Completed (October 23, 2026 verification pass)
 

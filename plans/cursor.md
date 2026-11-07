@@ -7,7 +7,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "ide", "agent"]
 modelAccess: "Multi-model"
 flags: ["multimodal", "student-discount"]
-updated: "2026-10-23"
+updated: "2026-11-07"
 website: "https://cursor.com/pricing"
 models: "Cursor Agent + Grok models; third-party frontier at API list price (no allowance)"
 quota: "Free limited; Plus $8/mo; Premium $30/mo 4x; Super $100/mo 15x; Ultra $200/mo 50x; weekly refresh, top-ups for overage"

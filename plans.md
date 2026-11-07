@@ -2,7 +2,7 @@
 
 > Individual plan deep-dives. For overview and quick picks, see [README.md](README.md).
 
-*Last updated: October 23, 2026*
+*Last updated: November 7, 2026*
 
 Each plan file carries the catalog metadata used by the website: plan type (`Free`, `Paid`, or `Freemium`), price range, quota model, model access, best-for tags, and special flags.
 
@@ -12,7 +12,7 @@ Each plan file carries the catalog metadata used by the website: plan type (`Fre
 
 | Plan | Price | Models | Best For |
 |------|-------|--------|----------|
-| [Kimi Code](plans/kimi-code.md) | Free | K2.7 Code | Free coding agent |
+| [Kimi Code](plans/kimi-code.md) | Free | K2.8 / K3.1 Pro | Free coding agent |
 | [NVIDIA NIM](plans/nvidia-nim.md) | Free | Nemotron, DeepSeek | Free open models |
 | [OpenRouter](plans/openrouter.md) | Free | 50 req/day select models | Testing multi-model |
 | [Antigravity](plans/antigravity.md) | Free | Gemini 3, Claude, GPT-OSS | Agentic IDE preview |
@@ -21,7 +21,7 @@ Each plan file carries the catalog metadata used by the website: plan type (`Fre
 
 | Plan | Price | Models | Best For |
 |------|-------|--------|----------|
-| [Chutes](plans/chutes.md) | $10/mo | 13+ open | Plus tier, daily quota |
+| [Chutes](plans/chutes.md) | PAYG | 13+ open | Per-token, no subscription |
 | [MiMo Token Plan](plans/mimo-token-plan.md) | $6/mo | 6 models | No weekly/5h caps |
 | [Qwen Token Plan](plans/qwen-token-plan.md) | ~$6/mo | 5+ models | Multi-model |
 | [Step Plan](plans/step-plan.md) | $6.99/mo | 4+ models | Multimodal |

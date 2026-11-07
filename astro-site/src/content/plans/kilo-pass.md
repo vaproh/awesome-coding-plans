@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "ide", "agent"]
 modelAccess: "Aggregator"
 flags: ["open-source", "byok", "offline"]
-updated: "2026-10-23"
+updated: "2026-11-07"
 ---
 
 # Kilo Code

@@ -1,7 +1,7 @@
 ---
 title: "Kimi Code"
 price: "Free / ¥49-699/mo"
-models: "Kimi K3 (2.8T params), kimi-for-coding (K2.8 Preview), highspeed variants"
+models: "Kimi K3.1 Pro (3T-class), K3/K3-256K, kimi-for-coding (K2.8), highspeed variants"
 quota: "Free to Allegro CNY699/mo; K3 from CNY99, 1M ctx from CNY199; new members 5h rolling only, Extra Usage top-up"
 website: "https://www.kimi.com/coding"
 bestFor: "Solo devs wanting Kimi K3 flagship with agent swarm"
@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "agent", "cli", "heavy"]
 modelAccess: "Single"
 flags: ["multimodal"]
-updated: "2026-10-23"
+updated: "2026-11-07"
 ---
 
 # Kimi code
@@ -19,12 +19,14 @@ updated: "2026-10-23"
 
 **Website:** [kimi.com/coding](https://www.kimi.com/coding) | **Docs:** [Kimi Code Docs](https://www.kimi.com/code/docs/en/)
 
-Moonshot AI's coding subscription featuring the K3 flagship model (2.8T parameters).
+Moonshot AI's coding subscription featuring the K3.1 Pro flagship model (3T-class, up to 1M context).
 
 ### Models
 
 | Model ID | Version | Context | Speed | Availability |
 |----------|---------|---------|-------|--------------|
+| `k3.1-pro` | Kimi K3.1 Pro | Up to 1M | Standard | Plus+ |
+| `k3.1-pro-highspeed` | Kimi K3.1 Pro HS | Up to 1M | 2-3x faster | Pro+ |
 | `k3` | Kimi K3 | 256K–1M | Standard | Moderato+ (1M needs Allegretto+) |
 | `k3-256k` | Kimi K3 (256K) | 256K | Standard | Moderato+ |
 | `kimi-for-coding` | K2.8 Preview | 1M | Standard | All members (including free) |

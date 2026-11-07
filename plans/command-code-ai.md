@@ -7,10 +7,10 @@ quotaModel: "Credits"
 bestForTags: ["solo", "api", "agent", "heavy"]
 modelAccess: "Aggregator"
 flags: ["byok", "multimodal"]
-updated: "2026-10-23"
+updated: "2026-11-07"
 website: "https://commandcode.ai/pricing"
 models: "taste-1, GPT-5.6 Luna/Sol, GPT-6 Sol/Luna, Grok 4.5/4.6, Claude Sonnet 5.5/Haiku 5.5, 30+"
-quota: "$1/$10/$20/$100/$200 per mo; $10/$70/$80/$150/$300 credits; ~9K/75K/100K/230K/370K requests"
+quota: "$1/$10/$20/$100/$200 per mo; $10/up to $100/up to $110/$150/$300 credits; ~9K/75K/100K/219K/437K requests"
 bestFor: "Solo devs wanting a style-learning model and deep discounts"
 ---
 
@@ -23,10 +23,10 @@ Multi-model coding subscription with "taste-1" — a model that learns and appli
 
 ### Models
 
-**Included free (no credits):**
-- `Laguna S 2.1`
-- `Ling 3.0 Flash`
-- `LongCat 2.0`
+**Included free (no credits, rotating promos):**
+- `Glyph Cluster`
+- `Crouton Alpha`
+- `Beam 1.0`
 
 **Included on every plan (select premium):**
 - `taste-1` — learns your coding style
@@ -42,8 +42,8 @@ Multi-model coding subscription with "taste-1" — a model that learns and appli
 | Tier | Price | Credits | Effective Usage | Requests | Notes |
 |------|-------|---------|-----------------|----------|-------|
 | **Go** | $1/mo + fee | $10 | ~$15 with deals | ~9K | Entry tier |
-| **GOAT** | $10/mo + fee | $70 | ~$100 with deals | ~75K | Best value |
-| **Pro** | $20/mo + fee | $80 | — | ~100K | Mid-tier |
+| **GOAT** | $10/mo + fee | Up to $100 | ~$100 with deals | ~75K | Best value |
+| **Pro** | $20/mo + fee | Up to $110 | — | ~100K | Mid-tier |
 | **Max 10x** | $100/mo + fee | $150 | ~$300 with deals | ~219K | Priority support |
 | **Max 20x** | $200/mo + fee | $300 | ~$600 | ~437K | Highest limits |
 
@@ -63,7 +63,7 @@ Multi-model coding subscription with "taste-1" — a model that learns and appli
 ### Key Features
 - **taste-1 model** — learns your coding style, applies it automatically
 - **Up to 1M context window** on all plans
-- **Free models** — Laguna S 2.1, Ling 3.0 Flash, LongCat 2.0 never cost credits
+- **Free models** — rotating promos (currently Glyph Cluster, Crouton Alpha, Beam 1.0) never cost credits
 - **No training on your code** — privacy-first
 - **Local-only taste storage** — your style profile stays on your machine
 - **Up to 99% off** select premium models (MiMo V2.5)

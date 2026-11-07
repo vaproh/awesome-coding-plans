@@ -7,7 +7,7 @@ quotaModel: "Credits"
 bestForTags: ["solo", "heavy", "api"]
 modelAccess: "Single"
 flags: ["multimodal"]
-updated: "2026-10-23"
+updated: "2026-11-07"
 website: "https://mimo.mi.com/pricing"
 models: "MiMo V2.6 Pro/Flash/UltraSpeed, ASR/TTS"
 quota: "$6-$100/mo; 4.1B-82B credits; no weekly/5h caps"

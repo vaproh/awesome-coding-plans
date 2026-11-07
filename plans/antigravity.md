@@ -7,10 +7,10 @@ quotaModel: "Mixed"
 bestForTags: ["agent", "ide", "student"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
-updated: "2026-10-23"
+updated: "2026-11-07"
 website: "https://antigravity.google/"
-models: "Gemini 4 Argon, Gemini 3.x Flash/Pro, Claude Sonnet 5.5, GPT-OSS-120B (removal Nov 2 2026)"
-quota: "Free tier w/ weekly limits; Google AI Pro ~$20/mo; Ultra $100/mo (5x) or $200/mo (20x)"
+models: "Gemini 4 Argon, Gemini 3.x Flash/Pro, Claude Opus/Sonnet 5.5, GPT-OSS-120B (still listed)"
+quota: "Free tier w/ weekly limits; Google AI Pro ~$20/mo; Ultra via G1 upgrade (no public per-tier figures)"
 bestFor: "Agent-first IDE for autonomous coding with multi-model access"
 ---
 
@@ -29,8 +29,10 @@ Google's agentic development platform. Now generally available with free tier an
 | `Gemini 3.7 Flash` | Google |
 | `Gemini 3.6 Flash` | Google |
 | `Gemini 3.1 Pro` | Google |
-| `Claude Sonnet 5.5` | Anthropic |
-| `GPT-OSS-120B` | OpenAI (removal Nov 2, 2026) |
+| `Claude Opus 5.5` / `Claude Sonnet 5.5` | Anthropic (thinking) |
+| `Claude Sonnet 4.6` / `Claude Opus 4.6` | Anthropic (thinking, older gen) |
+| `GPT-OSS-120B` | OpenAI (still listed; Nov 2 removal unconfirmed) |
+| `Nano Banana 2` | Google (image) |
 
 ### Plans
 
@@ -38,7 +40,7 @@ Google's agentic development platform. Now generally available with free tier an
 |------|-------|-------|
 | **Individual (Free)** | $0 | Unlimited Tab/Command, basic weekly rate limits |
 | **Google AI Pro** | $19.99/mo | More generous rate limits, flexible AI credit pool (overage-only credits) |
-| **Google AI Ultra** | $99.99–$100/mo (5x Pro) / $199.99–$200/mo (20x Pro) | Highest access to latest Gemini models; shared Gemini quota |
+| **Google AI Ultra** | Via G1 upgrade (no public per-tier figures) | Highest access to latest Gemini models; shared Gemini quota |
 | **Organization** | via Google Cloud | Gemini Enterprise Agent Platform integration |
 
 ### Key Features

@@ -7,7 +7,7 @@ quotaModel: "Credits"
 bestForTags: ["solo", "heavy", "agent", "api"]
 modelAccess: "Frontier"
 flags: ["open-source"]
-updated: "2026-10-15"
+updated: "2026-11-07"
 website: "https://standardcompute.com/coding-subscription"
 models: "Frontier + open via smart routing (Claude Opus/Sonnet 5.5, GPT-6 Astra/Luna, GPT-5.6 Sol, Gemini, DeepSeek, Qwen, Kimi, GLM, MiniMax)"
 quota: "$19/$39/$89/$249 per mo individual; $20/$41/$95/$269 monthly compute budget; stops at budget, no overage"

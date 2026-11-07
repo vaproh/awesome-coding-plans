@@ -1,16 +1,16 @@
 ---
 title: "Chutes"
-price: "$10-20/mo"
+price: "PAYG (per-token)"
 type: "Paid"
 priceRange: "Budget"
-quotaModel: "Mixed"
+quotaModel: "Tokens"
 bestForTags: ["solo", "api", "heavy"]
 modelAccess: "Multi-model"
 flags: ["open-source", "byok"]
-updated: "2026-10-23"
+updated: "2026-11-07"
 website: "https://chutes.ai/pricing"
-models: "GLM-5.x, Kimi K2.6/K3, DeepSeek V3.2/V4 Flash, Qwen3.5/3.8, MiniMax M2.5+"
-quota: "Plus $10/mo (2,000 req/day, $50 cap); Pro $20/mo (5,000 req/day, $100 cap); 6%/10% off PAYGO"
+models: "Kimi K3/K2.7-Code/K2.6, GLM-5.3/5.2/5.1, DeepSeek V4.1-Flash/V4-Pro/V3.2, Qwen3.8-27B/Max, Hy4, Gemma-4"
+quota: "Pure PAYG per-token; no subscription, no minimum, no markup; private TEE GPU from $2.25/hr"
 bestFor: "Budget users wanting cheapest decentralized AI inference"
 ---
 
@@ -19,30 +19,30 @@ bestFor: "Budget users wanting cheapest decentralized AI inference"
 
 **Website:** [chutes.ai/pricing](https://chutes.ai/pricing)
 
-Decentralized AI inference with optional subscription tiers. Known for cheapest PAYG rates.
+Decentralized AI inference. Subscriptions wound down — now pure pay-per-token with no minimum and no markup.
 
-### Models
+### Models (per-1M-token rates, in / out)
 
-| Tier | Models |
-|------|--------|
-| **Plus ($10)** | GLM-5/5.1/5.2, Kimi K2.6/K3, DeepSeek V3.2/V4-Flash, Qwen3.5/3.8, MiniMax M2.5+ |
-| **Pro ($20)** | Same as Plus with larger daily quota |
+| Model | In | Out |
+|-------|----|-----|
+| Kimi K3 | $1.85 | $9.50 |
+| GLM-5.2 | $1.25 | $3.95 |
+| DeepSeek-V4.1-Flash | $0.30 | $1.20 |
+| Qwen3.8-27B | $0.039 | $1.25 |
+| Kimi K2.7-Code / K2.6, GLM-5.3/5.1, Hy4, Gemma-4, Qwen3.8-Max | Varies | Varies |
 
-> Base tier discontinued — only Plus and Pro are offered.
+### Plan
 
-### Plans
+| Tier | Price | Notes |
+|------|-------|-------|
+| **PAYG** | Per-token | No subscription, no minimum, no markup |
 
-| Tier | Price | Requests/Day | Monthly Cap | 4h Burst | PAYGO Discount |
-|------|-------|--------------|-------------|----------|----------------|
-| **Plus** | $10/mo | 2,000 | $50/mo usage | $4.17 | 6% off PAYGO |
-| **Pro** | $20/mo | 5,000 | $100/mo usage | $8.33 | 10% off PAYGO |
+> Monthly Plus/Pro subscriptions are gone ("What happens to my existing monthly plan?" FAQ). Existing subscribers were transitioned off.
 
 ### Key Features
 - **TEE (Trusted Execution Environment)** — confidential compute
-- **Token-based quota** — capped at 5x subscription value
-- **Shorter rolling windows** may apply (4h rolling window observed)
-- **Also offers PAYGO** without subscription (competitive rates)
-- **GPU deployment** available for private models
-- **Model lineup changes** — flagships pulled from Base tier in 2026
+- **No markup** — pay provider list rates
+- **Private GPU deploys** — RTX Pro 6000 at $2.25/hr + $6.75 one-time fee
+- **Model lineup changes** — check live pricing page for current rates
 
 ---

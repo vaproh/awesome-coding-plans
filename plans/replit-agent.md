@@ -9,9 +9,9 @@ modelAccess: "Multi-model"
 flags: ["student-discount"]
 website: "https://replit.com/pricing"
 models: "Frontier models (Claude, OpenAI) via effort-based credits"
-quota: "Core $20/mo usage credits; Pro $100/mo pooled credits, 10 parallel agents"
+quota: "Core $20/mo usage credits; Pro $100/mo $100 credits, up to 15 collaborators, 28-day rollback"
 bestFor: "Builders shipping full apps from prompts without local setup"
-updated: "2026-10-23"
+updated: "2026-11-07"
 ---
 
 # Replit Agent
@@ -26,7 +26,7 @@ Cloud IDE with an agent that plans, builds, deploys, and hosts full applications
 |------|-------|----------|
 | Starter | Free | Daily agent credits, limited AI, 1 published app, public projects |
 | Core | $20/mo ($18/mo annual) | Full Agent, $20/mo usage credits toward frontier models, unlimited private workspaces, 5 collaborators, plan mode |
-| Pro | $100/mo ($90/mo annual) | Up to 15 builders + 50 viewers, 10 parallel agents, $100/mo pooled credits with 1-month rollover, premium support, 28-day DB rollback |
+| Pro | $100/mo ($90/mo annual) | Up to 15 collaborators, $100/mo credits toward most powerful models, premium support, 28-day DB rollback |
 | Enterprise | Custom | SSO/SAML, single-tenant, static IPs |
 
 ### Models

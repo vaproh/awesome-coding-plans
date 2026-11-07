@@ -11,7 +11,7 @@ quotaModel: "Credits"
 bestForTags: ["solo", "heavy", "agent", "api"]
 modelAccess: "Frontier"
 flags: ["open-source"]
-updated: "2026-10-15"
+updated: "2026-11-07"
 ---
 
 # Standard compute
