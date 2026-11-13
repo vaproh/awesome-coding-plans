@@ -1,7 +1,7 @@
 ---
 title: "Claude Plans"
 price: "$0-200/mo"
-models: "Claude Opus 5.5, Sonnet 5.5, Haiku 5.5, Fable 5.1"
+models: "Claude Opus 5.5, Sonnet 5.5, Haiku 5.5, Fable 5.2"
 quota: "Free limited; Pro $17/mo annual or $20/mo; Max $100/mo (5x); Ultra $200/mo (10x weekly, no 5h limit); API credits included"
 website: "https://www.anthropic.com/pricing"
 bestFor: "Solo and team users wanting Claude's full model lineup"
@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "agent", "heavy"]
 modelAccess: "Frontier"
 flags: ["multimodal", "student-discount"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 ---
 
 # Claude plans
@@ -28,7 +28,7 @@ Anthropic's official subscription tiers with access to Claude models across prod
 | `Claude Opus 5.5` | Frontier | Hardest reasoning tasks |
 | `Claude Sonnet 5.5` | Balanced | Daily coding |
 | `Claude Haiku 5.5` | Fast | Quick tasks, high volume |
-| `Claude Fable 5/5.1` | Latest | Newest capabilities |
+| `Claude Fable 5.2` | Latest | Newest capabilities |
 
 ### Plans
 

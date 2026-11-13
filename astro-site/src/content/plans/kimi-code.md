@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "agent", "cli", "heavy"]
 modelAccess: "Single"
 flags: ["multimodal"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 ---
 
 # Kimi code
@@ -43,7 +43,7 @@ Moonshot AI's coding subscription featuring the K3.1 Pro flagship model (3T-clas
 | **Moderato** | ¥99/mo | Yes (256K) | No | No | 2x |
 | **Allegretto** | ¥199/mo | Yes (1M) | Yes | Yes | 4x |
 | **Allegro** | ¥699/mo | Yes (1M) | Yes | Yes | 10x |
-| **Vivace (US store)** | $199/mo | Yes (1M) | Yes | Yes | 720 agent credits, 4 concurrent |
+| **Ultra (US store)** | $199/mo ($1,908/yr) | Yes (1M) | Yes | Yes | 10x agent credits, 4 concurrent |
 
 ### Key Features
 - **Agent Swarm** — multi-agent collaboration (Moderato+)

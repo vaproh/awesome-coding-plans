@@ -2,7 +2,7 @@
 title: "OpenCode Go"
 price: "$10-40/mo"
 models: "Grok 4.7/4.6, GLM-5.3/5.2, Kimi K3.1 Pro/K3, Qwen3.8 Max/Flash, Qwen3.7 Plus, DeepSeek V4.1, MiniMax M3.1 Flash/M3, MiMo-V2.6-Flash, Hy4, GPT 6 Luna, Haiku 5.5, Gemini 4 Argon, Muse Spark 1.3"
-quota: "$10/mo Go; $40/mo Go Plus; per-model monthly caps, 5h 20% / week 50%"
+quota: "$10/mo Go; $40/mo Go Plus; $20/member/mo Go Teams; per-model monthly caps, 5h 20% / week 50%"
 website: "https://opencode.ai"
 bestFor: "CLI users wanting one subscription for many frontier models"
 type: "Paid"
@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "cli", "agent", "heavy"]
 modelAccess: "Multi-model"
 flags: ["open-source"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 ---
 
 # Opencode go
@@ -40,8 +40,9 @@ Multi-model aggregator subscription — one plan, access to many frontier models
 
 | Tier | Price | Limits |
 |------|-------|--------|
-| **Go** | $10/mo | Per-model monthly caps (e.g. Kimi K3 $15, DeepSeek V4.1 Flash $80); 5h 20%, week 50% |
-| **Go Plus** | $40/mo | Higher per-model caps (e.g. Kimi K3 $60, DeepSeek V4.1 Flash $160) |
+| **Go** | $10/mo | Per-model monthly caps (e.g. Kimi K3 $15, DeepSeek V4.1 Flash $100); 5h 20%, week 50% |
+| **Go Plus** | $40/mo | Higher per-model caps (e.g. Kimi K3 $60, DeepSeek V4.1 Flash $200) |
+| **Go Teams** | $20/member/mo | Same per-model caps +$5; per-member allowances |
 
 > Dollar-based limits (not credits). Usage deducted at each model's pay-as-you-go rate.
 

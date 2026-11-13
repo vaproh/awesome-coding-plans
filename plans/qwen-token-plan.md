@@ -1,16 +1,16 @@
 ---
 title: "Qwen Token Plan"
-price: "$6-$68/mo"
+price: "$6-$43/mo"
 type: "Paid"
 priceRange: "Budget"
 quotaModel: "Credits"
 bestForTags: ["solo", "api", "light"]
 modelAccess: "Multi-model"
 flags: ["open-source", "multimodal"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 website: "https://docs.qwencloud.com/coding-plan/overview"
-models: "Qwen3.8-Max, Qwen3.8-Flash, Qwen3.7-Max/Plus, Qwen3.6-Flash, DeepSeek V4 Pro/V4.1-Flash, GLM-5.3/5.2 + vision/image/audio"
-quota: "Personal $6-$68/mo; 11.5K-180K credits/mo; Team seats $20/$75/$200; 60% night discount from 22:00"
+models: "Qwen3.8-Max, Qwen3.8-Flash, Qwen3.7-Max/Plus, Qwen3.6-Flash, DeepSeek V4 Pro/V4.1-Flash, GLM-5.3/5.2, qwen4-max-preview + vision/image/audio"
+quota: "Personal $6-$43/mo; 20K-200K credits/mo; Team seats $20/$75/$180; 60% night discount 22:00-08:00"
 bestFor: "Budget users wanting Qwen and partner models with monthly credits"
 ---
 
@@ -38,14 +38,14 @@ Alibaba Cloud's credit-based plan for AI coding. Access to Qwen, DeepSeek, GLM, 
 
 | Tier | Price | Credits/mo | Concurrent Agents |
 |------|-------|-----------|-------------------|
-| **Lite** | $6/mo | 11,500 | 1-2 |
-| **Essential** | $10/mo | 25,500 | 2-3 |
-| **Standard** | $18/mo | 45,000 | 3-4 |
-| **Pro** | $68/mo | 180,000 | 6-8 |
+| **Lite** | $6/mo | 20,000 | 1-2 |
+| **Essential** | $10/mo | 45,000 | 2-3 |
+| **Standard** | $18/mo | 80,000 | 3-4 |
+| **Pro** | $43/mo | 200,000 | 6-8 |
 
-**Team Edition** seats ($20/$75/$200) and **Credit Packs** ($15/20K, max 5) also available. Singapore-region only. Promo: Lite $3/mo, Essential $5/mo for new users until Nov 30, 2026.
+**Team Edition** seats ($20/$75/$180 per seat/month for 25K/100K/250K credits) and **Credit Packs** ($15/20K individual, max 5; $700/625K team) also available. Singapore-region only. Promo: Lite $3/mo, Essential $5/mo for new users until Nov 30, 2026.
 
-> **Night discount:** 60% off (40% rate) from 22:00 on Qwen3.8-Max/Flash. Old request-based Lite plan discontinued Apr 2026.
+> **Night discount:** 22:00-08:00 — 60% off Qwen3.8-Max/Flash, 50% off DeepSeek V4/V4.1. Old request-based Lite plan discontinued Apr 2026.
 
 ### Supported Tools
 OpenClaw, Claude Code, OpenCode, Cursor, Codex, Qwen Code, QwenPaw, Cherry Studio, Chatbox, Cline, Qoder, Lingma, Kilo CLI, Hermes Agent.

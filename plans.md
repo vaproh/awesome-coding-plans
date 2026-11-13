@@ -2,7 +2,7 @@
 
 > Individual plan deep-dives. For overview and quick picks, see [README.md](README.md).
 
-*Last updated: November 7, 2026*
+*Last updated: November 13, 2026*
 
 Each plan file carries the catalog metadata used by the website: plan type (`Free`, `Paid`, or `Freemium`), price range, quota model, model access, best-for tags, and special flags.
 
@@ -25,7 +25,7 @@ Each plan file carries the catalog metadata used by the website: plan type (`Fre
 | [MiMo Token Plan](plans/mimo-token-plan.md) | $6/mo | 6 models | No weekly/5h caps |
 | [Qwen Token Plan](plans/qwen-token-plan.md) | ~$6/mo | 5+ models | Multi-model |
 | [Step Plan](plans/step-plan.md) | $6.99/mo | 4+ models | Multimodal |
-| [Cline Pass](plans/cline-pass.md) | $9.99/mo | 12 open | Cline users |
+| [Cline Pass](plans/cline-pass.md) | $9.99/mo | 15 open | Cline users |
 
 ## Mid-Range Plans ($10-$20)
 
@@ -34,14 +34,14 @@ Each plan file carries the catalog metadata used by the website: plan type (`Fre
 | [GitHub Copilot](plans/github-copilot.md) | $10/mo | 30+ models | Most models |
 | [Amazon Q Developer](plans/amazon-q-developer.md) | Free / $19/mo | Claude via AWS | AWS IDE + CLI |
 | [Perch AI](plans/perch-ai.md) | $10/mo | 15+ models | Smart routing |
-| [OpenCode Go](plans/opencode-go.md) | $10/mo | 24 models | Best value |
+| [OpenCode Go](plans/opencode-go.md) | $10/mo | 32 models | Best value |
 | [Trae Pro](plans/trae-pro.md) | $20/mo | Multi-model | SOLO mode, unlimited autocomplete |
 | [NanoGPT](plans/nanogpt.md) | $12/mo | 4+ models | 1000+ via PAYGO |
 | [Kimi Code](plans/kimi-code.md) | ¥49 (~$7) | K3 (256K) | K3 flagship access |
 | [Mistral Vibe](plans/mistral-vibe.md) | $14.99/mo | 7 models | European AI |
 | [Kilo Code](plans/kilo-pass.md) | Free (Teams $15/mo) | Any model | Open-source, BYOK |
 | [GLM Coding Plan](plans/glm-coding-plan.md) | $18/mo | 2 models | GLM-5.3 flagship |
-| [Gemini Code Assist](plans/gemini-code-assist.md) | $19/mo | Gemini family | Google IDE + CLI |
+| [Gemini Code Assist](plans/gemini-code-assist.md) | $19/mo | Gemini 3.x family | Sunsetting (Antigravity) |
 | [Standard Compute](plans/standard-compute.md) | $19/mo | All frontiers | No windows |
 | [Claude Plans](plans/claude-plans.md) | $17-20/mo | 4 models | Frontier quality |
 
@@ -54,10 +54,10 @@ Each plan file carries the catalog metadata used by the website: plan type (`Fre
 | [OpenAI Codex](plans/openai-codex-plans.md) | $20/mo | Tiered | OpenAI ecosystem |
 | [Cursor](plans/cursor.md) | $8-200/mo | Cursor Agent + Grok | AI-native IDE |
 | [Windsurf](plans/windsurf.md) | $20/mo | Multi-model | Cascade agent |
-| [Factory Droid](plans/factory-droid.md) | $20/mo | Multi-model | Autonomous agent |
+| [Factory Droid](plans/factory-droid.md) | Free / $20/mo | Multi-model | Autonomous agent |
 | [Qoder Pro](plans/qoder-pro.md) | $10-200/mo | Agentic | Alibaba Cloud |
 | [Replit Agent](plans/replit-agent.md) | Free / $20/mo | Frontier via credits | Build apps from prompts |
-| [MiniMax Token Plan](plans/minimax-token-plan.md) | $220-1,320/yr | M3.1 Flash, H3 video | M Plan for new subs | Multimodal |
+| [MiniMax Token Plan](plans/minimax-token-plan.md) | $22-132/mo | M3.1 Flash, H3 video | M Plan for new subs | Multimodal |
 | [Synthetic](plans/synthetic.md) | $9-90/mo | 16 open | Privacy |
 | [Fireworks Fire Pass](plans/fireworks-fire-pass.md) | Closed to new subs | Kimi K3 | Existing passes active |
 | [Augment Code](plans/augment-code.md) | $100/mo | Context engine | Large codebases, up to 50 seats |

@@ -1,11 +1,17 @@
 # TODO
 
-Last updated: November 7, 2026
+Last updated: November 13, 2026
+
+## Completed (November 13, 2026 verification pass)
+
+- Re-verified all 33 plans. Claude Fable 5.2, Copilot model adds, Perch Fable 5.2 + Gemini 4 Hydrogen/Carbon, OpenCode Go Teams + higher DeepSeek caps, Standard Compute budget=price restructure, Factory Droid Free tier, Qoder bonuses/promos, Antigravity Gemini 4 Carbon/Hydrogen, Synthetic GLM-5.3, Ollama PAYG free tier.
+- README.md, plans.md, changelog, sitemap lastmods updated.
+- Unverified and left as-is: OpenAI Go $8 / Plus $20 (client-rendered pricing), Antigravity $19.99, ChatGPT student extension.
 
 ## Completed (November 7, 2026 verification pass)
 
 - Re-verified all 33 plans; Chutes subs wound down (pure PAYG), Claude Max/Ultra rename, Perch Ultra $30, Command Code credits + free models, Copilot dollar credits, Kimi K3.1 Pro, Cline/Qwen/OpenCode model refreshes, Antigravity soften, ChatGPT student expired.
-- NanoGPT re-verified via rendered-page fetch; Qoder left at Oct 23 (JS page, unverified).
+- NanoGPT re-verified via rendered-page fetch; Qoder re-checked Nov 13 (bonus credits, QoderWake list price).
 - README.md, plans.md, student pages, `/changelog` updated.
 
 ## Completed (October 23, 2026 verification pass)

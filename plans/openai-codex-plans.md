@@ -7,7 +7,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "agent", "ide", "heavy"]
 modelAccess: "Frontier"
 flags: ["multimodal", "student-discount"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 website: "https://openai.com/pricing"
 models: "GPT-6 Astra, GPT-6.1 Sol, GPT-6 Sol/Luna, GPT-5.6 family"
 quota: "Go $8/mo (limited Codex); Plus $20/mo (Codex yes); Pro $100/$200/$500/mo; credits extend usage"
@@ -25,8 +25,8 @@ OpenAI's subscription tiers for ChatGPT with Codex agent access.
 
 | Tier | Models |
 |------|--------|
-| **Go** | Core model, limited Codex (no Codex Cloud) |
-| **Plus** | GPT-6 Sol/Luna, GPT-5.6 family, advanced models |
+| **Go** | GPT-5.6 Luna default (Think), GPT-5.6 Terra limited in Codex/Work |
+| **Plus** | GPT-6 Astra, GPT-6.1 Sol, GPT-6 Sol/Luna, GPT-5.6 Sol/Terra/Luna, Codex |
 | **Pro** | GPT-6 Astra, GPT-6.1 Sol frontier + Ultrafast mode (Pro $500) |
 
 ### Plans
@@ -37,7 +37,7 @@ OpenAI's subscription tiers for ChatGPT with Codex agent access.
 | **Plus** | $20/mo | Advanced models, Thinking image, Work agent, **Codex agent**, deep research, Projects |
 | **Pro** | $100 / $200 / $500/mo | 5x+ Plus usage, Frontier Pro (GPT-6 Astra), max Codex/Work agent, unlimited chat/images, early access, Ultrafast on $500 |
 
-> **The Codex agent starts at Plus ($20/mo).** The Go tier ($8) is basically just more ChatGPT — no coding agent access.
+> **Full Codex access starts at Plus ($20/mo).** Free and Go get limited Codex; Go is also ad-supported.
 
 ### Key Features
 - **Codex agent** — dedicated coding agent

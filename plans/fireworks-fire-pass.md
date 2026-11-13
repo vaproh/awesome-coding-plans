@@ -7,7 +7,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 website: "https://docs.fireworks.ai/firepass"
 models: "kimi-fast-latest (Kimi K3 Fast, 1.04M ctx); enabled routes vary"
 quota: "Not open to new subscriptions; existing/promo passes active"

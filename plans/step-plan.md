@@ -7,9 +7,9 @@ quotaModel: "Credits"
 bestForTags: ["solo", "multimodal", "ide"]
 modelAccess: "Single"
 flags: ["multimodal"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 website: "https://platform.stepfun.ai/step-plan"
-models: "Step 5 Preview, Step 3.7/3.5 Flash, StepAudio 2.5, Step Image Edit 2"
+models: "Step 5 Preview, Step 3.7/3.5 Flash, StepAudio 2.5"
 quota: "$6.99-$99/mo; 400M-40,000M credits; $1 ~ 7M credits"
 bestFor: "Budget users wanting StepFun's multimodal models"
 ---
@@ -32,7 +32,6 @@ StepFun's subscription for flagship models with smart routing. Credit-based mont
 | `stepaudio-2.5-tts` | Text-to-speech | Contextual TTS |
 | `stepaudio-2.5-asr` | Speech recognition | Next-gen ASR |
 | `step-router-v1` | Smart routing | Dispatches by task complexity |
-| `step-image-edit-2` | Image editing | Text-to-image + editing |
 
 ### Plans
 
@@ -43,7 +42,7 @@ StepFun's subscription for flagship models with smart routing. Credit-based mont
 | **Pro** | $29/mo | 8,000M | Heavy use |
 | **Max** | $99/mo | 40,000M | Professional workloads |
 
-> **$1 ≈ 7M Credits.** All tiers get same high-speed model performance. Quarterly/Yearly discounts available. All tiers currently show **Out of stock** on the pricing page — purchases may be paused; new free-trial claims are closed.
+> **$1 ≈ 7M Credits.** All tiers get same high-speed model performance. **Availability (monthly billing): Plus $9.99 and Pro $29 are purchasable; Mini $6.99 and Max $99 show Out of stock.** All quarterly and yearly options show **Out of stock**. New free-trial claims remain closed.
 
 ### Key Features
 - **No request-frequency limits** — spend credits flexibly

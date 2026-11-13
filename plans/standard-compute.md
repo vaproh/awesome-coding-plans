@@ -7,10 +7,10 @@ quotaModel: "Credits"
 bestForTags: ["solo", "heavy", "agent", "api"]
 modelAccess: "Frontier"
 flags: ["open-source"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 website: "https://standardcompute.com/coding-subscription"
 models: "Frontier + open via smart routing (Claude Opus/Sonnet 5.5, GPT-6 Astra/Luna, GPT-5.6 Sol, Gemini, DeepSeek, Qwen, Kimi, GLM, MiniMax)"
-quota: "$19/$39/$89/$249 per mo individual; $20/$41/$95/$269 monthly compute budget; stops at budget, no overage"
+quota: "$19/$39/$89/$249 per mo individual, compute budget = price; Teams $0 platform; Enterprise $1,499/mo; Pro Plus $499 / Growth $999 / Scale $2,499 per key; stops at budget, no overage"
 bestFor: "Heavy agent users who want one fixed monthly bill across frontier and open models"
 ---
 
@@ -33,11 +33,13 @@ Flat-rate subscription with access to frontier and open models via smart routing
 
 | Tier | Price | Compute Budget | Notes |
 |------|-------|----------------|-------|
-| **Starter** | $19/mo | $20/mo ($30 first month) | Entry tier, one agent at a time, 1 API key |
-| **Economy** | $39/mo | $41/mo ($61 first month) | Parallel agents |
-| **Standard** | $89/mo | $95/mo ($142 first month) | Priority lane |
-| **Pro** | $249/mo | $269/mo ($403 first month) | Highest priority scheduling |
-| **Pro Plus** (business) | $499/mo | $549/mo | No cap on API keys; Growth $999 and Scale $2,499 above it |
+| **Starter** | $19/mo | $19/mo | Entry tier, one agent at a time, 1 API key |
+| **Economy** | $39/mo | $39/mo | Parallel agents |
+| **Standard** | $89/mo | $89/mo | Priority lane |
+| **Pro** | $249/mo | $249/mo | Highest priority scheduling |
+| **Pro Plus** (per key) | $499/mo | $499/mo | Growth $999 and Scale $2,499 above it |
+| **Teams** | $0/mo platform | PAYG usage +7.5% | Unlimited people/keys; Enterprise features $199-$399/mo each |
+| **Enterprise** | $1,499/mo | PAYG usage +10% | All features, SSO/SAML, DPA, SLA, named contact |
 
 ### Key Features
 - **Fixed monthly compute budget in USD** — each request is counted at the model's per-token rate; usage shown live in the dashboard

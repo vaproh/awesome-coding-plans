@@ -11,7 +11,7 @@ quotaModel: "Sessions"
 bestForTags: ["solo", "cli", "ide"]
 modelAccess: "Frontier"
 flags: ["open-source"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 ---
 
 # Mistral vibe

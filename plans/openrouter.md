@@ -7,7 +7,7 @@ quotaModel: "Requests"
 bestForTags: ["solo", "api", "light"]
 modelAccess: "Aggregator"
 flags: ["byok", "multimodal"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 website: "https://openrouter.ai"
 models: "600+ models (25+ free); free 50 reqs/day, 1,000/day after $10 credits"
 quota: "Free 50 reqs/day (20/min); PAYG at list price + 5.5%/8% platform fee"

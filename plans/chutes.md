@@ -7,7 +7,7 @@ quotaModel: "Tokens"
 bestForTags: ["solo", "api", "heavy"]
 modelAccess: "Multi-model"
 flags: ["open-source", "byok"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 website: "https://chutes.ai/pricing"
 models: "Kimi K3/K2.7-Code/K2.6, GLM-5.3/5.2/5.1, DeepSeek V4.1-Flash/V4-Pro/V3.2, Qwen3.8-27B/Max, Hy4, Gemma-4"
 quota: "Pure PAYG per-token; no subscription, no minimum, no markup; private TEE GPU from $2.25/hr"

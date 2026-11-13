@@ -7,9 +7,9 @@ quotaModel: "Requests"
 bestForTags: ["solo", "api", "heavy"]
 modelAccess: "Multi-model"
 flags: ["open-source", "offline"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 website: "https://synthetic.new/pricing"
-models: "Kimi-K3.1-Pro (beta), Kimi-K3, gpt-oss-120b, GLM-5.3, GLM-5.3-Flash, GLM-4.7-Flash, DeepSeek-V4.1-Flash, Qwen3.8-27B, Nemotron-3-Super"
+models: "Kimi-K3.1-Pro (beta), Kimi-K3, gpt-oss-120b, GLM-5.3 (beta), GLM-5.3-Flash, GLM-4.7-Flash, DeepSeek-V4.1-Flash, Qwen3.8-27B"
 quota: "Go $9/mo / Standard $30/mo / Big $90/mo; weekly regenerating credits; extra usage at API rates"
 bestFor: "Privacy-focused users wanting flat-fee open-weight access"
 ---
@@ -27,12 +27,11 @@ Flat-fee subscription for open-weight models on private infrastructure. No train
 |-------|---------|--------|
 | Kimi-K3.1-Pro | 512K | Beta |
 | Kimi K3 | 512K | Included |
-| Nemotron-3-Super-120B | 256K | Included |
 | gpt-oss-120b | 128K | Included |
 | Qwen3.8-27B | 256K | Included |
 | GLM-4.7-Flash | 192K | Included |
-| GLM-5.2 | 512K | Included |
-| GLM-5.3-Flash | 512K | Beta |
+| GLM-5.3 | 512K | Beta |
+| GLM-5.3-Flash | 512K | Included |
 | DeepSeek-V4.1-Flash | — | Included |
 
 ### Plans

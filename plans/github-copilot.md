@@ -7,9 +7,9 @@ quotaModel: "Credits"
 bestForTags: ["solo", "team", "ide", "student"]
 modelAccess: "Multi-model"
 flags: ["student-discount", "multimodal"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 website: "https://github.com/features/copilot/plans"
-models: "Claude 5.5 family, GPT-6/5.6, Gemini 4 Argon/3.8, Grok 4.7, Kimi K3, MAI-Code, Raptor mini"
+models: "Claude 5.5 family + Fable 5.2, GPT-6/5.6/5.4 mini, Gemini 4 Argon/Carbon, Grok 4.7, Kimi K3, MAI-Code, Raptor mini"
 quota: "Pro $10/mo $15 credits; Pro+ $39/mo $70 credits; Max $100/mo $200 credits; unlimited completions"
 bestFor: "Solo and team devs wanting the broadest model catalog"
 ---
@@ -25,9 +25,9 @@ The industry-standard AI coding assistant with the broadest model catalog. Uses 
 
 | Provider | Models |
 |----------|--------|
-| **Anthropic** | Claude Opus 5.5/5, Opus 4.8, Sonnet 5.5/5/4, Sonnet 4.6, Haiku 5.5/4.5, Fable 5, Fable 5.1 |
-| **OpenAI** | GPT-6 Astra/Luna/Sol, GPT-6.1 Sol/Terra, GPT-5.6 Sol/Terra/Luna, GPT-5.5, GPT-5.4, GPT-5.3-Codex, GPT-5.2, GPT-5.2-Codex, GPT-5 mini |
-| **Google** | Gemini 4 Argon, Gemini 3.8 Flash, 3.7 Flash |
+| **Anthropic** | Claude Opus 5.5/5, Opus 4.8, Sonnet 5.5/5/4, Sonnet 4.6, Haiku 5.5/4.5, Fable 5, Fable 5.1, Fable 5.2 |
+| **OpenAI** | GPT-6 Astra/Luna/Sol, GPT-6.1 Sol/Terra, GPT-5.6 Sol/Terra/Luna, GPT-5.5, GPT-5.4, GPT-5.3-Codex, GPT-5.2, GPT-5.2-Codex, GPT-5.4 mini, GPT-5 mini |
+| **Google** | Gemini 4 Argon, Gemini 4 Carbon, Gemini 3.8 Flash, 3.7 Flash |
 | **xAI** | Grok 4.7, Grok 4.6, Grok 4.5 |
 | **Moonshot** | Kimi K3 |
 | **Microsoft** | MAI-Code-1.1-Flash |

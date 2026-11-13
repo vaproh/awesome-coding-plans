@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "cli", "agent", "heavy"]
 modelAccess: "Single"
 flags: ["multimodal"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 ---
 
 # Glm coding plan

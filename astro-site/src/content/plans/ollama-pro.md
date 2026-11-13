@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "api", "heavy"]
 modelAccess: "Multi-model"
 flags: ["offline", "open-source", "multimodal"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 ---
 
 # Ollama Pro
@@ -29,7 +29,7 @@ Access to open-weight models including:
 
 | Tier | Price | Included Usage | Notes |
 |------|-------|----------------|-------|
-| **Free** | $0 | Starter credits | Limited models, 1 concurrent; add credits to unlock all |
+| **Pay as you go** | $0 | Pay per token | Every cloud model, 3 concurrent, no service fees |
 | **Pro** | $20/mo ($16.67/yr) | $60/mo usage credits | Access to pro models, 3 concurrent |
 | **Max** | $100/mo | $300/mo usage credits | 10 concurrent requests, early access |
 | **Team** | $500/mo | $1,000/mo shared credits | Unlimited users, centralized billing, 10 concurrent |

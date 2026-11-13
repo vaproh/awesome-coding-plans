@@ -7,7 +7,7 @@ quotaModel: "Requests"
 bestForTags: ["solo", "api", "light"]
 modelAccess: "Multi-model"
 flags: ["open-source", "byok"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 website: "https://build.nvidia.com"
 models: "nemotron-3.5-super-vl, nemotron-3.5-lightning, deepseek-v4.1-flash, nemotron-3-ultra (rotating)"
 quota: "Completely free; rate limits apply; no credit card required"

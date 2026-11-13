@@ -7,9 +7,9 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api", "light"]
 modelAccess: "Aggregator"
 flags: ["byok"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 website: "https://nano-gpt.com/pricing"
-models: "Rotating: GLM 5.x, Kimi K2.5/K3, MiniMax M2.7, DeepSeek V3.2/V4 (check live endpoint)"
+models: "Rotating: GLM 5.x, Kimi K2.5/K3, MiniMax M2.7, MiMo, Qwen, DeepSeek V3.2/V4 (check live endpoint)"
 quota: "$12/mo: 60M input tokens/wk, 100 images/day, 5% discount; PAYG from $0.10"
 bestFor: "Budget API users wanting 1000+ models at list prices"
 ---
@@ -28,6 +28,8 @@ Multi-model API gateway with optional subscription. 1000+ models accessible thro
 | GLM 5.x | Zhipu AI |
 | Kimi K2.5 / K3 | Moonshot AI |
 | MiniMax M2.7 | MiniMax |
+| MiMo | Xiaomi |
+| Qwen | Alibaba |
 | DeepSeek V3.2 / V4 | DeepSeek |
 
 ### Plan

@@ -7,7 +7,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "team", "ide", "agent"]
 modelAccess: "Multi-model"
 flags: ["multimodal", "student-discount"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 website: "https://windsurf.com/pricing"
 models: "Claude, GPT, Gemini, xAI + SWE-2 proprietary (via Devin Desktop)"
 quota: "Free limited; Pro $20/mo daily+weekly quota; Max $200/mo larger weekly quota"

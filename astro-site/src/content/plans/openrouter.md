@@ -11,7 +11,7 @@ quotaModel: "Requests"
 bestForTags: ["solo", "api", "light"]
 modelAccess: "Aggregator"
 flags: ["byok", "multimodal"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 ---
 
 # OpenRouter

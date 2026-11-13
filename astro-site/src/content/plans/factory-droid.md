@@ -1,17 +1,17 @@
 ---
 title: "Factory Droid"
-price: "$20-$200/mo"
+price: "$0-200/mo"
 models: "Multi-model via autonomous Droid agent"
 quota: "$20-$200/mo; Pro standard, Plus ~5x, Max ~10x Pro limits"
 website: "https://factory.ai/pricing"
 bestFor: "Teams wanting autonomous AI agent for end-to-end development"
-type: "Paid"
+type: "Freemium"
 priceRange: "Premium"
 quotaModel: "Mixed"
 bestForTags: ["team", "enterprise", "agent", "heavy"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 ---
 
 # Factory Droid
@@ -24,6 +24,7 @@ AI agent for autonomous software development. Droid agent plans for individuals 
 
 | Tier | Price | Usage | Notes |
 |------|-------|-------|-------|
+| **Free** | $0 | BYOK | Sign in with ChatGPT, GitHub Copilot, or OpenRouter; own keys/endpoint |
 | **Pro** | $20/mo | Standard rate limits | Desktop/CLI/SDK, background agents |
 | **Plus** | $100/mo | ~5x Pro usage | Droid Computers (cloud), expanded limits |
 | **Max** | $200/mo | ~10x Pro usage | Early access to new features |

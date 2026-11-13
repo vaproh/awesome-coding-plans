@@ -11,7 +11,7 @@ quotaModel: "Credits"
 bestForTags: ["solo", "api", "agent", "heavy"]
 modelAccess: "Aggregator"
 flags: ["byok", "multimodal"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 ---
 
 # Command code ai
@@ -25,8 +25,7 @@ Multi-model coding subscription with "taste-1" — a model that learns and appli
 
 **Included free (no credits, rotating promos):**
 - `Glyph Cluster`
-- `Crouton Alpha`
-- `Beam 1.0`
+- `Inkling 2 Small`
 
 **Included on every plan (select premium):**
 - `taste-1` — learns your coding style
@@ -63,7 +62,7 @@ Multi-model coding subscription with "taste-1" — a model that learns and appli
 ### Key Features
 - **taste-1 model** — learns your coding style, applies it automatically
 - **Up to 1M context window** on all plans
-- **Free models** — rotating promos (currently Glyph Cluster, Crouton Alpha, Beam 1.0) never cost credits
+- **Free models** — rotating promos (currently Glyph Cluster, Inkling 2 Small) never cost credits
 - **No training on your code** — privacy-first
 - **Local-only taste storage** — your style profile stays on your machine
 - **Up to 99% off** select premium models (MiMo V2.5)

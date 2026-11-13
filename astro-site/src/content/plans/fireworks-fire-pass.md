@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "api"]
 modelAccess: "Multi-model"
 flags: ["multimodal"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 ---
 
 # Fireworks Fire Pass

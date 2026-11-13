@@ -1,7 +1,7 @@
 ---
 title: "Cline Pass"
 price: "$9.99/mo"
-models: "GLM-5.3/Flash, Kimi K3.1 Pro/K3, DeepSeek V4.1 Flash 1017/V4 Pro, MiniMax M3/M3.1 Flash, MiMo V2.6 Pro/Flash, Qwen3.8 Max, Qwen3.7 Max/Plus, Muse Spark 1.3"
+models: "GLM-5.3/Flash, Kimi K3.1 Pro/K3, DeepSeek V4.1 Flash 1017/DeepSeek V4.1 Flash/V4 Pro, MiniMax M3/M3.1 Flash, MiMo V2.6 Pro/Flash, Qwen3.8 Max, Qwen3.7 Max/Plus, Muse Spark 1.3"
 quota: "$9.99/mo; 2-5x standard API rate limits; processing fee may apply"
 website: "https://cline.bot/cline-pass"
 bestFor: "Cline agent users wanting higher limits on open-weight models"
@@ -11,7 +11,7 @@ quotaModel: "Mixed"
 bestForTags: ["solo", "agent", "ide"]
 modelAccess: "Multi-model"
 flags: ["open-source", "byok"]
-updated: "2026-11-07"
+updated: "2026-11-13"
 ---
 
 # Cline pass
@@ -29,13 +29,14 @@ Subscription exclusively for the Cline coding agent. 2-5x standard API rate limi
 | GLM-5.3 Flash | Z.ai | Agentic workflows |
 | Kimi K3.1 Pro | Moonshot | Long-horizon coding |
 | Kimi K3 | Moonshot | Agentic workflows |
+| DeepSeek V4.1 Flash | DeepSeek | Fast iteration |
 | DeepSeek V4.1 Flash 1017 | DeepSeek | Fast iteration |
 | DeepSeek V4 Pro | DeepSeek | Large changes |
 | MiniMax M3.1 Flash | MiniMax | Fast general coding |
 | MiniMax M3 | MiniMax | General coding |
 | MiMo V2.6 Pro | Xiaomi | Pro workloads |
 | MiMo V2.6 Flash | Xiaomi | Efficient edits |
-| Muse Spark 1.3 | — | Balanced coding |
+| Muse Spark 1.3 Contributor | — | Balanced coding |
 | Qwen3.8 Max | Alibaba | Complex coding |
 | Qwen3.7 Max | Alibaba | Heavy workloads |
 | Qwen3.7 Plus | Alibaba | Balanced coding |
